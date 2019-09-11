@@ -1,0 +1,12 @@
+.right {
+    float: right;
+    margin-left: -2rem;
+}
+._flex {
+    display: flex;
+    flex-direction: column;
+}
+._inlineFlex {
+    display: inline-flex;
+    justify-content: space-between;
+}

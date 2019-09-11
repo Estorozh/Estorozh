@@ -106,6 +106,7 @@ let find_pug = (src,save) => {
 }
 // find_pug("/src/pug/cards", "./cards/")
 find_pug('blocks/cards', "/UI/cards/");
+find_pug('blocks/__elements', '/UI/_elements/');
 // find_pug('/src/pug/blocks/__elements/text-field', "./__elemets/text-field/");
 
 

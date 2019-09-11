@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --open --mode development",
+    "dev": "webpack-dev-server --open --mode production",
     "build": "webpack --mode production",
-    "test": "webpack --mode development"
+    "start": "webpack --watch"
   },
   "browserslist": [
     "> 1%",

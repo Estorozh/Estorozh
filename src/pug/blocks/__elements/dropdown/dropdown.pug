@@ -1,0 +1,5 @@
+//- шаблон для создания dropdown - +dropdown([one,two,three])
+mixin dropdown(attr)
+  select(size="1" required)
+    each i in attr
+      option(value=attr[i])= i
