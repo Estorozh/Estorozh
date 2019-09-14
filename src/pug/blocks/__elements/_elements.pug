@@ -4,22 +4,22 @@ include ./text-field/text-field
 include ./dropdown/dropdown
 include ./buttons/button_big
 
-._flex
-    h3.input_320 text-field
-        span.right DEFAULT
-    +text-field-320('','EMAIL')
-._flex
-    h3.input_320 text-field
-        span.right Hover/focus
-    +text-field-320('','AWESOME')
-._flex
-    h3.input_320 Dropdown
-        span.right DEFAULT
-    +dropdown([0,1,2,3,4,5,6])
-._flex.input_320
-    ._inlineFlex
-        h3.input_150 date dropdown
-        h3.input_150 date dropdown
-    ._inlineFlex
-        +text-field-150('date','')
-        +text-field-150('date','')
+include svg.svg
+
+svg.logo
+  use(xlink:href="#logo")
+._flex._width-25
+  +text-field-320('text-field','text','EMAIL','default')
+  +text-field-320('text-field','text','This is pretty awesome','hover/focus')
+  h3._width-100 Dropdown
+      span.right DEFAULT
+  +dropdown-320(["спальни","кровати","ванные комнаты"],'text','Сколько будет гостей')
+  ._inlineFlex
+      h3.input_150 date dropdown
+      h3.input_150 date dropdown
+  ._inlineFlex
+      +text-field-150('date','')
+      +text-field-150('date','')
+
+
+

@@ -1,4 +1,6 @@
-mixin text-field-320(type,text)
-  input(type=type placeholder=text).input_320
-mixin text-field-150(type,text)
-  input(type=type placeholder=text).input_150
+mixin text-field-320(h3text,type,placeholder,span)
+  h3._width-100=h3text
+      span.right=span
+  input(type=type placeholder=placeholder)._width-100
+mixin text-field-150(type,placeholder)
+  input(type=type placeholder=placeholder).input_150
