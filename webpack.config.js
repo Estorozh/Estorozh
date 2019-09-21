@@ -12,9 +12,11 @@ const PATHS = {
 }
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-const config = {
+let config = {
     entry: {
-        app: `${PATHS.src}/index.js`
+        main: `${PATHS.src}/index.js`,
+        Form_Elements: `${PATHS.src}/Form_Elements.js`,
+        ColorType: `${PATHS.src}/colorType.js`
     },
     output: {
         filename: '[name].js',
@@ -27,26 +29,9 @@ const config = {
             loader: 'babel-loader',
             exclude: '/node_modules/'
         }, {
-            test: /\.css$/,
-            use: [
-                'style-loader',
-                MiniCssExtractPlugin.loader,
-                {
-                    loader: 'css-loader',
-                    options: { sourceMap: true }
-                }, {
-                    loader: 'postcss-loader',
-                    options: { sourceMap: true, config: { path: './postcss.config.js' } }
-                }, {
-                    loader: 'sass-loader',
-                    options: { sourceMap: true }
-                }
-            ]
-        }, {
             test: /\.scss$/,
             use: [
-                'style-loader',
-                MiniCssExtractPlugin.loader,
+              MiniCssExtractPlugin.loader,
                 {
                     loader: 'css-loader',
                     options: { sourceMap: true }
@@ -75,40 +60,51 @@ const config = {
     devServer: {
         overlay: true
     },
-
+    // devtool: 'source-map',
     plugins: [ 
         new MiniCssExtractPlugin({
-            filename:"[name].css",
+            filename:"./assets/css/[name].css",
         }),
         new CopyWebpackPlugin([
             { from: `${PATHS.src}/assets/img`, to: `${PATHS.assets}/img` },
             { from: `${PATHS.src}/assets/fonts`, to: `${PATHS.assets}/fonts` }
             //{ from: PATHS.src + '/static' }
         ]),
+        new HtmlWebpackPlugin({
+            template: __dirname + '/src/pug/blocks/__elements/ColorType.pug',
+            filename: '/pages/UI/ColorType.html',
+            inject: true,
+            chunks: ['<index>']
+        }),
+        new HtmlWebpackPlugin({
+            template: __dirname + '/src/pug/blocks/__elements/Form_Elements.pug',
+            filename: '/pages/UI/Form_Elements.html',
+            inject: true,
+            chunks: ['<index>']
+        })
 
     ],
 
 }
-//дополнение, чтобы вручную не прописывать пути к pug файлам
-// формат добавления паг файлов find_pug('pathFrom', 'pathTo')
-let find_pug = (src,save) => {
-    let pages = glob.sync(__dirname + "/src/pug/" + src + "/*.pug");
-    pages.forEach(function (file) {
-      let base = path.basename(file, '.pug');
-      config.plugins.push(
-        new HtmlWebpackPlugin({
-          filename: save + base + '.html',
-          template: `${PATHS.pug}/${src}/` + base + '.pug',
-          inject: true
-        })
-      )
-    });
-}
-// find_pug("/src/pug/cards", "./cards/")
-find_pug('blocks/cards', "/UI/cards/");
-find_pug('blocks/__elements', '/UI/_elements/');
-// find_pug('/src/pug/blocks/__elements/text-field', "./__elemets/text-field/");
 
+// дополнение, чтобы вручную не прописывать пути к pug файлам
+// формат добавления паг файлов find_pug('pathFrom', 'pathTo')
+// let find_pug = (src,save) => {
+//     let pages = glob.sync(__dirname + "/src/pug/" + src + "/*.pug");
+//     pages.forEach(function (file) {
+//       let base = path.basename(file, '.pug');
+//       config.plugins.push(
+//         new HtmlWebpackPlugin({
+//           filename: save + base + '.html',
+//           template: `${PATHS.pug}/${src}/` + base + '.pug',
+//           inject: true
+//         })
+//       )
+//     });
+// }
+
+// find_pug('blocks/cards', "/pages/");
+// find_pug('blocks/__elements', '/pages/UI/');
 
 module.exports = config
 

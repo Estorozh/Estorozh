@@ -1,0 +1,11 @@
+mixin radio-button(h3text)
+  .radio-button
+    h3= h3text
+    form
+      label.radio-button__item
+        input(type="radio" class=".radio-button__input")
+        span.radio-button__text Мужчина
+      label.radio-button__item
+        input(type="radio" class=".radio-button__input")
+        span.radio-button__text Женщина
+

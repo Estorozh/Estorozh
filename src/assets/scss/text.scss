@@ -1,4 +1,11 @@
 
+body {
+    font-family: var(--montserrat_reg);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+}
 h1 {
     font-family:  "OpenSans", sans-serif;
     font-style: normal;
@@ -21,13 +28,6 @@ h3 {
     line-height: 15px;
     text-transform: uppercase;
 }
-body {
-    font-family: var(--montserrat_reg);
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 24px;
-}
 span {
     font-family: var(--montserrat_reg);
     font-style: normal;
@@ -35,6 +35,5 @@ span {
     font-size: 12px;
     line-height: 15px;
     text-align: right;
-    text-transform: uppercase;
     color: rgba(31, 32, 65, 0.5);
 }

@@ -1,40 +1,18 @@
 //- шаблон для создания dropdown - +dropdown([one,two,three])
-//- mixin dropdown-320(attr)
-//-   select(size="1" required)._width-100
-//-     each i in attr
-//-       option(value=attr[i])= i
-//-   label 
-//-     svg.arrow-320
-//-         use(xlink:href="#arrow")
-//- mixin dropdown-150(attr)
-//-   select(size="1" required).input_150
-//-     each i in attr
-//-       option(value=attr[i])= i
-//-   label
-//-     svg.arrow-150
-//-         use(xlink:href="#arrow")
-mixin dropdown-320(attr,type,placeholder)
-  .dropdown
-    label.right
-      svg.arrow-320
+
+mixin dropdown(attr,type,placeholder,h3text,span)
+  .dropdown(class!=attributes.class)
+    label
+      svg.arrow
         use(xlink:href="#arrow")
-    input(type=type,placeholder=placeholder)._width-100
-    .dropdown-content._flex._bRadius._border
-      .item._inlineFlex
-        h3._width-50= attr[0]
-        .right._inlineFlex._width-40
-          .count._flex -
-          h3.num_item1 2
-          .count._flex +
-      .item._inlineFlex
-        h3._width-50= attr[1]
-        .right._inlineFlex._width-40
-          .count._flex -
-          h3.num_item1 2
-          .count._flex +
-      .item._inlineFlex
-        h3._width-50= attr[2]
-        .right._inlineFlex._width-40
-          .count._flex -
-          h3.num_item1 0
-          .count._flex +
+    h3= h3text  
+    span= span
+    input(type=type,placeholder=placeholder)
+    .dropdown-content._bRadius._border
+      each i in attr
+        .item
+          h3= i
+          .item__count
+            .count.minus -
+            h3.num_item1 2
+            .count.plus +

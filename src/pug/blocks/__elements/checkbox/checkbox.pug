@@ -1,0 +1,9 @@
+mixin checkbox(h3text)
+  .checkbox
+    -var list = ['Можно курить','Можно с питомцами','Можно пригласить гостей (до 10 человек)']
+    h3= h3text
+    each item in list
+      label
+        input(type="checkbox")
+        span.check
+        span.list__item= item

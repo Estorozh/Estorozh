@@ -1,0 +1,12 @@
+mixin color(objAttr,colorCode) 
+  .color
+    each i, index in objAttr
+      .color_rect(style="background-color:"+i)
+      .color-text
+        h2.color-text_bold= index
+        span.color-text_normal= colorCode
+
+mixin type(mod_tag, mod_decription, tag, description)
+    .type
+        .type__name(class= mod_tag)= tag
+        .type__example(class= mod_desc)= description

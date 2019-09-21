@@ -1,0 +1,1 @@
+import './pug/blocks/__elements/ColorType/ColorType.scss'

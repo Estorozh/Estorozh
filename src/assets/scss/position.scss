@@ -1,27 +1,48 @@
 body {
     max-width: 1920px;
+    display: flex;
+    flex-wrap: wrap;
 }
-.right {
-    float: right;
-    margin-left: -2rem;
+.logo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 1%;
 }
-._flex {
+.logo__img {
+    display: block;
+    width: 48px;
+    height: 48px;
+}
+// .right {
+//     float: right;
+//     margin-left: -2rem;
+// }
+._flex--column {
     display: flex;
     flex-direction: column;
+}
+._flex-wrap {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 ._inlineFlex {
     display: inline-flex;
     justify-content: space-between;
 }
-._width-25 {
+.-width-25 {
     width: 25%;
 }
-._width-40 {
+.-width-40 {
     width: 40%;
 }
-._width-100 {
+.-width-50 {
+    width: 50%;
+}
+.-width-100 {
     width: 100%;
 }
-.input_150 {
-    width: 150px;
+.display_none {
+    display: none;
 }

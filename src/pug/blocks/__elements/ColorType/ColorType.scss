@@ -1,0 +1,104 @@
+.colorType {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 100px auto;
+}
+.colorType_div {
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    width: 45%;
+    margin: 0 2.5%;
+    margin-bottom: 50px;
+}
+
+
+.color {
+    display: flex;
+    width: 270px;
+    margin-left: 5%;
+    margin-top: 2%;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .color_rect {
+        width: 4rem;
+        height: 4rem;
+        left:10%;
+        top: 14.5rem;
+        border-radius: 6px;
+    }
+
+    .color-text {
+        width: 60%;
+        margin-left: 10%
+    }
+
+    .color-text_bold {
+        margin: 0;
+    }
+
+    .color-text_normal {
+        color: inherit;
+        font-weight: 500;
+    }
+}
+
+
+.type {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    .type__name {
+        color: var(--dark-25);
+        width: 5%;
+        text-align: right;
+        margin-right: 30px;
+    }
+    .tag--h1 {
+        font-family: var(--montserrat_reg);
+        font-size: 24px;
+        line-height: 29px;
+    }
+    .tag--h2 {
+        font-family: var(--montserrat_reg);
+        font-size: 19px;
+        line-height: 23px;
+    }
+    .tag--h3 {
+        font-family: var(--montserrat_reg);
+        font-size: 12px;
+        line-height: 15px;
+    }
+    .tag--body {
+        font-family: var(--montserrat_reg);
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .type__example {
+        width: 80%
+    }
+    .tag--h1 + .type__example {
+        font-family: "OpenSans", sans-serif;
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .tag--h2 + .type__example {
+        font-family: "OpenSans", sans-serif;
+        font-size: 19px;
+        line-height: 24px;
+    }
+    .tag--h3 + .type__example {
+        font-family: var(--montserrat_bold);
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+    }
+    .tag--body + .type__example {
+        font-family: var(--montserrat_reg);
+        font-size: 14px;
+        line-height: 24px;
+        color: var(--dark-75)
+    }
+}

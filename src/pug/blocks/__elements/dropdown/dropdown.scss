@@ -1,23 +1,51 @@
-input {
-    box-sizing: border-box;
-    padding-left: 15px;
-    border-radius: 4px;
-    height: 44px;
-    color: var(--dark-25);
-}
+@import '../general.scss';
+
 .dropdown {
+    display: flex;
+    flex-wrap: wrap;
     position: relative;
+    width: 100%;
+    justify-content: space-between;
+    
+    input {
+        cursor: pointer;
+    }
+    span {
+        align-self: center;
+        text-transform: uppercase;
+    }
+    .dropdown-content {
+        background-color: #fff;
+        box-sizing: border-box;
+        padding: 15px;
+        height: 140px;
+        display: none;
+        flex-wrap: wrap;
+        position: absolute;
+        left:0;
+        right:0;
+        z-index: 1;
+    }
+    .item {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .item__count {
+        display: flex;
+        justify-content: space-between
+
+        h3{
+            margin: 10px 0;
+        }
+    }
 }
-.dropdown-content {
-    background-color: #fff;
-    box-sizing: border-box;
-    padding: 15px;
-    height: 140px;
-    display: none;
-    position: absolute;
-    left:0;
-    right:0;
-    z-index: 1;
+
+.dropdown--small {
+    width: 45%;    
+}
+.dropdown--medium {
+    width: 266px;    
 }
 .dropdown-content .count {
     font-size: 18px;
@@ -30,18 +58,4 @@ input {
     border-radius: 60%;
     cursor: pointer;
     justify-content: center;
-}
-.dropdown:hover .dropdown-content {
-    display: flex;
-}
-.arrow-320 {
-    fill: var(--dark-50);
-    width: 24px;
-    height: 24px;
-    position: absolute;
-    margin-top: .5rem;
-    margin-left: -2rem;
-}
-.arrow-320:hover {
-    fill: var(--dark-75);
 }

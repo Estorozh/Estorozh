@@ -1,0 +1,29 @@
+extends ../main.pug
+block head 
+  title Form Elemets
+  link(rel="stylesheet", href="../../assets/css/Form_Elements.css")
+
+include ./text-field/text-field
+include ./dropdown/dropdown
+include ./buttons/button_big
+include ./checkbox/checkbox
+include ./radio-buttons/radio-buttons
+block body
+  .block
+    +text-field('text-field','text','EMAIL','default')
+    +text-field('text-field','text','This is pretty awesome','hover/focus')
+    +dropdown(["спальни","кровати","ванные комнаты"],'text','Сколько будет гостей','dropdown','default')
+    +text-field('Masked text field','date','','default')
+    +dropdown('','date','','date dropdown')(class="dropdown--small")
+    +dropdown('','date','','date dropdown')(class="dropdown--small")
+    +dropdown('','date','19 авг - 23 авг','filter date dropdown')(class="dropdown--medium")
+    +text-field('subscribe text field','text','19 авг - 23 авг','','arrow_forward')(class="text-field--medium")
+  
+  .block 
+    +checkbox('Checkbox Buttons')
+    +radio-button('Radio Buttons')
+
+  //-   +checkbox(['завтрак','письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Телевизор','Шампунь'],'expandle checkbox list')
+
+block footer
+  script(src='../../Form_Elements.js')

@@ -1,0 +1,22 @@
+extends ../main.pug
+block head 
+  title Color&Type
+  link(rel="stylesheet", href="../../assets/css/ColorType.css")
+
+include ./ColorType/ColorType.pug
+block body
+    .colorType
+      .colorType_div
+        +color({'Dark Shade 100%': 'rgba(31, 32, 65, 1)'},'#1F2041')
+        +color({'Dark Shade 75% ': 'rgba(31, 32, 65, 0.75)'},'#1F2041')
+        +color({'Dark Shade 50% ': 'rgba(31, 32, 65, 0.5)'},'#1F2041')
+        +color({'Dark Shade 25%': 'rgba(31, 32, 65, 0.25)'},'#1F2041')
+        +color({'Dark Shade 5%': 'rgba(31, 32, 65, 0.05)'},'#1F2041')
+        +color({'Purple': '#BC9CFF'},'#BC9CFF')
+        +color({'Green': '#6FCF97'}, '#6FCF97')
+
+      .colorType_div
+        +type('tag--h1', 'tag__description--h1', 'H1','This one is the sub-section or widget title')
+        +type('tag--h2', 'tag__description--h2', 'H2','Next one is the item title inside widgets')
+        +type('tag--h3', 'tag__description--h3', 'H3', 'This is a label or CTA text')
+        +type('tag--body', 'tag__description--body','Body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.')
