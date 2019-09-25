@@ -8,6 +8,7 @@ include ./dropdown/dropdown
 include ./buttons/button_big
 include ./checkbox/checkbox
 include ./radio-buttons/radio-buttons
+include ./toggle/toggle
 block body
   .block
     +text-field('text-field','text','EMAIL','default')
@@ -22,6 +23,7 @@ block body
   .block 
     +checkbox('Checkbox Buttons')
     +radio-button('Radio Buttons')
+    +toggle('Toggle')
 
   //-   +checkbox(['завтрак','письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Телевизор','Шампунь'],'expandle checkbox list')
 
