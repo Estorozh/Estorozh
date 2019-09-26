@@ -9,6 +9,7 @@ include ./buttons/button_big
 include ./checkbox/checkbox
 include ./radio-buttons/radio-buttons
 include ./toggle/toggle
+include ./like-buttons/like-buttons
 block body
   .block
     +text-field('text-field','text','EMAIL','default')
@@ -20,12 +21,13 @@ block body
     +dropdown('','date','19 авг - 23 авг','filter date dropdown')(class="dropdown--medium")
     +text-field('subscribe text field','text','19 авг - 23 авг','','arrow_forward')(class="text-field--medium")
   
-  .block 
+  .block1
     +checkbox('Checkbox Buttons')
     +radio-button('Radio Buttons')
     +toggle('Toggle')
-
-  //-   +checkbox(['завтрак','письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Телевизор','Шампунь'],'expandle checkbox list')
+    h3 like button
+    +like-buttons(2,'dislake')
+    +like-buttons(12,'like')
 
 block footer
   script(src='../../Form_Elements.js')

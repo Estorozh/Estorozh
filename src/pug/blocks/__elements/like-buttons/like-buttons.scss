@@ -1,0 +1,53 @@
+.like-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50px;
+
+    .like-buttons__item {
+        cursor: pointer;
+    }
+    .like-buttons__input {
+        display: none;
+    }
+    .like-buttons__text {
+        color: var(--dark-25);
+        margin-left: 25px;
+        font-size: 10px;
+        line-height: 12px;
+    }
+    .like-buttons__item:before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 40px;
+        height: 20px;
+        border: 1px solid var(--dark-25);
+        background-color: transparent;
+        border-radius: 10px;
+        transform: translateY(-5px);
+    }
+    .like-buttons__item:after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 25px;
+        height: 17px;
+        background-image: var(--favorite-empty);
+        background-size: 50%;
+        background-repeat: no-repeat;
+        transition: .5s;
+        transform: translateX(5px);
+    }
+
+    .like-buttons__input:checked + .like-buttons__text {
+        color: var(--purple);
+    }
+    .like-buttons__input:checked + .like-buttons__item::before {
+        border-color: var(--purple);
+    }
+    .like-buttons__input:checked + .like-buttons__item:after {
+        background: var(--favorite);
+        background-size: 50%;
+        background-repeat: no-repeat;
+    }
+}
