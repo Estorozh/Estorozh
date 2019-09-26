@@ -1,0 +1,27 @@
+.rate-button {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 20px;
+
+    .rate-button__item {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+
+        .rate-button__star {
+            list-style: none;
+        }
+        .rate-button__star:before {
+            content: '\2605';
+            color: var(--purple);
+            font-size: 24px;
+            line-height: 20px;
+            width: 24px;
+            cursor: pointer;
+        }
+        .rate-button__star--empty:before {
+            content: '\2606';
+        }
+    }    
+}

@@ -10,6 +10,7 @@ include ./checkbox/checkbox
 include ./radio-buttons/radio-buttons
 include ./toggle/toggle
 include ./like-buttons/like-buttons
+include ./rate-button/rate-button
 block body
   .block
     +text-field('text-field','text','EMAIL','default')
@@ -23,11 +24,19 @@ block body
   
   .block1
     +checkbox('Checkbox Buttons')
-    +radio-button('Radio Buttons')
+    h3 Radio Buttons
+    +radio-button()
     +toggle('Toggle')
     h3 like button
     +like-buttons(2,'dislake')
     +like-buttons(12,'like')
+    h3 rate button
+    +rate-button('stars-left')
+    +rate-button('stars-right')
+
+  .block
+
+
 
 block footer
   script(src='../../Form_Elements.js')
