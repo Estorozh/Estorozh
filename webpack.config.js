@@ -58,6 +58,10 @@ let config = {
         } ]
     },
     devServer: {
+        contentBase: 'dist',
+        index: 'dist/pages/UI/Form_Elements.html',
+        port: 3000,
+        stats: 'errors-only',
         overlay: true
     },
     // devtool: 'source-map',
