@@ -4,16 +4,18 @@
 @import './radio-buttons/radio-buttons.scss';  
 @import './toggle/toggle.scss';  
 @import './like-buttons/like-buttons.scss';  
-@import './rate-button/rate-button.scss';  
+@import './rate-button/rate-button.scss';   
+@import './range-slider/range-slider.scss';   
+// @import '../../../assets/css/less/irs.less';  
 
 body .block {
     display: flex;
     justify-content: space-between;
     align-content: flex-start;
-    flex-basis: 25%;
+    flex-basis: 23%;
     min-width: 280px;
     flex-wrap: wrap;
-    margin: 0 5%;
+    margin: 0 3%;
 }
 body .block1 {
     display: flex;

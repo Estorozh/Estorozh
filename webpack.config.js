@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 const fs = require('fs')
 const glob = require('glob')
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -74,6 +75,11 @@ let config = {
             { from: `${PATHS.src}/assets/fonts`, to: `${PATHS.assets}/fonts` }
             //{ from: PATHS.src + '/static' }
         ]),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            'window.jQuery': 'jquery'
+        }),
         new HtmlWebpackPlugin({
             template: __dirname + '/src/pug/blocks/__elements/ColorType.pug',
             filename: '/pages/UI/ColorType.html',

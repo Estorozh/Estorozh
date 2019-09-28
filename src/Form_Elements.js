@@ -1,4 +1,5 @@
-import './pug/blocks/__elements/Form_Elements.scss'
+import './pug/blocks/__elements/Form_Elements.scss';
+import 'ion-rangeslider';
 
 //active two items in checkbox buttons
 let checkbox = document.getElementsByClassName('checkbox__input');
@@ -18,3 +19,16 @@ let star = document.querySelectorAll('.rate-button__star');
 star[3].classList.add('rate-button__star--full');
 star[9].classList.add('rate-button__star--full');
 
+
+$(".js-range-slider").ionRangeSlider({
+    type: "double",
+    min: 0,
+    max: 15000,
+    from: 5000,
+    to: 10000,
+    keyboard: true,
+    grid: false,
+    skin: "round",
+    hide_min_max: true,
+    postfix: "&#8381;"
+});

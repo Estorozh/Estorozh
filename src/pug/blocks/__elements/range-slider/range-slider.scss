@@ -1,0 +1,72 @@
+.range {
+  width: 266px;
+  margin-top: -36px;
+}
+.irs {
+  position: relative;
+  display: block;
+  user-select: none;
+}
+.irs-hidden-input {
+  position: absolute !important;
+  display: block !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden;
+  outline: none !important;
+  z-index: -9999 !important;
+  background: none !important;
+  border-style: solid !important;
+  border-color: transparent !important;
+}
+.irs-line {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  outline: none !important;
+  top: 36px;
+  height: 6px;
+  background-color: #fff;
+  border: 1px solid var(--dark-25);
+  border-radius: 3px;
+}
+.irs-bar {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 0;
+  top: 37px;
+  height: 6px;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}
+.irs--round .irs-handle {
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  top: 32px;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #fff;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 255, 0.3);
+  z-index: 1;
+  
+  .type_last {
+    z-index: 2;
+  }
+}
+.irs-from,
+.irs-to {
+  width: 250px;
+  position: absolute;
+  left: 0;
+  cursor: default;
+  white-space: wrap;
+}
