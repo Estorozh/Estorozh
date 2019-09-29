@@ -1,0 +1,54 @@
+.buttons-line {
+    display: flex;
+    flex-wrap: wrap;
+    width: 320px;
+    margin-top: 16px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 99px;
+    height: 44px;
+    border-radius: 22px;
+    cursor: pointer;
+    color: white;
+    margin-right: 20px;
+    color: var(--purple);
+}
+//style
+.btn--border {
+    border:double 1px transparent;
+    background-image: linear-gradient(white, white), radial-gradient(at top center, #BC9CFF,#8BA4F9);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    border-radius: 22px;
+}
+.btn--fill {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    color: white;
+}
+.btn--enable {
+    opacity: 1;
+}
+.btn--disable {
+    opacity: 0.5;
+}
+.btn--simple {
+    width: 60px;
+    height: 22px;
+}
+.btn--big {
+    width: 320px;
+
+}
+.btn--big:after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z' fill='white'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    margin-left: 260px;
+}

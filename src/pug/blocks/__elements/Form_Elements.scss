@@ -6,7 +6,8 @@
 @import './like-buttons/like-buttons.scss';  
 @import './rate-button/rate-button.scss';   
 @import './range-slider/range-slider.scss';   
-// @import '../../../assets/css/less/irs.less';  
+@import './buttons/buttons.scss';   
+@import './pagination/pagination.scss';   
 
 body .block {
     display: flex;

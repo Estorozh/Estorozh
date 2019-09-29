@@ -5,12 +5,13 @@ block head
 
 include ./text-field/text-field
 include ./dropdown/dropdown
-include ./buttons/button_big
 include ./checkbox/checkbox
 include ./radio-buttons/radio-buttons
 include ./toggle/toggle
 include ./like-buttons/like-buttons
 include ./rate-button/rate-button
+include ./buttons/buttons
+
 block body
   .block
     +text-field('text-field','text','EMAIL','default')
@@ -38,7 +39,19 @@ block body
     h3 Range slider
     .range
       input(type="text" class="js-range-slider" name="my_range" value="")
-
-
+    h3 Buttons
+      .buttons-line
+        +button('CLICK ME')(class=['btn--enable','btn--fill'])
+        +button('CLICK ME')(class=['btn--disable','btn--fill'])
+      .buttons-line
+        +button('CLICK ME')(class=['btn--enable', 'btn--border'])
+        +button('CLICK ME')(class=['btn--disable', 'btn--border'])
+      .buttons-line
+        +button('CLICK ME')(class=['btn--enable','btn--simple'])
+        +button('CLICK ME')(class=['btn--disable','btn--simple'])
+      .buttons-line
+        +button('ПЕРЕЙТИ К ОПЛАТЕ')(class=['btn--fill','btn--big'])
+    h3 pagination
+      .pagination
 block footer
   script(src='../../Form_Elements.js')

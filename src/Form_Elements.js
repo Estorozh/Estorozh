@@ -1,5 +1,6 @@
 import './pug/blocks/__elements/Form_Elements.scss';
 import 'ion-rangeslider';
+import './pug/blocks/__elements/pagination/pagination.js'
 
 //active two items in checkbox buttons
 let checkbox = document.getElementsByClassName('checkbox__input');
@@ -19,7 +20,7 @@ let star = document.querySelectorAll('.rate-button__star');
 star[3].classList.add('rate-button__star--full');
 star[9].classList.add('rate-button__star--full');
 
-
+//start range-slider
 $(".js-range-slider").ionRangeSlider({
     type: "double",
     min: 0,
@@ -31,4 +32,13 @@ $(".js-range-slider").ionRangeSlider({
     skin: "round",
     hide_min_max: true,
     postfix: "&#8381;"
+});
+
+//pagination
+$(function() {
+    $('.pagination').pagination({
+        items: 100,
+        itemsOnPage: 10,
+        cssStyle: 'light-theme'
+    });
 });
