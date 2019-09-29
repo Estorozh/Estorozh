@@ -37,8 +37,12 @@ $(".js-range-slider").ionRangeSlider({
 //pagination
 $(function() {
     $('.pagination').pagination({
-        items: 100,
-        itemsOnPage: 10,
-        cssStyle: 'light-theme'
+        items: 180,
+        itemsOnPage: 12,
+        cssStyle: 'light-theme',
+        displayedPages: 3,
+        edges: 1,
+        prevText: '',
+        nextText: ''
     });
 });
