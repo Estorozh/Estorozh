@@ -14,14 +14,28 @@ include ./buttons/buttons
 
 block body
   .block
-    +text-field('text-field','text','EMAIL','default')
-    +text-field('text-field','text','This is pretty awesome','hover/focus')
+    h3 text-field
+    span default
+    +text-field('text','EMAIL')
+    h3 text-field
+    span hover/focus
+    +text-field('text','This is pretty awesome')(class="color-75")
+    h3 dropdown
+    span DEFAULT
     +dropdown(["спальни","кровати","ванные комнаты"],'text','Сколько будет гостей','dropdown','default')
-    +text-field('Masked text field','date','','default')
-    +dropdown('','date','','date dropdown')(class="dropdown--small")
-    +dropdown('','date','','date dropdown')(class="dropdown--small")
-    +dropdown('','date','19 авг - 23 авг','filter date dropdown')(class="dropdown--medium")
-    +text-field('subscribe text field','text','19 авг - 23 авг','','arrow_forward')(class="text-field--medium")
+    h3 masked text field
+    span default
+    +text-field('date','')
+    .wrapper
+      h3 date dropdown
+      +dropdown('','date','','date dropdown')(class="dropdown--small")
+    .wrapper
+      h3 date dropdown
+      +dropdown('','date','','date dropdown')(class="dropdown--small")
+    h3 filter date dropdown
+    +dropdown('','text','19 авг - 23 авг')(class=["size-medium",'arrow--down','color-75'])
+    h3 subscribe text field
+    +text-field('text','Email')(class=['size-medium','arrow--forward'])
   
   .block1
     +checkbox('Checkbox Buttons')
@@ -54,7 +68,21 @@ block body
     h3 pagination
       .pagination
       span.pagination--text 1-12 из 100+ вариантов аренды
-        
+  .block.block-dropdown
+    h3 dropdown
+    span default
+    +dropdown(["спальни","кровати","ванные комнаты"],'text','2 спальни, 2 кровати...')(class="size-medium")
+    h3 dropdown
+    span Expanded
+    +dropdown(["спальни","кровати","ванные комнаты"],'text','2 спальни, 2 кровати...')(class=["size-medium",'expanded'])
+  .block.block-dropdown
+    h3 dropdown
+    span default
+    +dropdown(["взрослые","дети","младенцы"],'text','Сколько гостей')(class="size-medium")
+  .block.block-dropdown
+    h3 dropdown
+    span default
+    +dropdown(["взрослые","дети","младенцы"],'text','2 спальни, 2 кровати...')(class="size-medium")
 
 block footer
   script(src='../../Form_Elements.js')

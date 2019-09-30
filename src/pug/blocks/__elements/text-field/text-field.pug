@@ -1,10 +1,4 @@
-mixin text-field(h3text,type,placeholder,span,bool)
+mixin text-field(type,placeholder)
   .text-field(class!=attributes.class)
-    if(bool)
-      label
-        svg.arrow
-          use(xlink:href="#"+bool)
-    h3= h3text
-    span= span
     input(type=type placeholder=placeholder)
 

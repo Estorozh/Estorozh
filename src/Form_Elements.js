@@ -20,6 +20,7 @@ let star = document.querySelectorAll('.rate-button__star');
 star[3].classList.add('rate-button__star--full');
 star[9].classList.add('rate-button__star--full');
 
+
 //start range-slider
 $(".js-range-slider").ionRangeSlider({
     type: "double",
@@ -46,3 +47,8 @@ $(function() {
         nextText: ''
     });
 });
+
+// let dropdown = document.getElementsByClassName('dropdown');
+// dropdown.onClick = dropdown.classList.add('expanded');
+// console.dir(dropdown);
+// dropdownExpanded[0].children[1].style.display="block";

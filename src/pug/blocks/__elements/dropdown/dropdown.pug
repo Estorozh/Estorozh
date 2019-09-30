@@ -1,18 +1,13 @@
 //- шаблон для создания dropdown - +dropdown([one,two,three])
 
-mixin dropdown(attr,type,placeholder,h3text,span)
-  .dropdown(class!=attributes.class)
-    label
-      svg.arrow
-        use(xlink:href="#arrow")
-    h3= h3text  
-    span= span
+mixin dropdown(attr,type,placeholder)
+  .dropdown(class!=attributes.class, onclick='children[1].classList.toggle("show");')
     input(type=type,placeholder=placeholder)
-    .dropdown-content._bRadius._border
+    .dropdown-content
       each i in attr
         .item
-          h3= i
+          span.item__text= i
           .item__count
             .count.minus -
-            h3.num_item1 2
+            span.count__text 2
             .count.plus +

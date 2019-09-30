@@ -1,3 +1,4 @@
+@import './general.scss';
 @import './dropdown/dropdown.scss';
 @import './checkbox/checkbox.scss';
 @import './text-field/text-field.scss';  
@@ -17,6 +18,13 @@ body .block {
     min-width: 280px;
     flex-wrap: wrap;
     margin: 0 3%;
+    h3{
+        margin: 10px 0;
+    }
+    span {
+        align-self: center;
+        text-transform: uppercase;
+    }
 }
 body .block1 {
     display: flex;
@@ -30,6 +38,12 @@ body .block1 {
         width: 100%;
     }
 }
+.wrapper {
+    width: 50%;
+}
+.color-75 input {
+    color: var(--dark-75);
+}
 .simple-pagination {
     margin-top: 15px;
 }
@@ -38,4 +52,14 @@ body .block1 {
     color: var(--dark-75);
     line-height: 24px;
     font-family:  "Montserrat-bold";
+}
+body .block-dropdown {
+    margin-top: 100px;
+
+    h3{
+        width: 50%;
+    }
+    span {
+        margin-right: 85px;
+    }
 }

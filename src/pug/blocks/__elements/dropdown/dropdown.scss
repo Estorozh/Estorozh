@@ -1,19 +1,11 @@
-@import '../general.scss';
-
 .dropdown {
     display: flex;
     flex-wrap: wrap;
     position: relative;
     width: 100%;
     justify-content: space-between;
+    cursor: pointer;
     
-    input {
-        cursor: pointer;
-    }
-    span {
-        align-self: center;
-        text-transform: uppercase;
-    }
     .dropdown-content {
         background-color: #fff;
         box-sizing: border-box;
@@ -25,27 +17,37 @@
         left:0;
         right:0;
         z-index: 1;
+        border: 1px solid var(--dark-25);
     }
     .item {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .item__text {
+        color: var(--dark-100);
+        font-family:  var(--montserrat_bold);
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
     }
     .item__count {
         display: flex;
         justify-content: space-between
-
-        h3{
-            margin: 10px 0;
-        }
+    }
+    .show {
+        display: flex;
     }
 }
 
 .dropdown--small {
-    width: 45%;    
+    width: 150px;
 }
-.dropdown--medium {
-    width: 266px;    
+.size-medium {
+    width: 266px;
 }
 .dropdown-content .count {
     font-size: 18px;
@@ -58,4 +60,14 @@
     border-radius: 60%;
     cursor: pointer;
     justify-content: center;
+}
+
+.dropdown:after {
+    content: '';
+    position: absolute;
+    width: 97%;
+    height: 44px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z' fill='rgba(31, 32, 65, 0.5)'/%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right center;
 }

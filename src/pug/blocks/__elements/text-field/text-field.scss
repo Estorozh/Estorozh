@@ -1,20 +1,10 @@
 .text-field {
+    position: relative;
     display: flex;
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
-
-     h3,  span {
-        width: 50%;
-    }
-    span {
-        align-self: center;
-        text-transform: uppercase;
-    }
 }
-.text-field--medium {
+.size-medium {
     width: 266px;    
-    h3 {
-        width: 100%;
-    }
 }
