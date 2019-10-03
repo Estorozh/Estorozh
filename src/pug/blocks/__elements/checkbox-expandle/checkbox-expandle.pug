@@ -1,0 +1,6 @@
+mixin checkbox-expandle(text,checkboxItems)
+    .checkbox-expandle.arrow--down(onclick='children[1].classList.toggle("show"); classList.toggle("arrow--up"); classList.toggle("arrow--down");')
+        h3.text= text
+        .checkbox-expandle__body.checkbox
+            each item in checkboxItems
+                +checkboxItem(item)

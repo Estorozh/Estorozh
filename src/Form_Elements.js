@@ -1,6 +1,7 @@
 import './pug/blocks/__elements/Form_Elements.scss';
 import 'ion-rangeslider';
 import './pug/blocks/__elements/pagination/pagination.js'
+import './pug/blocks/__elements/dropdown/dropdown.min.js'
 
 //active two items in checkbox buttons
 let checkbox = document.getElementsByClassName('checkbox__input');
@@ -47,8 +48,24 @@ $(function() {
         nextText: ''
     });
 });
+//settings dropdown
+$(document).ready(() => {
+    $('.iqdropdown').iqDropdown({
+        minItems: 0,
+        maxItems: 9,
+    });
+  });
 
-// let dropdown = document.getElementsByClassName('dropdown');
-// dropdown.onClick = dropdown.classList.add('expanded');
-// console.dir(dropdown);
-// dropdownExpanded[0].children[1].style.display="block";
+//open expandle_checkbox
+let showCheckboxExpandle = document.getElementsByClassName('checkbox-expandle__body')[1];
+showCheckboxExpandle.style.display="flex";
+showCheckboxExpandle.click();
+showCheckboxExpandle.children[1].click();
+showCheckboxExpandle.children[2].click();
+showCheckboxExpandle.children[3].click();
+//option margin top
+let option = document.getElementsByClassName('option')[0];
+option.setAttribute("style","margin-top: 260px;");
+
+
+

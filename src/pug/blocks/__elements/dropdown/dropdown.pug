@@ -1,13 +1,13 @@
-//- шаблон для создания dropdown - +dropdown([one,two,three])
-
-mixin dropdown(attr,type,placeholder)
-  .dropdown(class!=attributes.class, onclick='children[1].classList.toggle("show");')
-    input(type=type,placeholder=placeholder)
-    .dropdown-content
-      each i in attr
-        .item
-          span.item__text= i
-          .item__count
-            .count.minus -
-            span.count__text 2
-            .count.plus +
+mixin dropdown()
+    .iqdropdown
+        p.iqdropdown-selection
+        .iqdropdown-menu
+            .iqdropdown-menu-option(data-id="item1")
+                div
+                    p.iqdropdown-item Спальни
+            .iqdropdown-menu-option(data-id="item2")
+                div
+                    p.iqdropdown-item Кровати
+            .iqdropdown-menu-option(data-id="item3")
+                div
+                    p.iqdropdown-item Ванные комнаты

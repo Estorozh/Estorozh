@@ -1,5 +1,4 @@
 @import './general.scss';
-@import './dropdown/dropdown.scss';
 @import './checkbox/checkbox.scss';
 @import './text-field/text-field.scss';  
 @import './radio-buttons/radio-buttons.scss';  
@@ -9,6 +8,9 @@
 @import './range-slider/range-slider.scss';   
 @import './buttons/buttons.scss';   
 @import './pagination/pagination.scss';   
+@import './dropdown/dropdown.min.scss';   
+@import './checkbox-expandle/checkbox-expandle.scss';   
+@import './option/option.scss';   
 
 body .block {
     display: flex;
@@ -26,13 +28,14 @@ body .block {
         text-transform: uppercase;
     }
 }
+//а нужен ли block1???
 body .block1 {
     display: flex;
     align-content: flex-start;
-    flex-basis: 25%;
+    flex-basis: 23%;
     min-width: 280px;
     flex-wrap: wrap;
-    margin: 0 5%;
+    margin: 0 3%;
 
     h3 {
         width: 100%;
@@ -55,11 +58,7 @@ body .block1 {
 }
 body .block-dropdown {
     margin-top: 100px;
-
-    h3{
-        width: 50%;
-    }
-    span {
-        margin-right: 85px;
-    }
+}
+body .block-list {
+    margin-top: 150px;
 }

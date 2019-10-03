@@ -4,13 +4,15 @@ block head
   link(rel="stylesheet", href="../../assets/css/Form_Elements.css")
 
 include ./text-field/text-field
-include ./dropdown/dropdown
 include ./checkbox/checkbox
 include ./radio-buttons/radio-buttons
 include ./toggle/toggle
 include ./like-buttons/like-buttons
 include ./rate-button/rate-button
 include ./buttons/buttons
+include ./dropdown/dropdown
+include ./checkbox-expandle/checkbox-expandle
+include ./option/option
 
 block body
   .block
@@ -22,18 +24,18 @@ block body
     +text-field('text','This is pretty awesome')(class="color-75")
     h3 dropdown
     span DEFAULT
-    +dropdown(["спальни","кровати","ванные комнаты"],'text','Сколько будет гостей','dropdown','default')
+    +dropdown()
     h3 masked text field
     span default
     +text-field('date','')
     .wrapper
       h3 date dropdown
-      +dropdown('','date','','date dropdown')(class="dropdown--small")
+      +dropdown()(class="dropdown--small")
     .wrapper
       h3 date dropdown
-      +dropdown('','date','','date dropdown')(class="dropdown--small")
+      +dropdown()(class="dropdown--small")
     h3 filter date dropdown
-    +dropdown('','text','19 авг - 23 авг')(class=["size-medium",'arrow--down','color-75'])
+    +dropdown()(class=["size-medium",'arrow--down','color-75'])
     h3 subscribe text field
     +text-field('text','Email')(class=['size-medium','arrow--forward'])
   
@@ -68,21 +70,31 @@ block body
     h3 pagination
       .pagination
       span.pagination--text 1-12 из 100+ вариантов аренды
+  
+  .block.block-dropdown
+    .size-medium
+      h3 dropdown
+      span default
+    +dropdown()(class="size-medium")
+    .size-medium
+      h3 dropdown
+      span Expanded
+    +dropdown()(class=["size-medium",'expanded'])
+        
   .block.block-dropdown
     h3 dropdown
-    span default
-    +dropdown(["спальни","кровати","ванные комнаты"],'text','2 спальни, 2 кровати...')(class="size-medium")
-    h3 dropdown
-    span Expanded
-    +dropdown(["спальни","кровати","ванные комнаты"],'text','2 спальни, 2 кровати...')(class=["size-medium",'expanded'])
+    +dropdown()
+        
   .block.block-dropdown
     h3 dropdown
-    span default
-    +dropdown(["взрослые","дети","младенцы"],'text','Сколько гостей')(class="size-medium")
-  .block.block-dropdown
-    h3 dropdown
-    span default
-    +dropdown(["взрослые","дети","младенцы"],'text','2 спальни, 2 кровати...')(class="size-medium")
+    +dropdown()
+
+  .block.block-list
+    .size-medium
+      +checkbox-expandle('expandable checkbox list','')
+      +checkbox-expandle('expandable checkbox list',['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Телевизор','Шампунь'])
+      +option('var(--smile)','Комфорт','Шумопоглощающие стены')
+      +option('var(--home)','text')
 
 block footer
   script(src='../../Form_Elements.js')

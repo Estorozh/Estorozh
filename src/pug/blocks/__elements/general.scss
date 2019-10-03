@@ -5,6 +5,7 @@ input {
     height: 44px;
     color: var(--dark-25);
     flex-basis: 100%;
+    border: 1px solid var(--dark-50);
 }
 .dropdown label, .text-field label {
     display: flex;
@@ -28,6 +29,15 @@ input {
     width: 97%;
     height: 44px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3Cpath d='M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z' fill='%231F2041'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+.arrow--up:after {
+    content: '';
+    position: absolute;
+    width: 97%;
+    height: 44px;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.40625 7.42187L1.74709e-06 6.01562L6 0.0156231L12 6.01562L10.5938 7.42187L6 2.82812L1.40625 7.42187Z' fill='%231F2041' fill-opacity='0.5'/%3E%3C/svg%3E%0A");
     background-repeat: no-repeat;
     background-position: right center;
 }
