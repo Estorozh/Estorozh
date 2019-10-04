@@ -1,1 +1,5 @@
-h1 file
+mixin bullet-list()
+  -var list=['Нельзя с питомцами','Без вечеринок и мероприятий','Время прибытия — после 13:00, а выезд до 12:00']
+  .bullet-list
+    each text in list
+      span.bullet-list__items= text

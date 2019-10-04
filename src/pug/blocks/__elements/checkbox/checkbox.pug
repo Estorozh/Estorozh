@@ -1,12 +1,11 @@
 mixin checkboxItem(item)
   label
     input(type="checkbox" class="checkbox__input")
-    span.check
+    span.checkbox__input--check
     span.list__item= item
 
-mixin checkbox(h3text)
+mixin checkbox()
   .checkbox
     -var list = ['Можно курить','Можно с питомцами','Можно пригласить гостей (до 10 человек)']
-    span= h3text
     each item in list
       +checkboxItem(item)

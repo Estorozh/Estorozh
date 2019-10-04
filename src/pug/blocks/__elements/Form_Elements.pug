@@ -13,6 +13,9 @@ include ./buttons/buttons
 include ./dropdown/dropdown
 include ./checkbox-expandle/checkbox-expandle
 include ./option/option
+include ./checkbox_rich/checkbox_rich
+include ./bullet-list/bullet-list
+
 
 block body
   .block
@@ -40,6 +43,7 @@ block body
     +text-field('text','Email')(class=['size-medium','arrow--forward'])
   
   .block1
+    h3 checkbox Buttons
     +checkbox('Checkbox Buttons')
     h3 Radio Buttons
     +radio-button()
@@ -95,6 +99,14 @@ block body
       +checkbox-expandle('expandable checkbox list',['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Телевизор','Шампунь'])
       +option('var(--smile)','Комфорт','Шумопоглощающие стены')
       +option('var(--home)','text')
+  
+  .block.block-list
+    h3 rich Checkbox Buttons
+    +checkbox_rich()
+
+  .block.block-list
+    h3 bulet list
+    +bullet-list()
 
 block footer
   script(src='../../Form_Elements.js')

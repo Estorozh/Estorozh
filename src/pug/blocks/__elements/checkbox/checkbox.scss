@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     align-content: flex-start;
     h3, label {
-        flex-basis: 100%;
+        flex-basis:100%;
         align-self: flex-start;
     }
     label {
@@ -19,7 +19,7 @@
             text-align: left;
         }
     }
-    input[type="checkbox"] {
+    .checkbox__input {
         visibility: hidden;
         position: absolute;
         width: 20px;
@@ -28,7 +28,7 @@
     input + span {
         cursor: pointer;
     }
-    .check {
+    .checkbox__input--check {
         display: inline-flex;
         width:20px;
         height:20px;
@@ -36,7 +36,7 @@
         border-radius: 4px;
         margin-right: 10px;
     }
-    input[type="checkbox"]:checked + .check:before {
+    .checkbox__input:checked + .checkbox__input--check:before {
         display: inline-flex;
         width: 20px;
         height: 20px;
