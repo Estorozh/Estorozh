@@ -1,7 +1,7 @@
 .radio-button {
     display: flex;
     flex-wrap: wrap;
-    flex-basis: 260px;
+    flex-basis: rem(260);
 
     h3 {
         width: 100%;
@@ -12,8 +12,8 @@
         flex-basis: 30%;
         cursor: pointer;
         position: relative;
-        padding-left: 30px;
-        font-size: 13px;
+        padding-left: rem(30);
+        font-size: rem(13);
     }
     .radio-button__input {
         display: none;
@@ -21,8 +21,8 @@
     .radio-button__text:before {
         content: '';
         display: inline-block;
-        width: 1.3rem;
-        height: 1.3rem;
+        width: rem(20);
+        height: rem(20);
         position: absolute;
         left: 0;
         top: -.3rem;
@@ -39,10 +39,10 @@
     .radio-button__input:checked + .radio-button__text:after {
         content: '';
         position: absolute;
-        left: .3rem;
+        left: rem(4.5);
         top: 0;
-        width: .8rem;
-        height: .8rem;
+        width: rem(12);
+        height: rem(12);
         border-radius: 50%;
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     }

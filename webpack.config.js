@@ -51,6 +51,14 @@ let config = {
                 name: '[name].[ext]'
             }
         }, {
+            test: /\.(png|svg|jpg|gif)$/,
+            use:[ {
+              loader: 'file-loader',
+              options: {
+                name: '[name].[ext]'
+              }
+            } ]
+          }, {
             test: /\.pug$/,
             loader: 'pug-loader',
             options: {
@@ -71,7 +79,7 @@ let config = {
             filename:"./assets/css/[name].css",
         }),
         new CopyWebpackPlugin([
-            { from: `${PATHS.src}/assets/img`, to: `${PATHS.assets}/img` },
+            { from: `${PATHS.src}/assets/img`, to: `${PATHS.dist}/assets/img`},
             { from: `${PATHS.src}/assets/fonts`, to: `${PATHS.assets}/fonts` }
             //{ from: PATHS.src + '/static' }
         ]),

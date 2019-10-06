@@ -1,0 +1,11 @@
+mixin feedback(name,time,content)
+  .feedback
+    .feedback__left-elem.elem
+      img(src='./../../assets/img/image.png')
+    .feedback__right-elem.elem
+      span.feedback__right-elem__content.name= name
+      span.feedback__right-elem__content= time
+    .feedback__left-elem.elem
+      +like-buttons(12,'murad')
+    .feedback__right-elem.elem
+      span.feedback__right-elem__content= content

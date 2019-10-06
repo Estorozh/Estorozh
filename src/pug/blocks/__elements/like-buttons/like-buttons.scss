@@ -1,7 +1,7 @@
 .like-buttons {
     display: flex;
     flex-wrap: wrap;
-    width: 50px;
+    width: rem(50);
 
     .like-buttons__item {
         cursor: pointer;
@@ -11,27 +11,27 @@
     }
     .like-buttons__text {
         color: var(--dark-25);
-        margin-left: 25px;
-        font-size: 10px;
-        line-height: 12px;
+        margin-left: rem(20);
+        font-size: rem(10);
+        line-height: rem(10);
     }
     .like-buttons__item:before {
         content: '';
         display: inline-block;
         position: absolute;
-        width: 40px;
-        height: 20px;
+        width: rem(40);
+        height: rem(20);
         border: 1px solid var(--dark-25);
         background-color: transparent;
-        border-radius: 10px;
+        border-radius: rem(10);
         transform: translateY(-5px);
     }
     .like-buttons__item:after {
         content: '';
         display: inline-block;
         position: absolute;
-        width: 25px;
-        height: 17px;
+        width: rem(25);
+        height: rem(17);
         background-image: var(--favorite-empty);
         background-size: 50%;
         background-repeat: no-repeat;

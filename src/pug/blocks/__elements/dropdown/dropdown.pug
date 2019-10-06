@@ -1,13 +1,22 @@
-mixin dropdown()
-    .iqdropdown
-        p.iqdropdown-selection
-        .iqdropdown-menu
-            .iqdropdown-menu-option(data-id="item1")
-                div
-                    p.iqdropdown-item Спальни
-            .iqdropdown-menu-option(data-id="item2")
-                div
-                    p.iqdropdown-item Кровати
-            .iqdropdown-menu-option(data-id="item3")
-                div
-                    p.iqdropdown-item Ванные комнаты
+mixin items(list)
+  each i in list
+    .items
+      span.items__text= i
+      .items__count
+        span.items__count--style.items__count__minus -
+        span.items__count--style.items__count__text 0
+        span.items__count--style.items__count__plus +
+
+mixin dropdown(variant, booleanBtn, dropdownText)
+  -var Сonveniences= ['спальни','кровати','ванные комнаты']
+  -var People= ['взрослые','дети','младенцы']
+  .dropdown(id="dropdown")&attributes(attributes)= dropdownText
+    .dropdown__content
+      if(variant=="People")
+        +items(People)
+      if(variant=="Сonveniences")
+        +items(Сonveniences)
+      if(booleanBtn==true)
+        .button
+          +button('Очистить')(class=['btn--disable','btn--simple'])
+          +button('Применить')(class=['btn--enable','btn--simple'])

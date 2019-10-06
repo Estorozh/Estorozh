@@ -1,0 +1,30 @@
+.feedback {
+    display: flex;
+    flex-wrap: wrap;
+    .feedback__left-elem {
+        flex-basis: 5vw;
+        overflow: hidden;
+        min-width: 60px;
+
+        img {
+            border-radius: 50%;
+        }
+    }
+    .feedback__right-elem {
+        flex-basis: 45vw;
+        flex-grow:1;
+        align-self: flex-start;
+        margin-bottom: rem(30);
+        .feedback__right-elem__content {
+            display: block;
+            text-align: left;
+            max-width: rem(500);
+            font-family: var(--montserat_reg);
+            font-size: 14px;
+            color: var(--dark-75);
+        }
+        .name {
+            font-family: var(--montserat_bold);
+        }
+    }
+}

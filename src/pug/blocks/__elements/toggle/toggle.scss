@@ -11,8 +11,8 @@
         cursor: pointer;
         flex-basis: 100%;
         position: relative;
-        padding-left: 45px;
-        margin-bottom: 10px;
+        padding-left: rem(45);
+        margin-bottom: rem(10);
     }
     .toggle__input {
         display: none;
@@ -27,27 +27,27 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 30px;
-        height: 15px;
+        width: rem(30);
+        height: rem(15);
         border: 1px solid var(--dark-25);
-        border-radius: 10px;
+        border-radius: rem(10);
 
     }
     .toggle__text:after {
         content: '';
         display: inline-block;
         position: absolute;
-        top: 2px;
-        left: 2px;
+        top: rem(1);
+        left: rem(1);
         right: 0;
-        width: 13px;
-        height: 13px;
+        width: rem(13);
+        height: rem(13);
         border-radius: 50%;
         background-color: var(--dark-25);
         transition: 1s;
     }
     .toggle__input:checked + .toggle__text:after {
-        transform: translateX(15px);
+        transform: translateX(rem(15));
         background-color: var(--purple);
     }
     .toggle__input:checked + .toggle__text:before {

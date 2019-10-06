@@ -8,13 +8,17 @@
 @import './range-slider/range-slider.scss';   
 @import './buttons/buttons.scss';   
 @import './pagination/pagination.scss';   
-@import './dropdown/dropdown.min.scss';   
+@import './dropdown/dropdown.scss';   
 @import './checkbox-expandle/checkbox-expandle.scss';   
 @import './option/option.scss';   
 @import './checkbox_rich/checkbox_rich.scss';   
 @import './bullet-list/bullet-list.scss';   
+@import './feedback/feedback.scss';   
 
-body .block {
+body {
+    margin-bottom: 20px;
+}
+.block {
     display: flex;
     justify-content: space-between;
     align-content: flex-start;
@@ -44,7 +48,10 @@ body .block1 {
     }
 }
 .wrapper {
-    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 60vw;    
+    align-content: space-between;
 }
 .color-75 input {
     color: var(--dark-75);
@@ -63,4 +70,11 @@ body .block-dropdown {
 }
 body .block-list {
     margin-top: 150px;
+}
+.wrapper_content {
+    margin: 0 3vw;
+    min-width: 23vw
+}
+.flex-grow {
+    flex-grow: 1;
 }

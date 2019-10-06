@@ -1,7 +1,7 @@
 import './pug/blocks/__elements/Form_Elements.scss';
 import 'ion-rangeslider';
 import './pug/blocks/__elements/pagination/pagination.js'
-import './pug/blocks/__elements/dropdown/dropdown.min.js'
+import './pug/blocks/__elements/dropdown/dropdown.js'
 
 //active two items in checkbox buttons
 let checkbox = document.getElementsByClassName('checkbox__input');
@@ -14,8 +14,9 @@ radio[0].checked = true;
 
 //active right like-buttons
 let like = document.getElementsByClassName('like-buttons__input');
-
 like[1].checked = true;
+like[2].checked = true;
+
 // active 4 star in left stars and all in right stars
 let star = document.querySelectorAll('.rate-button__star');
 star[3].classList.add('rate-button__star--full');
@@ -49,12 +50,12 @@ $(function() {
     });
 });
 //settings dropdown
-$(document).ready(() => {
-    $('.iqdropdown').iqDropdown({
-        minItems: 0,
-        maxItems: 9,
-    });
-  });
+// $(document).ready(() => {
+//     $('.iqdropdown').iqDropdown({
+//         minItems: 0,
+//         maxItems: 9,
+//     });
+//   });
 
 //open expandle_checkbox
 let showCheckboxExpandle = document.getElementsByClassName('checkbox-expandle__body')[1];
