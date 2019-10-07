@@ -1,18 +1,18 @@
 @font-face {
     font-family: "Montserrat-bold";
-    src:url('/src/fonts/bold/Montserrat.woff') format('woff'),
-        url('/src/fonts/bold/Montserrat.ttf') format('trietype'),
-        url('/src/fonts/bold/Montserrat.svg') format('svg')
-}
+    src:url('../fonts/Montserrat-bold.woff') format('woff'),
+        url('../fonts/Montserrat-bold.ttf') format('trietype'),
+        url('../fonts/Montserrat-bold.svg') format('svg')
+}  
 @font-face {
     font-family: "Montserrat-regular";
-    src:url('/src/fonts/bold/Montserrat.woff') format('woff'),
-        url('/src/fonts/bold/Montserrat.ttf') format('trietype'),
-        url('/src/fonts/bold/Montserrat.svg') format('svg')
+    src:url('../fonts/Montserrat-reg.woff') format('woff'),
+        url('../fonts/Montserrat-reg.ttf') format('trietype'),
+        url('../fonts/Montserrat-reg.svg') format('svg')
 }
 @font-face {
     font-family: "OpenSans";
-    src:url('/src/fonts/Open_Sans/OpenSans-Bold.woff') format('woff'),
-        url('/src/fonts/Open_Sans/OpenSans-Bold.ttf') format('trietype'),
-        url('/src/fonts/Open_Sans/OpenSans-Bold.svg') format('svg')
-}
+    src:url('../fonts/OpenSans-Bold.woff') format('woff'),
+        url('../fonts/OpenSans-Bold.ttf') format('trietype'),
+        url('../fonts/OpenSans-Bold.svg') format('svg')
+} 

@@ -1,6 +1,7 @@
 .option {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border-bottom: 1px solid rgba(31, 32, 65, 0.1);
     min-height: 60px;
 
@@ -12,5 +13,11 @@
     }
     .content {
         flex-grow: 1;
+        h3, span {
+            text-transform: none;
+            color: var(--dark-75);
+            line-height: rem(18);
+            font-size: 14px;
+        }
     }
 }

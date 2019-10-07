@@ -45,13 +45,14 @@ let config = {
                 }
             ]
         }, {
-            test: /\.(woff(2)?|ttf|svg)(\?v=\d+\.\d+\.\d+)?$/,
-            loader: 'file-loader',
-            options: {
-                name: '[name].[ext]'
-            }
+            test: /\.(woff(2)?|ttf|svg)(\?v=\d+\.\d+\.\d+)?$/, 
+                loader: 'file-loader',
+                options: {
+                    publicPath: '../../',
+                    name: 'assets/fonts/[name].[ext]'
+                }
         }, {
-            test: /\.(png|svg|jpg|gif)$/,
+            test: /\.(png|jpg|gif)$/,
             use:[ {
               loader: 'file-loader',
               options: {
@@ -80,7 +81,7 @@ let config = {
         }),
         new CopyWebpackPlugin([
             { from: `${PATHS.src}/assets/img`, to: `${PATHS.dist}/assets/img`},
-            { from: `${PATHS.src}/assets/fonts`, to: `${PATHS.assets}/fonts` }
+            // { from: `${PATHS.src}/assets/fonts`, to: `${PATHS.dist}/assets/fonts` }
             //{ from: PATHS.src + '/static' }
         ]),
         new webpack.ProvidePlugin({

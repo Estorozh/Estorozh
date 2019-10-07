@@ -48,7 +48,9 @@ block body
     +checkbox('Checkbox Buttons')
     h3 Radio Buttons
     +radio-button()
-    +toggle('Toggle')
+    h3 Toggle
+    +toggle('получать спецпредложения')(checked)
+    +toggle('получать спецпредложения')
     h3 like button
     +like-buttons(2,'dislake')
     +like-buttons(12,'like')
@@ -101,7 +103,7 @@ block body
       +checkbox-expandle('expandable checkbox list','')
       +checkbox-expandle('expandable checkbox list',['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Телевизор','Шампунь'])
       +option('var(--smile)','Комфорт','Шумопоглощающие стены')
-      +option('var(--home)','text')
+      +option('var(--home)','Удобство','Окно в каждой из спален')
 
   .block-list.wrapper
     .size-medium.wrapper_content
