@@ -1,4 +1,4 @@
-mixin text-field(type,placeholder)
-  .text-field(class!=attributes.class)
-    input(type=type placeholder=placeholder)
+mixin text-field(type,placeholder,arrow)
+  .text-field(class=arrow)(class!=attributes.class)
+    input(type=type placeholder=placeholder)(class!=attributes.class)
 

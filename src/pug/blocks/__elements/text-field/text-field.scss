@@ -1,7 +1,16 @@
+
 .text-field {
     position: relative;
     display: flex;
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+.text-field--small {
+    max-width: 150px;
+}
+.wrapper-dropdown {
+    display: inherit;
+    flex-wrap: wrap;
+    width: 45%;
 }

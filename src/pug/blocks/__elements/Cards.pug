@@ -1,0 +1,90 @@
+extends ../main.pug
+block head 
+  title Cards
+  link(rel="stylesheet", href="../../assets/css/Cards.css")
+
+include ./text-field/text-field
+include ./checkbox/checkbox
+include ./radio-buttons/radio-buttons
+include ./toggle/toggle
+include ./like-buttons/like-buttons
+include ./rate-button/rate-button
+include ./buttons/buttons
+include ./dropdown/dropdown
+include ./checkbox-expandle/checkbox-expandle
+include ./option/option
+include ./checkbox_rich/checkbox_rich
+include ./bullet-list/bullet-list
+include ./feedback/feedback
+
+block body
+  .block
+    .block-card
+      h1 Найдем номера под ваши желания
+      .wrapper-dropdown.mt-20
+        h3 прибытие
+        +text-field('date','','arrow--down')(class="text-field--small")
+      .wrapper-dropdown.mt-20
+        h3 выезд
+        +text-field('date','','arrow--down')(class="text-field--small")
+      h3 гости
+      +dropdown('People',true,'Сколько гостей')(class="arrow--down")
+      +button('ПОДОБРАТЬ НОМЕР')(class=['btn--fill','btn--big','mt-30'])
+
+    .block-card.mt-40
+      h1.mt-40 Регистрация аккаунта
+      +text-field('','Имя')(class="mt-20")
+      +text-field('','Фамилия')(class="mt-10")
+      +radio-button()(class="mt-10")
+      h3.mt-20 дата рождения
+      +text-field('date','')
+      h3.mt-20 данные для входа в сервис
+      +text-field('','Email')
+      +text-field('','Пароль')(class="mt-10")
+      +toggle('получать спецпредложения')(class="mt-10")
+      +button('ПЕРЕЙТИ К ОПЛАТЕ')(class=['btn--fill','btn--big','mt-30'])
+      .auth.mt-30
+        span Уже есть аккаунт на Toxin
+        +button('ВОЙТИ')(class=['btn--enable', 'btn--border'])
+  .block
+    .block-card
+      h1.number № 8 8 8 
+        span.number люкс
+      span.number 9 990&#8381; в сутки
+      .wrapper-dropdown.mt-20
+        h3 прибытие
+        +text-field('date','','arrow--down')(class="text-field--small")
+      .wrapper-dropdown.mt-20
+        h3 выезд
+        +text-field('date','','arrow--down')(class="text-field--small")
+      h3 гости
+      +dropdown('People',true,'3 гостя')(class="arrow--down")
+      .line.mt-20
+        span 9 990₽ х 4 суток
+        span.price 39 960₽
+      .line.mt-10
+        span.info Сбор за услуги: скидка 2 179₽
+        span.price 0₽
+      .line.mt-10
+        span.info Сбор за дополнительные услуги  
+        span.line_price 300₽
+      .line
+        h3 Итого
+        .border-bottom
+        h3 38 081₽
+      +button('ЗАБРОНИРОВАТЬ')(class=['btn--fill','btn--big','mt-30'])
+
+    .block-card.mt-40
+      h1 Войти
+      +text-field('','Email')(class="mt-20")
+      +text-field('','Пароль')(class="mt-10")
+      +button('ВОЙТИ')(class=['btn--fill','btn--big','mt-20'])
+      .auth.mt-30
+        span Нет аккаунта на Toxin?
+        +button('Создать')(class=['btn--enable', 'btn--border'])
+
+  .block
+    .block-card
+
+block footer
+  script(src='../../Cards.js')

@@ -32,12 +32,12 @@ block body
     h3 masked text field
     span default
     +text-field('date','')
-    .wrapper
+    .wrapper-dropdown
       h3 date dropdown
-      +dropdown()(class="dropdown--small")
-    .wrapper
+      +text-field('date','','arrow--down')(class="text-field--small")
+    .wrapper-dropdown
       h3 date dropdown
-      +dropdown()(class="dropdown--small")
+      +text-field('date','19.08.2019','arrow--down')(class="text-field--small")
     h3 filter date dropdown
     +dropdown()(class=["size-medium",'arrow--down','color-75'])
     h3 subscribe text field

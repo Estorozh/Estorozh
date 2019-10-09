@@ -1,5 +1,5 @@
 mixin radio-button()
-  .radio-button
+  .radio-button(class!=attributes.class)
     label.radio-button__item
       input(type="radio" class="radio-button__input" name="sex")
       span.radio-button__text Мужчина

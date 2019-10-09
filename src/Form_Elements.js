@@ -49,13 +49,6 @@ $(function() {
         nextText: ''
     });
 });
-//settings dropdown
-// $(document).ready(() => {
-//     $('.iqdropdown').iqDropdown({
-//         minItems: 0,
-//         maxItems: 9,
-//     });
-//   });
 
 //open expandle_checkbox
 let showCheckboxExpandle = document.getElementsByClassName('checkbox-expandle__body')[1];

@@ -12,6 +12,8 @@ h1 {
     font-weight: 700;
     font-size: 24px;
     line-height: 30px;
+    margin: 0;
+    color: var(--dark);
 }
 h2 {
     font-family:  "OpenSans", sans-serif;
@@ -19,6 +21,7 @@ h2 {
     font-weight: bold;
     font-size: 19px;
     line-height: 24px;
+    color: var(--dark);
 }
 h3 {
     font-family:  var(--montserrat_bold);
@@ -27,6 +30,7 @@ h3 {
     font-size: 12px;
     line-height: 15px;
     text-transform: uppercase;
+    color: var(--dark);
 }
 span {
     font-family: var(--montserrat_reg);

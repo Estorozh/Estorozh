@@ -17,7 +17,8 @@ let config = {
     entry: {
         main: `${PATHS.src}/index.js`,
         Form_Elements: `${PATHS.src}/Form_Elements.js`,
-        ColorType: `${PATHS.src}/colorType.js`
+        ColorType: `${PATHS.src}/colorType.js`,
+        Cards: `${PATHS.src}/Cards.js`
     },
     output: {
         filename: '[name].js',
@@ -98,6 +99,12 @@ let config = {
         new HtmlWebpackPlugin({
             template: __dirname + '/src/pug/blocks/__elements/Form_Elements.pug',
             filename: '/pages/UI/Form_Elements.html',
+            inject: true,
+            chunks: ['<index>']
+        }),
+        new HtmlWebpackPlugin({
+            template: __dirname + '/src/pug/blocks/__elements/Cards.pug',
+            filename: '/pages/UI/Cards.html',
             inject: true,
             chunks: ['<index>']
         })
