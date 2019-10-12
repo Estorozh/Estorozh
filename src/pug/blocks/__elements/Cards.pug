@@ -84,7 +84,11 @@ block body
         +button('Создать')(class=['btn--enable', 'btn--border'])
 
   .block
-    .block-card
+    input.datepicker-here(data-range="true" data-multiple-dates-separator=" - " data-inline="true" style="display: none;")
+    .block-card.size-medium.mt-30
+      .img
+      //- img(src='./../../assets/img/appart_0.png' class="img")
 
 block footer
   script(src='../../Cards.js')
+

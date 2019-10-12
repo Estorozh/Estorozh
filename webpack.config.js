@@ -57,8 +57,16 @@ let config = {
             use:[ {
               loader: 'file-loader',
               options: {
-                name: '[name].[ext]'
+                publicPath: '../../',
+                name: 'assets/img/[name].[ext]'
               }
+            }, {
+                loader: 'url-loader',
+                options: {
+                    publicPath: '../../',
+                    name: 'assets/img/[name].[ext]',
+                    limit: 8192
+                }
             } ]
           }, {
             test: /\.pug$/,

@@ -14,6 +14,7 @@
 @import './checkbox_rich/checkbox_rich.scss';   
 @import './bullet-list/bullet-list.scss';   
 @import './feedback/feedback.scss';   
+@import './../../../assets/air-datepicker/datepicker.css';   
 
 body {
     background-color: #E5E5E5;
@@ -27,6 +28,7 @@ body {
     width: 25%; 
 }
 .block-card {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
@@ -108,6 +110,15 @@ span.number {
         border-bottom: 1px solid var(--dark-25);
         box-sizing: border-box;
     }
+}
+
+.img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 170px;
+    border-radius: 4px 4px 0 0;
+    background: url('../../../assets/img/appart_0.png') no-repeat;
 }
 
 .mt-10 {
