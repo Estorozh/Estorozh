@@ -1,0 +1,8 @@
+mixin slider_description(number,price,count,bool)
+  .slider_desription
+    h1.number= number
+      if(bool)
+        span.number люкс
+    span.number <span class="number--bold">#{price}&#8381;</span> в сутки
+  +rate-button('stars-left')
+  span.number <span class="number--bold">#{count}</span> Отзывов
