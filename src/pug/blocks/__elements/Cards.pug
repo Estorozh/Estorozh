@@ -16,6 +16,7 @@ include ./option/option
 include ./checkbox_rich/checkbox_rich
 include ./bullet-list/bullet-list
 include ./feedback/feedback
+include ./slider/slider
 
 block body
   .block
@@ -32,7 +33,7 @@ block body
       +button('ПОДОБРАТЬ НОМЕР')(class=['btn--fill','btn--big','mt-30'])
 
     .block-card.mt-40
-      h1.mt-40 Регистрация аккаунта
+      h1 Регистрация аккаунта
       +text-field('','Имя')(class="mt-20")
       +text-field('','Фамилия')(class="mt-10")
       +radio-button()(class="mt-10")
@@ -86,8 +87,7 @@ block body
   .block
     input.datepicker-here(data-range="true" data-multiple-dates-separator=" - " data-inline="true" style="display: none;")
     .block-card.size-medium.mt-30
-      .img
-      //- img(src='./../../assets/img/appart_0.png' class="img")
+      +slider
 
 block footer
   script(src='../../Cards.js')

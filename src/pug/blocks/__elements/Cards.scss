@@ -1,20 +1,21 @@
 @import './general.scss';
 @import './checkbox/checkbox.scss';
-@import './text-field/text-field.scss';  
-@import './radio-buttons/radio-buttons.scss';  
-@import './toggle/toggle.scss';  
-@import './like-buttons/like-buttons.scss';  
-@import './rate-button/rate-button.scss';   
-@import './range-slider/range-slider.scss';   
-@import './buttons/buttons.scss';   
-@import './pagination/pagination.scss';   
-@import './dropdown/dropdown.scss';   
-@import './checkbox-expandle/checkbox-expandle.scss';   
-@import './option/option.scss';   
-@import './checkbox_rich/checkbox_rich.scss';   
-@import './bullet-list/bullet-list.scss';   
-@import './feedback/feedback.scss';   
-@import './../../../assets/air-datepicker/datepicker.css';   
+@import './text-field/text-field.scss';
+@import './radio-buttons/radio-buttons.scss';
+@import './toggle/toggle.scss';
+@import './like-buttons/like-buttons.scss';
+@import './rate-button/rate-button.scss';
+@import './range-slider/range-slider.scss';
+@import './buttons/buttons.scss';
+@import './pagination/pagination.scss';
+@import './dropdown/dropdown.scss';
+@import './checkbox-expandle/checkbox-expandle.scss';
+@import './option/option.scss';
+@import './checkbox_rich/checkbox_rich.scss';
+@import './bullet-list/bullet-list.scss';
+@import './feedback/feedback.scss';
+@import './slider/slider.scss';
+@import './air-datepicker/datepicker.css';
 
 body {
     background-color: #E5E5E5;
@@ -112,19 +113,10 @@ span.number {
     }
 }
 
-.img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 170px;
-    border-radius: 4px 4px 0 0;
-    background: url('../../../assets/img/appart_0.png') no-repeat;
-}
-
 .mt-10 {
     margin-top: 10px;
 }
-.mt-20 {
+.mt-20 { 
     margin-top: 20px;
 }
 .mt-30 {

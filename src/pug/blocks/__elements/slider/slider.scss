@@ -1,0 +1,62 @@
+.slider__wrapper {
+    display: flex;
+    transition: transform 0.6s ease;
+    border-radius: 4px 4px 0 0;
+
+    &__item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 4px 4px 0 0;
+
+        &__img {
+            width: 100%;
+            border-radius: 4px 4px 0 0;
+        }
+    }
+    //создаем тень по бокам
+    &__control {
+        width: 42px;
+        height: 148px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        top: 0;
+        border-radius: 4px;
+
+        //рисуем стрелочки
+        &__right-arrow, &__left-arrow {
+            position: absolute;
+            cursor: pointer;            
+        }
+        &__right-arrow {
+            right: 30px;
+        }
+        &__left-arrow {
+            left: 10px;
+        }
+        &__right-arrow:before, &__left-arrow:before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            background: transparent no-repeat center center;
+            background-size: 100% 100%;
+        }
+        &__left-arrow:before {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+        }
+        &__right-arrow:before {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+        }
+    }
+    &--left-side {
+        left: 0;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+    }
+    &--right-side {
+        right: 0;
+        background: linear-gradient(270deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+    }
+
+}

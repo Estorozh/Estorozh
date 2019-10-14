@@ -60,14 +60,8 @@ let config = {
                 publicPath: '../../',
                 name: 'assets/img/[name].[ext]'
               }
-            }, {
-                loader: 'url-loader',
-                options: {
-                    publicPath: '../../',
-                    name: 'assets/img/[name].[ext]',
-                    limit: 8192
-                }
-            } ]
+            }
+         ]
           }, {
             test: /\.pug$/,
             loader: 'pug-loader',
