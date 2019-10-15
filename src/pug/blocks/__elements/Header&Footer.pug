@@ -1,0 +1,16 @@
+extends ../main.pug
+block head 
+  title Header & Footer
+  link(rel="stylesheet", href="../../assets/css/HeaderFooter.css")
+
+include ./buttons/buttons
+include ./header/header
+
+block body
+  +header()(class="mt-40")
+  +header('Cosmin Negoita')(class="mt-40")
+
+
+
+block footer
+  script(src='../../HeaderFooter.js')

@@ -1,0 +1,21 @@
+mixin header(boolAuth)
+  .header(class!=attributes.class)
+    .header__logo
+    .burger
+      .bar1
+      .bar2
+      .bar3
+    .nav
+      ul.nav__ul
+        li: a.nav-link(href="#") Home
+        li: a.nav-link(href="#") About Us
+        li.arrow--down.service: a.nav-link(href="#") Services
+        li: a.nav-link(href="#") Careers
+        li: a.nav-link(href="#") News
+        li: a.nav-link(href="#") Documentation
+      .nav__auth
+        if(!boolAuth)
+          +button('LOGIN')(class=['btn--enable', 'btn--border'])
+          +button('REGISTER')(class=['btn--enable','btn--fill'])
+        if(boolAuth)
+          .nav__auth--login= boolAuth
