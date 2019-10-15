@@ -2,6 +2,7 @@ import './pug/blocks/__elements/Form_Elements.scss';
 import 'ion-rangeslider';
 import './pug/blocks/__elements/pagination/pagination.js'
 import './pug/blocks/__elements/dropdown/dropdown.js'
+import './pug/blocks/__elements/air-datepicker/datepicker.min.js'
 
 //active two items in checkbox buttons
 let checkbox = document.getElementsByClassName('checkbox__input');
@@ -62,4 +63,22 @@ let option = document.getElementsByClassName('option')[0];
 option.setAttribute("style","margin-top: 260px;");
 
 
+//air data picker
+$('.datepicker-single').datepicker({
+    inline: false,
+    clearButton: true,
+    range: true,
+    showButtonPanel: true
+});
+$('.datepicker--buttons').append('<span class="datepicker--button" data-action="apply">Применить</span>');
 
+//datepicker на два инпута
+$('#start').datepicker({ 
+    clearButton: true,
+    range: true,
+    showButtonPanel: true,
+    onSelect: function (fd, d, picker) { 
+      $("#start").val(fd.split("-")[0]);
+      $("#end").val(fd.split("-")[1]);
+    }
+  });

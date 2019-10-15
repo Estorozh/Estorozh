@@ -469,3 +469,6 @@
     background: none;
     border: none; }
 
+.datepicker--pointer {
+  display: none !important;
+}

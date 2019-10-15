@@ -42,7 +42,7 @@
             disableNavWhenOutOfRange: true,
 
             multipleDates: false, // Boolean or Number
-            multipleDatesSeparator: ',',
+            multipleDatesSeparator: ' - ',
             range: false,
 
             todayButton: false,
