@@ -1,3 +1,6 @@
+html {
+    background-color: #E5E5E5;
+}
 input {
     box-sizing: border-box;
     padding-left: 15px;
@@ -49,6 +52,7 @@ input {
     width: 266px;
 }
 .flex-size-medium {
+    width: 266px;
     flex-basis: 266px;
     display: inherit;
     justify-content: space-between

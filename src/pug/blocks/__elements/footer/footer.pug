@@ -1,0 +1,31 @@
+mixin nav-link(lh,arr)
+  ul.nav__ul
+    lh.nav__lh: a.nav-link(href="#")= lh
+    each i in arr
+      li.nav__li.mt-20: a.nav-link(href="#")= i
+
+mixin footer
+  .footer(class!=attributes.class)
+    .wrapper  
+      .main
+        .logo 
+        span Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+      .nav
+        +nav-link('Navigation',['About Us','News','Support','Products'])
+        +nav-link('ABOUT US',['Who we are','Our team','Careers','Investors'])
+        +nav-link('Support',['Documentation','Community','Get in Touch'])
+      .subscribe
+        h3 Subscribe to our newsletter
+        span.mt-20 
+          | Receive our latest news and 
+          | promotions in your inbox!
+        +text-field('text','Your email address')(class=['flex-size-medium','mt-20'])
+    .copyright
+      span Copyright © 2018 Toxin UI Kit. All rights reserved.
+      .copyright__icon
+        a(href='#' target='blank')
+          i.fa.fa-twitter.fa-gradient
+        a(href='#' target='blank')
+          i.fa.fa-facebook-f.fa-gradient
+        a(href='#' target='blank')
+          i.fa.fa-instagram.fa-gradient

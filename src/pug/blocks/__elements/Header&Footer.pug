@@ -4,12 +4,14 @@ block head
   link(rel="stylesheet", href="../../assets/css/HeaderFooter.css")
 
 include ./buttons/buttons
+include ./text-field/text-field
 include ./header/header
+include ./footer/footer
 
 block body
   +header()(class="mt-40")
   +header('Cosmin Negoita')(class="mt-40")
-
+  +footer(class="mt-40")
 
 
 block footer
