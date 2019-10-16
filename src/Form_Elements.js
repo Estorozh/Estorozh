@@ -1,8 +1,8 @@
 import './pug/blocks/__elements/Form_Elements.scss';
 import 'ion-rangeslider';
-import './pug/blocks/__elements/pagination/pagination.js'
-import './pug/blocks/__elements/dropdown/dropdown.js'
-import './pug/blocks/__elements/air-datepicker/datepicker.min.js'
+import './pug/blocks/__elements/pagination/pagination.js';
+import './pug/blocks/__elements/dropdown/dropdown.js';
+import './pug/blocks/__elements/air-datepicker/datepicker.min.js';
 
 //active two items in checkbox buttons
 let checkbox = document.getElementsByClassName('checkbox__input');
@@ -81,4 +81,4 @@ $('#start').datepicker({
       $("#start").val(fd.split("-")[0]);
       $("#end").val(fd.split("-")[1]);
     }
-  });
+});

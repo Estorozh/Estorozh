@@ -9,9 +9,10 @@ html(lang="ru")
     block head
   body
     include ./../../assets/img/svg.svg
-    .logo
-      svg.logo__img
-        use(xlink:href="#logo")
+    mixin template-logo
+      .template-logo
+        svg.logo__img
+          use(xlink:href="#logo")
     block body
 
     block footer

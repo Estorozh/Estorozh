@@ -3,13 +3,14 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
-.logo {
+.template-logo {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin: 1%;
+    margin: 2%;
 }
 .logo__img {
+    margin: 2px;
     display: block;
     width: 48px;
     height: 48px;

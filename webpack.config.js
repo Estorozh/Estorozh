@@ -19,7 +19,8 @@ let config = {
         Form_Elements: `${PATHS.src}/Form_Elements.js`,
         ColorType: `${PATHS.src}/colorType.js`,
         Cards: `${PATHS.src}/Cards.js`,
-        HeaderFooter: `${PATHS.src}/Header&Footer.js`
+        HeaderFooter: `${PATHS.src}/Header&Footer.js`,
+        Landing: `${PATHS.src}/Landing.js`
     },
     output: {
         filename: '[name].js',
@@ -114,6 +115,12 @@ let config = {
         new HtmlWebpackPlugin({
             template: __dirname + '/src/pug/blocks/__elements/Header&Footer.pug',
             filename: '/pages/UI/Header&Footer.html',
+            inject: true,
+            chunks: ['<index>']
+        }),
+        new HtmlWebpackPlugin({
+            template: __dirname + '/src/pug/blocks/pages/Landing.pug',
+            filename: '/pages/Landing.html',
             inject: true,
             chunks: ['<index>']
         })

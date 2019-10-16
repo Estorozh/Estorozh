@@ -8,6 +8,7 @@ input {
     height: 44px;
     color: var(--dark-25);
     flex-basis: 100%;
+    width: 100%;
     border: 1px solid var(--dark-50);
 }
 .dropdown label, .text-field label {
@@ -16,6 +17,14 @@ input {
     justify-content: flex-end;
     margin-right: 1rem;
     cursor: pointer;
+}
+.fa-angle-down, .fa-angle-up, .fa-arrow-right {
+    height: 44px;
+    position: absolute;
+    color: var(--dark-50);
+    font-size: 24px;
+    margin: 10px -25px;
+    pointer-events: none;
 }
 .arrow--down:after {
     content: '';

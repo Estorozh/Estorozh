@@ -1,0 +1,30 @@
+extends ../main.pug
+block head 
+  title Header & Footer
+  link(rel="stylesheet", href="../assets/css/Landing.css")
+
+include ./../__elements/text-field/text-field
+include ./../__elements/air-datepicker/two-input/two-input
+include ./../__elements/checkbox/checkbox
+include ./../__elements/radio-buttons/radio-buttons
+include ./../__elements/toggle/toggle
+include ./../__elements/like-buttons/like-buttons
+include ./../__elements/rate-button/rate-button
+include ./../__elements/buttons/buttons
+include ./../__elements/dropdown/dropdown
+include ./../__elements/checkbox-expandle/checkbox-expandle
+include ./../__elements/option/option
+include ./../__elements/checkbox_rich/checkbox_rich
+include ./../__elements/bullet-list/bullet-list
+include ./../__elements/feedback/feedback
+include ./../__elements/slider/slider
+include ./../__elements/slider/slider_description
+include ./../__elements/header/header
+include ./../__elements/footer/footer
+
+block body
+  +header
+  //- content
+  +footer
+block footer
+  script(src='../../Form_Elements.js')

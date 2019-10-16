@@ -1,0 +1,13 @@
+.two-input {
+    display: flex;
+    width: 100%;
+}
+.two-input_wrapper:first-child {
+    padding-right: 20px;
+}
+.text-field--small {
+    width: 150px;
+}
+#start, #end {
+    cursor: pointer;
+}

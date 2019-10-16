@@ -4,6 +4,7 @@ block head
   link(rel="stylesheet", href="../../assets/css/Cards.css")
 
 include ./text-field/text-field
+include ./air-datepicker/two-input/two-input
 include ./checkbox/checkbox
 include ./radio-buttons/radio-buttons
 include ./toggle/toggle
@@ -20,15 +21,12 @@ include ./slider/slider
 include ./slider/slider_description
 
 block body
+  +template-logo
+  
   .block
     .block-card
       h1 Найдем номера под ваши желания
-      .wrapper-dropdown.mt-20
-        h3 прибытие
-        +text-field('date','','arrow--down')(class="text-field--small")
-      .wrapper-dropdown.mt-20
-        h3 выезд
-        +text-field('date','','arrow--down')(class="text-field--small")
+      +two-input
       h3 гости
       +dropdown('People',true,'Сколько гостей')(class="arrow--down")
       +button('ПОДОБРАТЬ НОМЕР')(class=['btn--fill','btn--big','mt-30'])
@@ -53,12 +51,7 @@ block body
       h1.number № 8 8 8 
         span.number люкс
       span.number <span class="number--bold">9 990&#8381;</span> в сутки
-      .wrapper-dropdown.mt-20
-        h3 прибытие
-        +text-field('date','','arrow--down')(class="text-field--small")
-      .wrapper-dropdown.mt-20
-        h3 выезд
-        +text-field('date','','arrow--down')(class="text-field--small")
+      +two-input
       h3 гости
       +dropdown('People',true,'3 гостя')(class="arrow--down")
       .line.mt-20

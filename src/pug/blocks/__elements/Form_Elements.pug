@@ -4,7 +4,7 @@ block head
   link(rel="stylesheet", href="../../assets/css/Form_Elements.css")
 
 include ./text-field/text-field
-include ./text-field/text-field--two/text-field--two
+include ./air-datepicker/two-input/two-input
 include ./checkbox/checkbox
 include ./radio-buttons/radio-buttons
 include ./toggle/toggle
@@ -20,6 +20,7 @@ include ./feedback/feedback
 
 
 block body
+  +template-logo
   .block
     h3 text-field
     span default
@@ -33,7 +34,7 @@ block body
     h3 masked text field
     span default
     +text-field('text','')(class="datepicker-single")
-    +text-field--two()
+    +two-input()
     h3 filter date dropdown
     +dropdown()(class=["size-medium",'arrow--down','color-75'])
     h3 subscribe text field

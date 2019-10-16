@@ -1,0 +1,29 @@
+@import './../__elements/general.scss';
+@import './../__elements/checkbox/checkbox.scss';
+@import './../__elements/text-field/text-field.scss';
+@import './../__elements/radio-buttons/radio-buttons.scss';
+@import './../__elements/toggle/toggle.scss';
+@import './../__elements/like-buttons/like-buttons.scss';
+@import './../__elements/rate-button/rate-button.scss';
+@import './../__elements/range-slider/range-slider.scss';
+@import './../__elements/buttons/buttons.scss';
+@import './../__elements/pagination/pagination.scss';
+@import './../__elements/dropdown/dropdown.scss';
+@import './../__elements/checkbox-expandle/checkbox-expandle.scss';
+@import './../__elements/option/option.scss';
+@import './../__elements/checkbox_rich/checkbox_rich.scss';
+@import './../__elements/bullet-list/bullet-list.scss';
+@import './../__elements/feedback/feedback.scss';
+@import './../__elements/slider/slider.scss';
+@import './../__elements/air-datepicker/datepicker.css';
+@import './../__elements/air-datepicker/two-input/two-input.scss';
+
+body {
+    height: 1343px;
+    background: url('../../../assets/img/background_landing.png') no-repeat;
+
+}
+.block-card {
+    margin-top: 70px;
+    margin-left: 140px;
+}

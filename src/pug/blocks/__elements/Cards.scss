@@ -16,15 +16,23 @@
 @import './feedback/feedback.scss';
 @import './slider/slider.scss';
 @import './air-datepicker/datepicker.css';
+@import './air-datepicker/two-input/two-input.scss';
 
+.template-logo {
+    margin-left: -15px;
+}
 body {
+    margin-left: 40px;
     background-color: #E5E5E5;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 .block {
-    margin: rem(50) rem(10) rem(40) rem(10);
+    margin-top: rem(38);
+    margin-right: rem(10);
+    margin-left: 30px;
+    margin-bottom: rem(20);
     min-width: 380px;
     width: 25%; 
 }
@@ -35,6 +43,7 @@ body {
     align-content: flex-start;
     justify-content: space-between;
     padding: 30px;
+    padding-top:40px;
     width: 380px;
     background-color: #FFF;
     border: 1px solid rgba(0, 0, 0, 0.12);

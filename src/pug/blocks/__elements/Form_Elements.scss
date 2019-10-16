@@ -1,7 +1,7 @@
 @import './general.scss';
 @import './checkbox/checkbox.scss';
 @import './text-field/text-field.scss';  
-@import './text-field/text-field--two/text-field--two.scss';  
+@import './air-datepicker/two-input/two-input.scss';  
 @import './radio-buttons/radio-buttons.scss';  
 @import './toggle/toggle.scss';  
 @import './like-buttons/like-buttons.scss';  
@@ -16,6 +16,7 @@
 @import './bullet-list/bullet-list.scss';   
 @import './feedback/feedback.scss';   
 @import './air-datepicker/datepicker.css';
+@import './air-datepicker/two-input/two-input.scss';
 
 html {
     background-color: #fff;
