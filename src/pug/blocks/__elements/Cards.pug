@@ -18,7 +18,6 @@ include ./checkbox_rich/checkbox_rich
 include ./bullet-list/bullet-list
 include ./feedback/feedback
 include ./slider/slider
-include ./slider/slider_description
 include ./cards_find/cards_find
 
 block body
@@ -76,12 +75,10 @@ block body
 
   .block
     input.datepicker-here(data-range="true" data-multiple-dates-separator=" - " data-inline="true" style="display: none;")
-    .block-card.size-medium.mt-30.p-20
-      +slider()(class="img--0")
-      +slider_description('№888','9 900','145',true)
-    .block-card.size-medium.mt-40.p-20
-      +slider()(class="img--1")
-      +slider_description('№840','9 900','65',false)
+    .block-card.size-medium.mt-30.p-0
+      +slider('№888','9 900','145',true)(class="img--0")
+    .block-card.size-medium.mt-40.p-0
+      +slider('№840','9 900','65',false)(class="img--1")
 
 block footer
   script(src='../../Cards.js')

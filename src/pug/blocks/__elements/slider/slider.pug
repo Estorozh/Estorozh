@@ -1,7 +1,19 @@
-mixin slider
-  .slider
-    .slider__img(class!=attributes.class)
-    .slider__control.slider--left-side
-      span.slider__control__left-arrow
-    .slider__control.slider--right-side
-      span.slider__control__right-arrow
+mixin slider_description(number,price,count,bool)
+  .slider-content
+    .slider-desription
+      h1.number= number
+        if(bool)
+          span.number люкс
+      span.number <span class="number--bold">#{price}&#8381;</span> в сутки
+    +rate-button('stars-left')
+    span.number <span class="number--bold">#{count}</span> Отзывов
+
+mixin slider(number,price,count,bool)
+  .slider-wrapper
+    .slider
+      .slider__img(class!=attributes.class)
+      .slider__control.slider--left-side
+        span.slider__control__left-arrow
+      .slider__control.slider--right-side
+        span.slider__control__right-arrow
+    +slider_description(number,price,count,bool)

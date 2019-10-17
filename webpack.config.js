@@ -21,7 +21,8 @@ let config = {
         Cards: `${PATHS.src}/Cards.js`,
         HeaderFooter: `${PATHS.src}/Header&Footer.js`,
         Landing: `${PATHS.src}/Landing.js`,
-        SearchRoom: `${PATHS.src}/SearchRoom.js`
+        SearchRoom: `${PATHS.src}/SearchRoom.js`,
+        test: `${PATHS.src}/test.js` 
     },
     output: {
         filename: '[name].js',
@@ -129,6 +130,12 @@ let config = {
         new HtmlWebpackPlugin({
             template: __dirname + '/src/pug/blocks/pages/SearchRoom.pug',
             filename: '/main/pages/SearchRoom.html',
+            inject: true,
+            chunks: ['<index>']
+        }),
+        new HtmlWebpackPlugin({
+            template: __dirname + '/src/pug/blocks/pages/test.pug',
+            filename: '/main/pages/test.html',
             inject: true,
             chunks: ['<index>']
         })
