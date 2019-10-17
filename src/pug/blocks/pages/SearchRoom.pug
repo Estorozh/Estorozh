@@ -1,0 +1,89 @@
+extends ../main.pug
+block head 
+  title Search Room page
+  link(rel="stylesheet", href="../../assets/css/SearchRoom.css")
+
+include ./../__elements/text-field/text-field
+include ./../__elements/air-datepicker/two-input/two-input
+include ./../__elements/checkbox/checkbox
+include ./../__elements/radio-buttons/radio-buttons
+include ./../__elements/toggle/toggle
+include ./../__elements/like-buttons/like-buttons
+include ./../__elements/rate-button/rate-button
+include ./../__elements/buttons/buttons
+include ./../__elements/dropdown/dropdown
+include ./../__elements/checkbox-expandle/checkbox-expandle
+include ./../__elements/option/option
+include ./../__elements/checkbox_rich/checkbox_rich
+include ./../__elements/bullet-list/bullet-list
+include ./../__elements/feedback/feedback
+include ./../__elements/slider/slider
+include ./../__elements/slider/slider_description
+include ./../__elements/header/header
+include ./../__elements/footer/footer
+include ./../__elements/cards_find/cards_find
+
+block body
+  +header
+  .content
+    .content__left-side.mt-30
+      h3 Дата пребывания в отеле
+      +text-field('text','')(class="datepicker-single")
+      h3.mt-20 Сколько гостей
+      +dropdown('People',true,'3 гостя')(class="arrow--down")
+      h3 Диапазон цены
+      .range
+        input(type="text" class="js-range-slider" name="my_range" value="")
+      span Стоимость за сутки пребывания в номере
+      h3.mt-30 checkbox Buttons
+      +checkbox('Checkbox Buttons')
+      .wrapper_content
+        h3.mt-30 Доступность
+        +checkbox_rich()
+      h3.mt-30 Удобство номера
+      +dropdown('Сonveniences','','2 спальни, 2 кровати')(class=["size-medium",'expanded','arrow--down'])
+      +checkbox-expandle('Дополнительные удобства',['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Телевизор','Шампунь'])(class="mt-30")
+      
+    .content__right-side
+      h3.mt-40 Номера, которые мы для вас подобрали
+      .SearchRoom
+        .SearchRoom__block
+          +slider.img--0
+          +slider_description('№888','9 900','145',true)
+        .SearchRoom__block
+          +slider.img--1
+          +slider_description('№888','9 900','145',true)
+        .SearchRoom__block
+          +slider.img--2
+          +slider_description('№888','9 900','145',true)
+        .SearchRoom__block
+          +slider.img--3
+          +slider_description('№888','9 900','145',true)
+        .SearchRoom__block
+          +slider.img--4
+          +slider_description('№888','9 900','145',true)
+        .SearchRoom__block
+          +slider.img--5
+          +slider_description('№888','9 900','145',true)
+        .SearchRoom__block
+          +slider.img--6
+          +slider_description('№888','9 900','145',true)
+        .SearchRoom__block
+          +slider.img--7
+          +slider_description('№888','9 900','145',true)
+        .SearchRoom__block
+          +slider.img--8
+          +slider_description('№888','9 900','145',true)
+        .SearchRoom__block
+          +slider.img--9
+          +slider_description('№888','9 900','145',true)
+        .SearchRoom__block
+          +slider.img--10
+          +slider_description('№888','9 900','145',true)
+        .SearchRoom__block
+          +slider.img--11
+          +slider_description('№888','9 900','145',true)
+
+  +footer
+block footer
+  script(src='../../SearchRoom.js')

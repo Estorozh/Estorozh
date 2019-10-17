@@ -1,0 +1,7 @@
+mixin cards_find
+    .block-card(class= attributes.class)
+      h1 Найдем номера под ваши желания
+      +two-input
+      h3 гости
+      +dropdown('People',true,'Сколько гостей')(class="arrow--down")
+      +button('ПОДОБРАТЬ НОМЕР')(class=['btn--fill','btn--big','mt-30'])

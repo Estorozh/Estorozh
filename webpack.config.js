@@ -20,7 +20,8 @@ let config = {
         ColorType: `${PATHS.src}/colorType.js`,
         Cards: `${PATHS.src}/Cards.js`,
         HeaderFooter: `${PATHS.src}/Header&Footer.js`,
-        Landing: `${PATHS.src}/Landing.js`
+        Landing: `${PATHS.src}/Landing.js`,
+        SearchRoom: `${PATHS.src}/SearchRoom.js`
     },
     output: {
         filename: '[name].js',
@@ -74,10 +75,11 @@ let config = {
     },
     devServer: {
         contentBase: 'dist',
-        index: 'dist/pages/UI/Form_Elements.html',
+        index: 'dist/main/UI/Form_Elements.html',
         port: 3000,
         stats: 'errors-only',
-        overlay: true
+        overlay: true,
+        writeToDisk: true
     },
     // devtool: 'source-map',
     plugins: [ 
@@ -96,34 +98,41 @@ let config = {
         }),
         new HtmlWebpackPlugin({
             template: __dirname + '/src/pug/blocks/__elements/ColorType.pug',
-            filename: '/pages/UI/ColorType.html',
+            filename: '/main/UI/ColorType.html',
             inject: true,
             chunks: ['<index>']
         }),
         new HtmlWebpackPlugin({
             template: __dirname + '/src/pug/blocks/__elements/Form_Elements.pug',
-            filename: '/pages/UI/Form_Elements.html',
+            filename: '/main/UI/Form_Elements.html',
             inject: true,
             chunks: ['<index>']
         }),
         new HtmlWebpackPlugin({
             template: __dirname + '/src/pug/blocks/__elements/Cards.pug',
-            filename: '/pages/UI/Cards.html',
+            filename: '/main/UI/Cards.html',
             inject: true,
             chunks: ['<index>']
         }),
         new HtmlWebpackPlugin({
             template: __dirname + '/src/pug/blocks/__elements/Header&Footer.pug',
-            filename: '/pages/UI/Header&Footer.html',
+            filename: '/main/UI/Header&Footer.html',
             inject: true,
             chunks: ['<index>']
         }),
         new HtmlWebpackPlugin({
             template: __dirname + '/src/pug/blocks/pages/Landing.pug',
-            filename: '/pages/Landing.html',
+            filename: '/main/pages/Landing.html',
+            inject: true,
+            chunks: ['<index>']
+        }),
+        new HtmlWebpackPlugin({
+            template: __dirname + '/src/pug/blocks/pages/SearchRoom.pug',
+            filename: '/main/pages/SearchRoom.html',
             inject: true,
             chunks: ['<index>']
         })
+
 
     ],
 
@@ -145,8 +154,8 @@ let config = {
 //     });
 // }
 
-// find_pug('blocks/cards', "/pages/");
-// find_pug('blocks/__elements', '/pages/UI/');
+// find_pug('blocks/cards', "/main/");
+// find_pug('blocks/__elements', '/main/UI/');
 
 module.exports = config
 

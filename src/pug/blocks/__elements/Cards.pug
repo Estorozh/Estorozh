@@ -19,17 +19,13 @@ include ./bullet-list/bullet-list
 include ./feedback/feedback
 include ./slider/slider
 include ./slider/slider_description
+include ./cards_find/cards_find
 
 block body
   +template-logo
   
   .block
-    .block-card
-      h1 Найдем номера под ваши желания
-      +two-input
-      h3 гости
-      +dropdown('People',true,'Сколько гостей')(class="arrow--down")
-      +button('ПОДОБРАТЬ НОМЕР')(class=['btn--fill','btn--big','mt-30'])
+    +cards_find
 
     .block-card.mt-40
       h1 Регистрация аккаунта

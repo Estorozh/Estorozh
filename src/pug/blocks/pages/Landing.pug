@@ -1,7 +1,7 @@
 extends ../main.pug
 block head 
-  title Header & Footer
-  link(rel="stylesheet", href="../assets/css/Landing.css")
+  title Landing page
+  link(rel="stylesheet", href="../../assets/css/Landing.css")
 
 include ./../__elements/text-field/text-field
 include ./../__elements/air-datepicker/two-input/two-input
@@ -21,10 +21,14 @@ include ./../__elements/slider/slider
 include ./../__elements/slider/slider_description
 include ./../__elements/header/header
 include ./../__elements/footer/footer
+include ./../__elements/cards_find/cards_find
 
 block body
   +header
-  //- content
+  .content
+    +cards_find
+    .content__text
+      span Лучшие номера для вашей работы, отдыха и просто вдохновения
   +footer
 block footer
-  script(src='../../Form_Elements.js')
+  script(src='../../Landing.js')
