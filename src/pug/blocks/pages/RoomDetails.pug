@@ -1,0 +1,81 @@
+extends ../main.pug
+block head 
+  title Room details
+  link(rel="stylesheet", href="../../assets/css/RoomDetails.css")
+
+include ./../__elements/text-field/text-field
+include ./../__elements/air-datepicker/two-input/two-input
+include ./../__elements/checkbox/checkbox
+include ./../__elements/radio-buttons/radio-buttons
+include ./../__elements/toggle/toggle
+include ./../__elements/like-buttons/like-buttons
+include ./../__elements/rate-button/rate-button
+include ./../__elements/buttons/buttons
+include ./../__elements/dropdown/dropdown
+include ./../__elements/checkbox-expandle/checkbox-expandle
+include ./../__elements/option/option
+include ./../__elements/checkbox_rich/checkbox_rich
+include ./../__elements/bullet-list/bullet-list
+include ./../__elements/feedback/feedback
+include ./../__elements/slider/slider
+include ./../__elements/header/header
+include ./../__elements/footer/footer
+include ./../__elements/chart/chart
+include ./../__elements/cards_find/cards_find
+
+block body
+  +header
+  .RoomDetails
+    .RoomDetails__img
+      .img-big
+        img(src="../../assets/img/RoomDetails_img1.png")
+      .img__block
+        .img-small
+          img(src="../../assets/img/RoomDetails_img2.png")
+        .img-small
+          img(src="../../assets/img/RoomDetails_img3.png")
+    .RoomDetails__content
+      .RoomDetails__left-side.mt-70
+        .RoomDetails__block
+          h3 Сведения о номере
+          +option('var(--smile)','Комфорт','Шумопоглощающие стены')
+          +option('var(--home)','Удобство','Окно в каждой из спален')
+          +option('var(--fire)','Уют','Номер оснащён камином')
+        .RoomDetails__block
+          h3 Впечатление о номере
+          +chart
+        .mt-30
+          h3 Отзывы посетителей номера
+        +feedback('Мурад Сарафанов','5 дней назад','Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
+        +feedback('Патрисия Стёклышкова','Неделю назад','Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент')
+        .RoomDetails__block.mt-30
+          h3 Правила
+          +bullet-list
+        .RoomDetails__cancel.mt-30
+          h3 Отмена 
+          span Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+      .RoomDetails__right-side.mt-70
+        .block-card
+          h1.number № 8 8 8 
+            span.number люкс
+          span.number <span class="number--bold">9 990&#8381;</span> в сутки
+          +two-input
+          h3 гости
+          +dropdown('People',true,'3 гостя')(class="arrow--down")
+          .line.mt-20
+            span 9 990₽ х 4 суток
+            span.price 39 960₽
+          .line.mt-10
+            span.info Сбор за услуги: скидка 2 179₽
+            span.price 0₽
+          .line.mt-10
+            span.info Сбор за дополнительные услуги  
+            span.line_price 300₽
+          .line
+            h3 Итого
+            .border-bottom
+            h3 38 081₽
+          +button('ЗАБРОНИРОВАТЬ')(class=['btn--fill','btn--big','mt-30'])
+  +footer
+block footer
+  script(src='../../RoomDetails.js')

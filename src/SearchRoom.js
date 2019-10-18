@@ -28,3 +28,16 @@ $(".js-range-slider").ionRangeSlider({
   hide_min_max: true,
   postfix: "&#8381;"
 });
+
+//pagination
+$(function() {
+  $('.pagination').pagination({
+      items: 180,
+      itemsOnPage: 12,
+      cssStyle: 'light-theme',
+      displayedPages: 3,
+      edges: 1,
+      prevText: '',
+      nextText: ''
+  });
+});

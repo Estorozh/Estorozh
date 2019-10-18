@@ -1,29 +1,3 @@
-@import './../__elements/general.scss';
-@import './../__elements/checkbox/checkbox.scss';
-@import './../__elements/text-field/text-field.scss';
-@import './../__elements/radio-buttons/radio-buttons.scss';
-@import './../__elements/toggle/toggle.scss';
-@import './../__elements/like-buttons/like-buttons.scss';
-@import './../__elements/rate-button/rate-button.scss';
-@import './../__elements/range-slider/range-slider.scss';
-@import './../__elements/buttons/buttons.scss';
-@import './../__elements/pagination/pagination.scss';
-@import './../__elements/dropdown/dropdown.scss';
-@import './../__elements/checkbox-expandle/checkbox-expandle.scss';
-@import './../__elements/option/option.scss';
-@import './../__elements/checkbox_rich/checkbox_rich.scss';
-@import './../__elements/bullet-list/bullet-list.scss';
-@import './../__elements/feedback/feedback.scss';
-@import './../__elements/slider/slider.scss';
-@import './../__elements/air-datepicker/datepicker.css';
-@import './../__elements/air-datepicker/two-input/two-input.scss';
-@import './../__elements/header/header.scss';
-@import './../__elements/footer/footer.scss';
-@import './../__elements/cards_find/cards_find.scss';
-
-body {
-    margin: 2%;
-}
 
 figure {
     display: flex;
@@ -31,6 +5,8 @@ figure {
     flex-direction: column;
     margin-left: -15px;
     margin-right: -15px;
+    width: 200px;
+    margin-left: 45px;
 }
 @media (min-width: 768px) {
     figure {
@@ -41,6 +17,7 @@ figure {
     flex: 1;
     padding-left: 15px;
     padding-right: 15px;
+    line-height: 15px;
 }
 .chart{
     align-self: center;
@@ -80,7 +57,8 @@ figure {
     margin: 0;
     padding: 0;
     list-style: none;
-
+    line-height: 0;
+    
     li {
         margin: 0 0 8px;
         padding: 0;

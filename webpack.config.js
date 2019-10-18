@@ -22,6 +22,7 @@ let config = {
         HeaderFooter: `${PATHS.src}/Header&Footer.js`,
         Landing: `${PATHS.src}/Landing.js`,
         SearchRoom: `${PATHS.src}/SearchRoom.js`,
+        RoomDetails: `${PATHS.src}/RoomDetails.js`,
         test: `${PATHS.src}/test.js` 
     },
     output: {
@@ -136,6 +137,12 @@ let config = {
         new HtmlWebpackPlugin({
             template: __dirname + '/src/pug/blocks/pages/test.pug',
             filename: '/main/pages/test.html',
+            inject: true,
+            chunks: ['<index>']
+        }),
+        new HtmlWebpackPlugin({
+            template: __dirname + '/src/pug/blocks/pages/RoomDetails.pug',
+            filename: '/main/pages/RoomDetails.html',
             inject: true,
             chunks: ['<index>']
         })

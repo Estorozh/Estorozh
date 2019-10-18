@@ -54,11 +54,26 @@ body {
     }
 }
 .content:before {
-    background: url('../../../assets/img/background_landing.png') no-repeat;
+    background-repeat:  no-repeat;
     background-size: auto;
     background-size: cover;
     content: '';
     width: 100%;
     position: absolute;
     height: 100%;
+    animation-name: background_landing;
+    animation-duration: 45s;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+}
+@keyframes background_landing {
+    0% {
+        background:url('../../../assets/img/background_landing.png');
+    }
+    50% {
+        background:url('../../../assets/img/background_landing_2.png');
+    }
+    100% {
+        background:url('../../../assets/img/background_landing_3.png');
+    }
 }

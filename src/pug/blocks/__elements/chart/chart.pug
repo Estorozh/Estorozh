@@ -1,0 +1,18 @@
+mixin chart
+  figure
+    .chart
+      svg(width="160px" height= "160px" viewbox="0 0 42 42" class="donut")
+        circle(class="donut-hole" cx="21" cy="21" r="15.91549430918952" fill="#fff")
+        circle(class="donut-ring" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#fff" stroke-width="3")
+        circle(class="donut-segment" cx="20" cy="22" r="15.91549430918952" fill="transparent" stroke="#BC9CFF" stroke-width="3" stroke-dasharray="22.9 77.5" stroke-dashoffset="25")
+        circle(class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#6FCF97" stroke-width="1" stroke-dasharray="24.5 76.5" stroke-dashoffset="0")
+        circle(class="donut-segment" cx="21" cy="21" r="15.91549430918952" fill="transparent" stroke="#FFE39C" stroke-width="1" stroke-dasharray="48.8 51.5" stroke-dashoffset="75")
+        g(clss="chart-text")
+          text(x="50%" y="50%" class="chart-number") 260
+          text(x="50%" y="50%" class="chart-label") Голосов
+    figcaption(class="chart-key")
+      ul(class='chart-key-list' aria-hidden="true" role="presentation")
+        li: span(class="shape-circle shape-excellent") Великолепно
+        li: span(class="shape-circle shape-good") Хорошо
+        li: span(class="shape-circle shape-well") Удовлетворительно
+        li: span(class="shape-circle shape-bad") Разочарован

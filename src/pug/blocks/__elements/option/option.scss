@@ -1,13 +1,15 @@
 .option {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     border-bottom: 1px solid rgba(31, 32, 65, 0.1);
     min-height: 60px;
+    width: 260px;
+    padding-bottom: 10px;
 
     .icon {
         width: 48px;
-        height: 48px;
+        height: 44px;
         background-repeat: no-repeat;
         background-position: center;
     }
