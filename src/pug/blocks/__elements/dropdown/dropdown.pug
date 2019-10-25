@@ -18,5 +18,5 @@ mixin dropdown(variant, booleanBtn, dropdownText)
         +items(Сonveniences)
       if(booleanBtn==true)
         .button
-          +button('Очистить')(class=['btn--disable','btn--simple'])
-          +button('Применить')(class=['btn--enable','btn--simple'])
+          +button('Очистить')(class=['btn--disable','btn--simple','dropdown__clean'])
+          +button('Применить')(class=['btn--enable','btn--simple','dropdown__apply'])

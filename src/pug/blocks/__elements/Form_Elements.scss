@@ -31,58 +31,70 @@ body {
     flex-basis: 23%;
     min-width: 280px;
     flex-wrap: wrap;
-    margin: 0 4%;
+    // margin: 0 4%;
     max-width: 320px;
+
+    .elem {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        span {
+            margin-top: 5px;
+        }
+    }
     h3{
-        margin: 10px 0;
+        margin: 15px 0 5px 0;
+        width:170px;
     }
     span {
         align-self: center;
         text-transform: uppercase;
     }
 }
-//а нужен ли block1???
-body .block1 {
-    display: flex;
-    align-content: flex-start;
-    flex-basis: 23%;
-    min-width: 280px;
-    flex-wrap: wrap;
-    margin: 0 5%;
 
-    h3 {
-        width: 100%;
-    }
+.color-75 input {
+    color: var(--dark-75);
 }
+.simple-pagination {
+    margin-top: 15px;
+    margin-bottom: 3px;
+}
+.block .pagination--text {
+    font-size: 14px;
+    color: var(--dark-75);
+    line-height: 24px;
+    font-family:  var(--montserrat_reg);
+    text-transform: none;
+    padding-left: 5px;
+}
+// не нужно
 .wrapper {
     display: flex;
     flex-wrap: wrap;
     width: 60%;
     align-content: space-between;
 }
-.color-75 input {
-    color: var(--dark-75);
-}
-.simple-pagination {
-    margin-top: 15px;
-}
-.pagination--text {
-    font-size: 14px;
-    color: var(--dark-75);
-    line-height: 24px;
-    font-family:  "Montserrat-bold";
-}
-body .block-dropdown {
-    margin-top: 100px;
-}
-body .block-list {
-    margin-top: 150px;
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    width: 100%;
+    margin-top: 190px;
 }
 .wrapper_content {
-    margin: 0 3vw;
     min-width: 23vw;
     width: 266px;
 }
 .flex-grow {
     flex-grow: 1;
+    margin-left: 117px;
+    margin-top: 22px;
+
+}
+
+@media screen and (max-width: 700px) {
+    body .block {
+        margin-left:0 !important;
+    }
 }

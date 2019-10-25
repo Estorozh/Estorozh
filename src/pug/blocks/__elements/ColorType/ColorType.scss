@@ -1,51 +1,59 @@
 .colorType {
     display: flex;
+    width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 100px auto;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 150px;
 }
 .colorType_div {
     display: flex;
     flex-direction: column;
     min-width: 320px;
-    width: 45%;
-    margin: 0 2.5%;
+    width: 420px;
     margin-bottom: 50px;
 }
 
-
 .color {
     display: flex;
-    width: 270px;
-    margin-left: 5%;
-    margin-top: 2%;
+    width: 320px;
+    margin-top: 20px;
     align-items: center;
     flex-wrap: wrap;
 
     .color_rect {
-        width: 4rem;
-        height: 4rem;
-        left:10%;
-        top: 14.5rem;
+        width: 70px;
+        height: 70px;
         border-radius: 6px;
     }
 
     .color-text {
-        width: 60%;
-        margin-left: 10%
+        margin-left: 40px;
     }
 
     .color-text_bold {
+        font-family: var(--quicksand);
         margin: 0;
+        margin-top: -5px;
+        line-height: 28px;
     }
 
     .color-text_normal {
+        font-family: var(--quicksand);
+        font-size: 19px;
+        line-height: 24px;
         color: inherit;
-        font-weight: 500;
+        letter-spacing: 0;
+        font-weight: lighter;
     }
 }
 
 
+.colorType_div:nth-child(2) {
+    margin-right: 130px;
+    margin-top: 17px;
+}
 .type {
     display: flex;
     flex-wrap: wrap;
@@ -80,12 +88,12 @@
         width: 80%
     }
     .tag--h1 + .type__example {
-        font-family: "OpenSans", sans-serif;
+        font-family: var(--quicksand);
         font-size: 24px;
         line-height: 30px;
     }
     .tag--h2 + .type__example {
-        font-family: "OpenSans", sans-serif;
+        font-family: var(--quicksand);
         font-size: 19px;
         line-height: 24px;
     }
@@ -100,5 +108,22 @@
         font-size: 14px;
         line-height: 24px;
         color: var(--dark-75)
+    }
+}
+.type:last-child {
+    width: 380px;
+    margin-top: -1px;
+    .tag--body {
+        margin-left: -12px;
+        margin-right: 45px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .colorType {
+        margin-left: 0;
+    }
+    .colorType_div:nth-child(2) {
+        margin-right: 0;
     }
 }

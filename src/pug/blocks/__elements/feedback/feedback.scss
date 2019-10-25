@@ -2,29 +2,35 @@
     display: flex;
     flex-wrap: wrap;
     .feedback__left-elem {
-        flex-basis: 5vw;
+        flex-basis: 57px;
         overflow: hidden;
-        min-width: 60px;
+        min-width: 57px;
 
         img {
             border-radius: 50%;
         }
     }
     .feedback__right-elem {
-        flex-basis: 45vw;
+        flex-basis: 87%;
         flex-grow:1;
         align-self: flex-start;
-        margin-bottom: rem(30);
+        margin-bottom: 18px;
         .feedback__right-elem__content {
             display: block;
             text-align: left;
-            max-width: rem(500);
+            max-width: 653px;
             font-family: var(--montserat_reg);
             font-size: 14px;
             color: var(--dark-75);
+            margin-top: 10px;
         }
         .name {
+            margin-top: 5px;
             font-family: var(--montserrat_bold);
+        }
+        .feedback__main {
+            line-height: 24px;
+            margin-top: -5px;
         }
     }
 }

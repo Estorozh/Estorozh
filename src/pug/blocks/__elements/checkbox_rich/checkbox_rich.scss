@@ -1,16 +1,25 @@
 .checkbox_rich {
+    .checkbox_row {
+        margin:0;
+    }
     label .list__item {
         margin: 5px 0;
         margin-left: 30px;
         font-size: 12px;
         line-height: 14px;
         color: var(--dark-50);
+        text-transform: none;
     }
     .list__item--h3 {
-        font-family: var(--montserrat_reg);
+        font-family: var(--montserrat_bold);
         font-weight: bold;
         font-size: 14px;
         line-height: 18px;
         color: var(--dark-75);
+        text-transform: none;
     }
+}
+
+.checkbox_input--check {
+    margin: 0;
 }

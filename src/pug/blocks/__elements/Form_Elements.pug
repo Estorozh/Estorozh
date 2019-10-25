@@ -21,95 +21,111 @@ include ./feedback/feedback
 
 block body
   +template-logo
-  .block
-    h3 text-field
-    span default
-    +text-field('text','EMAIL')
-    h3 text-field
-    span hover/focus
-    +text-field('text','This is pretty awesome')(class="color-75")
-    h3 dropdown
-    span DEFAULT
-    +dropdown('','','Сколько Гостей')(class="arrow--down")
-    h3 masked text field
-    span default
-    +text-field('text','')(class="datepicker-single")
-    +two-input()
-    h3 filter date dropdown
-    +dropdown()(class=["size-medium",'arrow--down','color-75'])
-    h3 subscribe text field
-    +text-field('text','Email','arrow--forward')(class='flex-size-medium')
-  
-  .block1
-    h3 checkbox Buttons
-    +checkbox('Checkbox Buttons')
-    h3 Radio Buttons
-    +radio-button()
-    h3 Toggle
-    +toggle('получать спецпредложения')(checked)
-    +toggle('получать спецпредложения')
-    h3 like button
-    +like-buttons(2,'dislake')
-    +like-buttons(12,'like')
-    h3 rate button
-    +rate-button('stars-left')
-    +rate-button('stars-right')
+  .block(style="margin: 20px 0 0 141px;")
+    .elem
+      h3 text-field
+      span default
+      +text-field('text','EMAIL')
+    .elem.mt-5
+      h3 text-field
+      span hover/focus
+      +text-field('text','This is pretty awesome')(class="color-75")
+    .elem.mt-5
+      h3 dropdown
+      span DEFAULT
+      +dropdown('','','Сколько Гостей')(class="arrow--down")
+    .elem.mt-10
+      h3 masked text field
+      span default
+      +text-field('text','')(class="datepicker-single")
+    .elem.mt-28
+      +two-input()
+    .elem.mt-28(style="width: 266px;")
+      h3 filter date dropdown
+      +dropdown()(class=["size-medium",'arrow--down','color-75'])
+    .elem.mt-30.flex-size-medium
+      h3 subscription text field
+      +text-field('text','Email','arrow--forward')(class='flex-size-medium')
+    .elem.flex-size-medium(style="margin-top: 85px;")
+      h3 dropdown
+      span default
+    .elem.flex-size-medium
+      +dropdown('','','2 спальни, 2 кровати')(class=["flex-size-medium",'arrow--down'])
+    .elem.flex-size-medium(style="margin-top: 9px;")
+      h3 dropdown
+      span Expanded
+    .elem.flex-size-medium
+      +dropdown('Сonveniences','','2 спальни, 2 кровати')(class=["size-medium",'expanded','arrow--down'])
+    .size-medium(style="margin-top: 157px;")
+      +checkbox-expandle('expandable checkbox list','')
+      .mt-20
+        +checkbox-expandle('expandable checkbox list',['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Телевизор','Шампунь'])
+      
 
-  .block
-    h3 Range slider
-    .range
+
+  
+  .block(style="margin-left: 126px")
+    .mt-20
+      h3 checkbox Buttons
+      +checkbox('Checkbox Buttons')
+    h3(style="margin-top: 37px;") Radio Buttons
+    .mt-15
+      +radio-button()
+    h3(style="margin-top: 45px;") Toggle
+    .mt-10
+      +toggle('Получать спецпредложения')(checked)
+    .mt-10
+      +toggle('Получать спецпредложения')
+    h3(style="margin-top: 36px") like button
+    .mt-15.elem(style="justify-content: flex-start;")
+      +like-buttons(2,'dislake')
+      +like-buttons(12,'like')
+    h3(style="margin-top: 41px;") rate button
+    .mt-15.elem(style="justify-content: flex-start;")
+      +rate-button('stars-left')
+      +rate-button('stars-right')
+    .elem(style="margin-top: 157px;")
+      h3 dropdown
+      +dropdown('People',true,'Сколько гостей')(class="arrow--down")
+    .elem(style="margin-top: 245px;")
+      h3(style="width: 100%;") rich Checkbox Buttons
+      .mt-5
+        +checkbox_rich()
+
+  .block(style="margin-left: 72px;")
+    .mt-20
+      h3 Range slider
+    .range(style="margin-top: -18px;")
       input(type="text" class="js-range-slider" name="my_range" value="")
-    h3 Buttons
+    h3(style="margin-top: 33px;") Buttons
       .buttons-line
         +button('CLICK ME')(class=['btn--enable','btn--fill'])
         +button('CLICK ME')(class=['btn--disable','btn--fill'])
-      .buttons-line
+      .buttons-line(style="margin-top: 29px;")
         +button('CLICK ME')(class=['btn--enable', 'btn--border'])
         +button('CLICK ME')(class=['btn--disable', 'btn--border'])
-      .buttons-line
+      .buttons-line(style="margin-top: 26px;")
         +button('CLICK ME')(class=['btn--enable','btn--simple'])
         +button('CLICK ME')(class=['btn--sdisable','btn--simple'])
-      .buttons-line
+      .buttons-line(style="margin-top: 27px;")
         +button('ПЕРЕЙТИ К ОПЛАТЕ')(class=['btn--fill','btn--big'])
-    h3 pagination
+    h3(style="margin-top: 35px; width:100%;") pagination
       .pagination
-      span.pagination--text 1-12 из 100+ вариантов аренды
-  
-  .block.block-dropdown
-    .flex-size-medium
-      h3 dropdown
-      span default
-    .size-medium
-      +dropdown('','','2 спальни, 2 кровати')(class=["flex-size-medium",'arrow--down'])
-    .flex-size-medium
-      h3 dropdown
-      span Expanded
-    .size-medium
-      +dropdown('Сonveniences','','2 спальни, 2 кровати')(class=["size-medium",'expanded','arrow--down'])
-        
-  .block.block-dropdown
-    h3 dropdown
-    +dropdown('People',true,'Сколько гостей')(class="arrow--down")
-        
-  .block.block-dropdown
+      span.pagination--text 1 – 12 из 100+ вариантов аренды
+    .mt-20(style="margin-top: 357px;")
     h3 dropdown
     +dropdown('People',true,'3 гостя')(class="arrow--down")
-
-  .block.block-list
-    .size-medium
-      +checkbox-expandle('expandable checkbox list','')
-      +checkbox-expandle('expandable checkbox list',['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Телевизор','Шампунь'])
-      +option('var(--smile)','Комфорт','Шумопоглощающие стены')
-      +option('var(--home)','Удобство','Окно в каждой из спален')
-
-  .block-list.wrapper
-    .wrapper_content
-      h3 rich Checkbox Buttons
-      +checkbox_rich()
-    .wrapper_content
-      h3 bulet list
+    .elem(style="margin-top: 245px;")
+      h3(style="margin-bottom: 8px;") bulet list
       +bullet-list()
+
+  .footer
+    .wrapper_content(style="margin-left: 142px;")
+      +option('var(--smile)','Комфорт','Шумопоглощающие стены')
+      .mt-5
+        +option('var(--home)','Удобство','Окно в каждой из спален')
     .wrapper_content.flex-grow
       +feedback('Мурад Сарафанов','5 дней назад','Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
+
 block footer
   script(src='../../Form_Elements.js')

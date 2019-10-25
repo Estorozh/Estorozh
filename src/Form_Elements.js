@@ -55,12 +55,10 @@ $(function() {
 let showCheckboxExpandle = document.getElementsByClassName('checkbox-expandle__body')[1];
 showCheckboxExpandle.style.display="flex";
 showCheckboxExpandle.click();
-showCheckboxExpandle.children[1].click();
-showCheckboxExpandle.children[2].click();
-showCheckboxExpandle.children[3].click();
+// $('.checkbox-expandle__body').children[1].prop('checked', true);
+// showCheckboxExpandle.children[2].click();
+// showCheckboxExpandle.children[3].click();
 //option margin top
-let option = document.getElementsByClassName('option')[0];
-option.setAttribute("style","margin-top: 260px;");
 
 
 //air data picker
