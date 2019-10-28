@@ -9,14 +9,14 @@ mixin footer
     .wrapper  
       .main
         .logo 
-        span Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+        span.logo-text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
       .nav
         +nav-link('Navigation',['About Us','News','Support','Products'])
         +nav-link('ABOUT US',['Who we are','Our team','Careers','Investors'])
         +nav-link('Support',['Documentation','Community','Get in Touch'])
       .subscribe
-        h3 Subscribe to our newsletter
-        span.mt-20 
+        h3.subcribe_h3 Subscribe to our newsletter
+        span.subscribe_text.mt-20 
           | Receive our latest news and 
           | promotions in your inbox!
         +text-field('text','Your email address')(class=['flex-size-medium','mt-20'])

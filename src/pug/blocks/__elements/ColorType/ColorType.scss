@@ -4,7 +4,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 19px;
     margin-left: 150px;
 }
 .colorType_div {
@@ -51,7 +51,7 @@
 
 
 .colorType_div:nth-child(2) {
-    margin-right: 130px;
+    margin-right: 165px;
     margin-top: 17px;
 }
 .type {
@@ -62,7 +62,7 @@
         color: var(--dark-25);
         width: 5%;
         text-align: right;
-        margin-right: 30px;
+        margin-right: 37px;
     }
     .tag--h1 {
         font-family: var(--montserrat_reg);
@@ -112,10 +112,10 @@
 }
 .type:last-child {
     width: 380px;
-    margin-top: -1px;
+    margin-top: -4px;
     .tag--body {
         margin-left: -12px;
-        margin-right: 45px;
+        margin-right: 51px;
     }
 }
 

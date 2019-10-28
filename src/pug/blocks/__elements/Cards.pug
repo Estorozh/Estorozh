@@ -23,62 +23,63 @@ include ./cards_find/cards_find
 block body
   +template-logo
   
-  .block
-    +cards_find
+  .main
+    .block
+      +cards_find
 
-    .block-card.mt-40
-      h1 Регистрация аккаунта
-      +text-field('','Имя')(class="mt-20")
-      +text-field('','Фамилия')(class="mt-10")
-      +radio-button()(class="mt-10")
-      h3.mt-20 дата рождения
-      +text-field('date','')
-      h3.mt-20 данные для входа в сервис
-      +text-field('','Email')
-      +text-field('','Пароль')(class="mt-10")
-      +toggle('получать спецпредложения')(class="mt-10")
-      +button('ПЕРЕЙТИ К ОПЛАТЕ')(class=['btn--fill','btn--big','mt-30'])
-      .auth.mt-30
-        span Уже есть аккаунт на Toxin
-        +button('ВОЙТИ')(class=['btn--enable', 'btn--border'])
-  .block
-    .block-card
-      h1.number № 8 8 8 
-        span.number люкс
-      span.number <span class="number--bold">9 990&#8381;</span> в сутки
-      +two-input
-      h3 гости
-      +dropdown('People',true,'3 гостя')(class="arrow--down")
-      .line.mt-20
-        span 9 990₽ х 4 суток
-        span.price 39 960₽
-      .line.mt-10
-        span.info Сбор за услуги: скидка 2 179₽
-        span.price 0₽
-      .line.mt-10
-        span.info Сбор за дополнительные услуги  
-        span.line_price 300₽
-      .line
-        h3 Итого
-        .border-bottom
-        h3 38 081₽
-      +button('ЗАБРОНИРОВАТЬ')(class=['btn--fill','btn--big','mt-30'])
+      .block-card.mt-40
+        h1 Регистрация аккаунта
+        +text-field('','Имя')(class="mt-20")
+        +text-field('','Фамилия')(class="mt-10")
+        +radio-button()(class="mt-10")
+        h3.text_birthday дата рождения
+        +text-field('date','')
+        h3 данные для входа в сервис
+        +text-field('','Email')
+        +text-field('','Пароль')(class="mt-10")
+        +toggle('получать спецпредложения')(class="mt-10")
+        +button('ПЕРЕЙТИ К ОПЛАТЕ')(class=['btn--fill','btn--big','mt-30'])
+        .auth.mt-30
+          span Уже есть аккаунт на Toxin
+          +button('ВОЙТИ')(class=['btn--enable', 'btn--border'])
+    .block
+      .block-card
+        h1 <span class="number_span">№</span> 888 
+          span.number люкс
+        span.num <span class="num-bold">9 990&#8381;</span> в сутки
+        +two-input
+        h3 гости
+        +dropdown('People',true,'3 гостя')(class="arrow--down")
+        .line.mt-20
+          span 9 990₽ х 4 суток
+          span.price 39 960₽
+        .line.mt-10
+          span.info Сбор за услуги: скидка 2 179₽
+          span.price 0₽
+        .line.mt-10
+          span.info Сбор за дополнительные услуги  
+          span.line_price 300₽
+        .line
+          h3 Итого
+          .border-bottom
+          h3 38 081₽
+        +button('ЗАБРОНИРОВАТЬ')(class=['btn--fill','btn--big','mt-30'])
 
-    .block-card.mt-40
-      h1 Войти
-      +text-field('','Email')(class="mt-20")
-      +text-field('','Пароль')(class="mt-10")
-      +button('ВОЙТИ')(class=['btn--fill','btn--big','mt-20'])
-      .auth.mt-30
-        span Нет аккаунта на Toxin?
-        +button('Создать')(class=['btn--enable', 'btn--border'])
+      .block-card.mt-40
+        h1 Войти
+        +text-field('','Email')(class="mt-20")
+        +text-field('','Пароль')(class="mt-10")
+        +button('ВОЙТИ')(class=['btn--fill','btn--big','mt-20'])
+        .auth.mt-30
+          span Нет аккаунта на Toxin?
+          +button('Создать')(class=['btn--enable', 'btn--border'])
 
-  .block
-    input.datepicker-here(data-range="true" data-multiple-dates-separator=" - " data-inline="true" style="display: none;")
-    .block-card.size-medium.mt-30.p-0
-      +slider('№888','9 900','145',true)(class="img--0")
-    .block-card.size-medium.mt-40.p-0
-      +slider('№840','9 900','65',false)(class="img--1")
+    .block
+      input.datepicker-here(data-range="true" data-multiple-dates-separator=" - " data-inline="true" style="display: none;")
+      .block-card.size-medium.mt-30.p-0
+        +slider('№888','9 900','145',true)(class="img--0")
+      .block-card.size-medium.mt-40.p-0
+        +slider('№840','9 900','65',false)(class="img--1")
 
 block footer
   script(src='../../Cards.js')

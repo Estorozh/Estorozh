@@ -64,6 +64,11 @@ body {
             color: #000;
         }
     }
+    .num-bold {
+        font-family: var(--montserrat_bold);
+        font-size: 14px;
+        line-height: 34px;
+    }
 }
 
 //text reserv
@@ -106,4 +111,67 @@ body {
         border-bottom: 0.0625rem solid var(--dark-25);
         box-sizing: border-box;
     }
+}
+
+
+//чего не сделаешь ради PP
+.block:first-child .block-card:first-child{
+    margin-left:1px;
+    h1 {
+        margin-top: -3px;
+        letter-spacing: -0.35px;
+    }
+    h3 {
+        margin: 21px 0 6px;
+    }
+    .btn--big {
+        margin-top: 33px;
+        margin-right: -2px;
+    }
+}
+.block:first-child .block-card:nth-child(2) {
+    h1 {
+        margin-top: -3px;
+        letter-spacing: -0.35px;
+    }
+    .radio-button__item {
+        margin-top: 5px;
+    }
+    .text_birthday {
+        margin: 27px 0 5px;
+    }
+    h3 {
+        margin: 20px 0 5px;
+    }
+    .btn--big {
+        margin-top: 17px;
+        margin-right: -2px;
+    }
+    .btn--border {
+        margin-right: -5px;
+    }
+}
+
+.block:nth-child(2) .block-card:nth-child(1) {
+    h1 {
+        font-family: var(--quicksand);
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 24px;
+        letter-spacing: -0.4px;
+        .number {
+            color: var(--purple);
+            font-family: var(--montserrat_bold);
+            font-size: 15px;
+        }
+    }
+    .number_span {
+        color: var(--dark);
+        font-family: var(--quicksand);
+    }
+
+}
+.block:nth-child(2) .block-card:nth-child(2) {
+
 }
