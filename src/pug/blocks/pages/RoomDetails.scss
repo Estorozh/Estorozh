@@ -99,6 +99,37 @@ body {
     box-sizing: border-box;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+
+    h1 {
+        font-family: var(--quicksand);
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 24px;
+        letter-spacing: -0.4px;
+        .number {
+            color: var(--purple);
+            font-family: var(--montserrat_bold);
+            font-size: 15px;
+        }
+    }
+    .number_span {
+        color: var(--dark);
+        font-family: var(--quicksand);
+    }
+    .two-input_wrapper h3 {
+        margin: 14px 0 5px;
+    }
+    h3 {
+        margin: 20px 0 6px;
+    }
+    .line h3 {
+        margin: 31px 0 6px;
+    }
+    .btn--big {
+        margin-top: 23px;
+        margin-right: -3px;
+    }
 }
 .line {
     display: inherit;
@@ -140,3 +171,4 @@ body {
         box-sizing: border-box;
     }
 }
+

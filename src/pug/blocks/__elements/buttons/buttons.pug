@@ -1,2 +1,2 @@
 mixin button(text)
-  div(class="btn")&attributes(attributes)= text
+  div(class="btn")&attributes(attributes)!= '<span class="btn_text">' + text + '</span>'

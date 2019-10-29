@@ -4,15 +4,15 @@ mixin header_nav-link(arr={'Home':'', 'About Us':'', 'Services':'arrow-down', 'C
       li(class=cls)
         a.nav-link(href="#")= i
 
-mixin header(boolAuth)
+mixin header(arr, boolAuth, login='LOGIN', reg='REGISTER')
   .header(class!=attributes.class)
     .header__logo
     .burger.fa.fa-navicon
     .nav
-      +header_nav-link
+      +header_nav-link(arr)
       .nav__auth
         if(!boolAuth)
-          +button('LOGIN')(class=['btn--enable', 'btn--border','btn--header'])
-          +button('REGISTER')(class=['btn--enable','btn--fill','btn--header'])
+          +button(login)(class=['btn--enable', 'btn--border','btn--header'])
+          +button(reg)(class=['btn--enable','btn--fill','btn--header'])
         if(boolAuth)
           .nav__auth--login= boolAuth

@@ -21,7 +21,7 @@
     }
     .main {
         width: 260px;
-        margin-left: 30px;
+        margin-left: 16px;
         margin-top: -10px;
     }
     .logo {
@@ -34,6 +34,7 @@
     .logo-text {
         line-height: 24px;
         letter-spacing: 1px;
+        text-align: left;
     }
     .nav {
         display: flex;
@@ -44,10 +45,10 @@
         display: flex;
         flex-wrap: wrap;
         list-style-type: none;
-        width: 120px;
+        width: 150px;
         font-size: 14px;
         align-self: baseline;
-        padding:0 40px;
+        padding: 0 10px 0 40px;
         line-height: 18px;
 
         .nav__lh {

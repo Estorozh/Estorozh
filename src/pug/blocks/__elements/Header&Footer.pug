@@ -11,8 +11,16 @@ include ./footer/footer
 block body
   +template-logo
   +header()(class="mt-40")
-  +header('Cosmin Negoita')(class="mt-40")
-  +footer(class="mt-40")
+  +header({'Home':'', 'About Us':'', 'Services':'arrow-down', 'Careers':'', 'News':'', 'Documentation':''},'Cosmin Negoita')(class="mt-40")
+  +footer('Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.',
+  {
+    ['Navigation']:['About Us','News','Support','Products'],
+    ['ABOUT US']: ['Who we are','Our team','Careers','Investors'],
+    ['Support']: ['Documentation','Community','Get in Touch'] 
+    },
+    'Subscribe to our newsletter',
+    'Receive our latest news and <br> promotions in your inbox!'
+    )(class="mt-40")
 
 
 block footer

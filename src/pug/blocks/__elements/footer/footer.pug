@@ -4,21 +4,18 @@ mixin nav-link(lh,arr)
     each i in arr
       li.nav__li.mt-20: a.nav-link(href="#")= i
 
-mixin footer
+mixin footer(logoText,navLink,subcribeH3,subscribeText)
   .footer(class!=attributes.class)
     .wrapper  
       .main
         .logo 
-        span.logo-text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+        span.logo-text= logoText 
       .nav
-        +nav-link('Navigation',['About Us','News','Support','Products'])
-        +nav-link('ABOUT US',['Who we are','Our team','Careers','Investors'])
-        +nav-link('Support',['Documentation','Community','Get in Touch'])
+        each link, Lh in navLink
+          +nav-link(Lh,link)
       .subscribe
-        h3.subcribe_h3 Subscribe to our newsletter
-        span.subscribe_text.mt-20 
-          | Receive our latest news and 
-          | promotions in your inbox!
+        h3.subcribe_h3= subcribeH3
+        span.subscribe_text.mt-20!= subscribeText
         +text-field('text','Your email address')(class=['flex-size-medium','mt-20'])
     .copyright
       span Copyright © 2018 Toxin UI Kit. All rights reserved.
