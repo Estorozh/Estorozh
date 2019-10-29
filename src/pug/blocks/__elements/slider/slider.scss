@@ -78,29 +78,45 @@
 .slider-desription {
     display: flex;
     width: 235px;
-    height: 30px;
+    height: 35px;
     justify-content: space-between;
     border-bottom: 1px solid rgba(31, 32, 65, 0.1);
     margin-bottom: 10px;
 }
+.slider-description_h1 {
+    font-family: var(--quicksand);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+    margin-left: -2px;
+}
+.slider-description_num {
+    color: var(--dark);
+    font-family: var(--quicksand);
+    font-size: 14px;
+    letter-spacing: -1px;
+}
+.slider-description_lux {
+    font-size: 15px;
+    color: var(--purple);
+}
+.slider-description_price {
+    color: var(--dark-50);
+    font-size: 12px;
+    margin-top: 6px;
+    letter-spacing: -0.2px;
+    margin-right: 4px;
+}
+.slider-description_price--bold {
+    font-family: var(--montserrat_bold);
+    font-size: 15px;
+}
 .number {
     line-height: 17px;
     font-size: 14px;
-}
-h1.number {
-    width: 105px;
-    margin: 0;
-    letter-spacing: 2px;
-
-    span {
-        letter-spacing: normal;
-        font-size: 12px;
-        color: var(--purple);
-    }
-}
-span.number {
-    color: var(--dark-50);
-    font-size: 10px;
+    margin-right: 8px;
 }
 span.number--bold {
     font-family: var(--montserrat_bold);

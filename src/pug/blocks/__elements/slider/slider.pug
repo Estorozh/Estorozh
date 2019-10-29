@@ -1,10 +1,10 @@
 mixin slider_description(number,price,count,bool)
   .slider-content
     .slider-desription
-      h1.number= number
+      h1.slider-description_h1!= '<span class="slider-description_num">№</span> '+number
         if(bool)
-          span.number люкс
-      span.number <span class="number--bold">#{price}&#8381;</span> в сутки
+          span.slider-description_lux= ' люкс'
+      span.slider-description_price <span class="slider-description_price--bold">#{price}&#8381;</span> в сутки
     +rate-button('stars-left')
     span.number <span class="number--bold">#{count}</span> Отзывов
 

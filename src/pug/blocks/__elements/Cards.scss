@@ -76,7 +76,6 @@ body {
     display: inherit;
     width: 100%;
     justify-content: space-between;
-    margin-top: 0.625rem;
 
     span {
         color: var(--dark-75);
@@ -88,8 +87,9 @@ body {
     }
     h3 {
         margin: 0;
-        font-size: 1.1875rem;
-        line-height: 1.5rem;
+        font-size: 17px;
+        line-height: 6px;
+        font-family: OpenSans;
     }
     .info:after {
         content: '\1F6C8';
@@ -108,11 +108,10 @@ body {
     }
     .border-bottom {
         flex-grow: 2;
-        border-bottom: 0.0625rem solid var(--dark-25);
+        border-bottom: 0.0625rem dotted var(--dark-25);
         box-sizing: border-box;
     }
 }
-
 
 //чего не сделаешь ради PP
 .block:first-child .block-card:first-child{
@@ -170,8 +169,29 @@ body {
         color: var(--dark);
         font-family: var(--quicksand);
     }
-
+    .two-input_wrapper h3 {
+        margin: 14px 0 5px;
+    }
+    h3 {
+        margin: 20px 0 6px;
+    }
+    .line h3 {
+        margin: 31px 0 6px;
+    }
+    .btn--big {
+        margin-top: 23px;
+        margin-right: -3px;
+    }
 }
 .block:nth-child(2) .block-card:nth-child(2) {
-
+    h1 {
+        margin-top: -3px;
+    }    
+    .btn--big {
+        margin-top: 21px;
+        margin-right: -3px;
+    }
+    .btn--border {
+        margin-right: -3px;
+    }
 }
