@@ -1,0 +1,373 @@
+
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../../assets/css/main.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Form Elemets</title>
+    <link rel="stylesheet" href="../../assets/css/Form_Elements.css">
+  </head>
+  <body><svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+  <symbol id="arrow" viewBox="0 0 20 20">
+    <title>arrow</title>
+        <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
+        <path d="M0 0h24v24H0z" fill="none"/>
+  </symbol>
+
+  <symbol id="arrow_forward" viewBox="0 0 20 20">
+    <title>arrow_forward</title>
+      <path d="M0 0h24v24H0z" fill="none"/>
+      <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+  </symbol>
+
+  <symbol id="favorite_empty" viewBox="0 0 24 24">
+    <title>favorite_empty</title>
+        <path d="M0 0h24v24H0z" fill="none"/>
+        <path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/>
+  </symbol>
+  
+  <symbol id="check" viewBox="0 0 24 24">
+    <path d="M1.46439 4.40768L5.70703 8.65032L4.29282 10.0645L0.0501771 5.82189L1.46439 4.40768Z"/>
+    <path d="M8.53546 2.99347L9.94967 4.40768L4.29282 10.0645L2.8786 8.65032L8.53546 2.99347Z"/>
+  </symbol>
+
+  <symbol id="logo" viewBox="0 0 48 48">
+    <path d="M23.9989 32.4712C23.2224 32.4712 22.5871 31.8359 22.5871 31.0594C22.5871 25.6241 18.14 21.177 12.7047 21.177C11.9283 21.177 11.293 20.5418 11.293 19.7653C11.293 18.9888 11.9283 18.3535 12.7047 18.3535C19.7283 18.3535 25.4106 24.0359 25.4106 31.0594C25.4106 31.8359 24.7753 32.4712 23.9989 32.4712Z" fill="#1F2041" fill-opacity="0.25"/>
+    <path d="M36.7068 19.7653C36.7068 20.5418 36.0715 21.177 35.295 21.177C31.9421 21.177 28.9421 22.8712 27.1774 25.4476C26.7892 24.4594 26.3303 23.5418 25.7656 22.6947C28.095 20.0123 31.5186 18.3535 35.295 18.3535C36.0715 18.3535 36.7068 18.9888 36.7068 19.7653Z" fill="#1F2041" fill-opacity="0.25"/>
+    <path d="M24 48C10.7647 48 0 37.2353 0 24C0 10.7647 10.7647 0 24 0C37.2353 0 48 10.7647 48 24C48 37.2353 37.2353 48 24 48ZM24 2.82353C12.3176 2.82353 2.82353 12.3176 2.82353 24C2.82353 35.6824 12.3176 45.1765 24 45.1765C35.6824 45.1765 45.1765 35.6824 45.1765 24C45.1765 12.3176 35.6824 2.82353 24 2.82353Z" fill="#1F2041" fill-opacity="0.25"/>
+  </symbol>
+</svg>
+
+        <div class="template-logo">
+          <svg class="logo__img">
+            <use xlink:href="#logo"></use>
+          </svg>
+        </div>
+    <div class="block" style="margin: 20px 0 0 141px;">
+      <div class="elem">
+        <h3>text-field</h3><span>default</span>
+        <div class="text-field">
+          <input type="text" placeholder="EMAIL">
+        </div>
+      </div>
+      <div class="elem mt-5">
+        <h3>text-field</h3><span>hover/focus</span>
+        <div class="text-field">
+          <input class="color-75" type="text" placeholder="This is pretty awesome">
+        </div>
+      </div>
+      <div class="elem mt-5">
+        <h3>dropdown</h3><span>DEFAULT</span>
+        <div class="dropdown arrow--down" id="dropdown">Сколько Гостей
+          <div class="dropdown__content">
+          </div>
+        </div>
+      </div>
+      <div class="elem mt-10">
+        <h3>masked text field</h3><span>default</span>
+        <div class="text-field">
+          <input class="datepicker-single" type="text" placeholder="">
+        </div>
+      </div>
+      <div class="elem mt-28">
+        <div class="two-input">
+          <div class="two-input_wrapper">
+            <h3>Прибытие</h3>
+            <input type="text" id="start" placeholder="дд.мм.ггг"><i class="fa fa-angle-down"></i>
+          </div>
+          <div class="two-input_wrapper">
+            <h3>Выезд</h3>
+            <input type="text" id="end" placeholder="дд.мм.ггг"><i class="fa fa-angle-down"></i>
+          </div>
+        </div>
+      </div>
+      <div class="elem mt-28" style="width: 266px;">
+        <h3>filter date dropdown</h3>
+        <div class="dropdown size-medium arrow--down color-75" id="dropdown">
+          <div class="dropdown__content">
+          </div>
+        </div>
+      </div>
+      <div class="elem mt-30 flex-size-medium">
+        <h3>subscription text field</h3>
+        <div class="text-field arrow--forward">
+          <input class="flex-size-medium" type="text" placeholder="Email">
+        </div>
+      </div>
+      <div class="elem flex-size-medium" style="margin-top: 85px;">
+        <h3>dropdown</h3><span>default</span>
+      </div>
+      <div class="elem flex-size-medium">
+        <div class="dropdown flex-size-medium arrow--down" id="dropdown">2 спальни, 2 кровати
+          <div class="dropdown__content">
+          </div>
+        </div>
+      </div>
+      <div class="elem flex-size-medium" style="margin-top: 9px;">
+        <h3>dropdown</h3><span>Expanded</span>
+      </div>
+      <div class="elem flex-size-medium">
+        <div class="dropdown size-medium expanded arrow--down" id="dropdown">2 спальни, 2 кровати
+          <div class="dropdown__content">
+            <div class="items"><span class="items__text">спальни</span>
+              <div class="items__count"><span class="items__count--style items__count__minus">-</span><span class="items__count--style items__count__text">0</span><span class="items__count--style items__count__plus">+</span></div>
+            </div>
+            <div class="items"><span class="items__text">кровати</span>
+              <div class="items__count"><span class="items__count--style items__count__minus">-</span><span class="items__count--style items__count__text">0</span><span class="items__count--style items__count__plus">+</span></div>
+            </div>
+            <div class="items"><span class="items__text">ванные комнаты</span>
+              <div class="items__count"><span class="items__count--style items__count__minus">-</span><span class="items__count--style items__count__text">0</span><span class="items__count--style items__count__plus">+</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="size-medium" style="margin-top: 157px;">
+        <div class="checkbox-expandle arrow--down" onclick="children[1].classList.toggle(&quot;show&quot;); classList.toggle(&quot;arrow--up&quot;); classList.toggle(&quot;arrow--down&quot;);">
+          <h3 class="text">expandable checkbox list</h3>
+          <div class="checkbox-expandle__body checkbox">
+          </div>
+        </div>
+        <div class="mt-20">
+          <div class="checkbox-expandle arrow--down" onclick="children[1].classList.toggle(&quot;show&quot;); classList.toggle(&quot;arrow--up&quot;); classList.toggle(&quot;arrow--down&quot;);">
+            <h3 class="text">expandable checkbox list</h3>
+            <div class="checkbox-expandle__body checkbox">
+              <label>
+                <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item">Завтрак</span>
+              </label>
+              <label>
+                <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item">Письменный стол</span>
+              </label>
+              <label>
+                <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item">Стул для кормления</span>
+              </label>
+              <label>
+                <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item">Кроватка</span>
+              </label>
+              <label>
+                <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item">Телевизор</span>
+              </label>
+              <label>
+                <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item">Шампунь</span>
+              </label>
+              <label>
+                <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item">Телевизор</span>
+              </label>
+              <label>
+                <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item">Шампунь</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="block" style="margin-left: 126px">
+      <div class="mt-20">
+        <h3>checkbox Buttons</h3>
+        <div class="checkbox">
+          <label>
+            <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item">Можно курить</span>
+          </label>
+          <label>
+            <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item">Можно с питомцами</span>
+          </label>
+          <label>
+            <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item">Можно пригласить гостей (до 10 человек)</span>
+          </label>
+        </div>
+      </div>
+      <h3 style="margin-top: 37px;">Radio Buttons</h3>
+      <div class="mt-15">
+        <div class="radio-button">
+          <label class="radio-button__item">
+            <input class="radio-button__input" type="radio" name="sex"><span class="radio-button__text">Мужчина</span>
+          </label>
+          <label class="radio-button__item">
+            <input class="radio-button__input" type="radio" name="sex"><span class="radio-button__text">Женщина</span>
+          </label>
+        </div>
+      </div>
+      <h3 style="margin-top: 45px;">Toggle</h3>
+      <div class="mt-10">
+        <div class="toggle">
+          <label class="toggle__item">
+            <input class="toggle__input" type="checkbox" checked><span class="toggle__text">Получать спецпредложения</span>
+          </label>
+        </div>
+      </div>
+      <div class="mt-10">
+        <div class="toggle">
+          <label class="toggle__item">
+            <input class="toggle__input" type="checkbox"><span class="toggle__text">Получать спецпредложения</span>
+          </label>
+        </div>
+      </div>
+      <h3 style="margin-top: 36px">like button</h3>
+      <div class="mt-15 elem" style="justify-content: flex-start;">
+        <div class="like-buttons">
+          <input class="like-buttons__input" type="checkbox" id="dislake">
+          <label class="like-buttons__item" for="dislake"></label><span class="like-buttons__text">2</span>
+        </div>
+        <div class="like-buttons">
+          <input class="like-buttons__input" type="checkbox" id="like">
+          <label class="like-buttons__item" for="like"></label><span class="like-buttons__text">12</span>
+        </div>
+      </div>
+      <h3 style="margin-top: 41px;">rate button</h3>
+      <div class="mt-15 elem" style="justify-content: flex-start;">
+        <div class="rate-button">
+          <label class="rate-button__star">
+            <input class="rate-button__input" type="radio" name="stars-left">
+          </label>
+          <label class="rate-button__star">
+            <input class="rate-button__input" type="radio" name="stars-left">
+          </label>
+          <label class="rate-button__star">
+            <input class="rate-button__input" type="radio" name="stars-left">
+          </label>
+          <label class="rate-button__star">
+            <input class="rate-button__input" type="radio" name="stars-left">
+          </label>
+          <label class="rate-button__star">
+            <input class="rate-button__input" type="radio" name="stars-left">
+          </label>
+        </div>
+        <div class="rate-button">
+          <label class="rate-button__star">
+            <input class="rate-button__input" type="radio" name="stars-right">
+          </label>
+          <label class="rate-button__star">
+            <input class="rate-button__input" type="radio" name="stars-right">
+          </label>
+          <label class="rate-button__star">
+            <input class="rate-button__input" type="radio" name="stars-right">
+          </label>
+          <label class="rate-button__star">
+            <input class="rate-button__input" type="radio" name="stars-right">
+          </label>
+          <label class="rate-button__star">
+            <input class="rate-button__input" type="radio" name="stars-right">
+          </label>
+        </div>
+      </div>
+      <div class="elem" style="margin-top: 157px;">
+        <h3>dropdown</h3>
+        <div class="dropdown arrow--down" id="dropdown">Сколько гостей
+          <div class="dropdown__content">
+            <div class="items"><span class="items__text">взрослые</span>
+              <div class="items__count"><span class="items__count--style items__count__minus">-</span><span class="items__count--style items__count__text">0</span><span class="items__count--style items__count__plus">+</span></div>
+            </div>
+            <div class="items"><span class="items__text">дети</span>
+              <div class="items__count"><span class="items__count--style items__count__minus">-</span><span class="items__count--style items__count__text">0</span><span class="items__count--style items__count__plus">+</span></div>
+            </div>
+            <div class="items"><span class="items__text">младенцы</span>
+              <div class="items__count"><span class="items__count--style items__count__minus">-</span><span class="items__count--style items__count__text">0</span><span class="items__count--style items__count__plus">+</span></div>
+            </div>
+            <div class="button">
+              <div class="btn btn--disable btn--simple dropdown__clean"><span class="btn_text">Очистить</span></div>
+              <div class="btn btn--enable btn--simple dropdown__apply"><span class="btn_text">Применить</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="elem" style="margin-top: 245px;">
+        <h3 style="width: 100%;">rich Checkbox Buttons</h3>
+        <div class="mt-5">
+          <div class="checkbox checkbox_rich">
+            <label class="checkbox_row">
+              <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item--h3">Широкий коридор</span><span class="list__item">Ширина коридоров в номере не менее 91 см.</span>
+            </label>
+            <label class="checkbox_row">
+              <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item--h3">Помощник для инвалидов</span><span class="list__item">На 1 этаже вас встретит специалист  и проводит до номера.</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="block" style="margin-left: 72px;">
+      <div class="mt-20">
+        <h3>Range slider</h3>
+      </div>
+      <div class="range" style="margin-top: -18px;">
+        <input class="js-range-slider" type="text" name="my_range" value="">
+      </div>
+      <h3 style="margin-top: 33px;">Buttons
+        <div class="buttons-line">
+          <div class="btn btn--enable btn--fill"><span class="btn_text">CLICK ME</span></div>
+          <div class="btn btn--disable btn--fill"><span class="btn_text">CLICK ME</span></div>
+        </div>
+        <div class="buttons-line" style="margin-top: 29px;">
+          <div class="btn btn--enable btn--border"><span class="btn_text">CLICK ME</span></div>
+          <div class="btn btn--disable btn--border"><span class="btn_text">CLICK ME</span></div>
+        </div>
+        <div class="buttons-line" style="margin-top: 26px;">
+          <div class="btn btn--enable btn--simple"><span class="btn_text">CLICK ME</span></div>
+          <div class="btn btn--sdisable btn--simple"><span class="btn_text">CLICK ME</span></div>
+        </div>
+        <div class="buttons-line" style="margin-top: 27px;">
+          <div class="btn btn--fill btn--big"><span class="btn_text">ПЕРЕЙТИ К ОПЛАТЕ</span></div>
+        </div>
+      </h3>
+      <h3 style="margin-top: 35px; width:100%;">pagination
+        <div class="pagination"></div><span class="pagination--text">1 – 12 из 100+ вариантов аренды</span>
+      </h3>
+      <div class="mt-20" style="margin-top: 357px;"></div>
+      <h3>dropdown</h3>
+      <div class="dropdown arrow--down" id="dropdown">3 гостя
+        <div class="dropdown__content">
+          <div class="items"><span class="items__text">взрослые</span>
+            <div class="items__count"><span class="items__count--style items__count__minus">-</span><span class="items__count--style items__count__text">0</span><span class="items__count--style items__count__plus">+</span></div>
+          </div>
+          <div class="items"><span class="items__text">дети</span>
+            <div class="items__count"><span class="items__count--style items__count__minus">-</span><span class="items__count--style items__count__text">0</span><span class="items__count--style items__count__plus">+</span></div>
+          </div>
+          <div class="items"><span class="items__text">младенцы</span>
+            <div class="items__count"><span class="items__count--style items__count__minus">-</span><span class="items__count--style items__count__text">0</span><span class="items__count--style items__count__plus">+</span></div>
+          </div>
+          <div class="button">
+            <div class="btn btn--disable btn--simple dropdown__clean"><span class="btn_text">Очистить</span></div>
+            <div class="btn btn--enable btn--simple dropdown__apply"><span class="btn_text">Применить</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="elem" style="margin-top: 245px;">
+        <h3 style="margin-bottom: 8px;">bulet list</h3>
+        <div class="bullet-list"><span class="bullet-list__items">Нельзя с питомцами</span><span class="bullet-list__items">Без вечеринок и мероприятий</span><span class="bullet-list__items">Время прибытия — после 13:00, а выезд до 12:00</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="wrapper_content" style="margin-left: 142px;">
+        <div class="option">
+          <div class="icon" style="background:var(--smile)"></div>
+          <div class="content">
+            <h3>Комфорт</h3><span>Шумопоглощающие стены</span>
+          </div>
+        </div>
+        <div class="mt-5">
+          <div class="option">
+            <div class="icon" style="background:var(--home)"></div>
+            <div class="content">
+              <h3>Удобство</h3><span>Окно в каждой из спален</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper_content flex-grow">
+        <div class="feedback">
+          <div class="feedback__left-elem elem"><img src="./../../assets/img/image.png"></div>
+          <div class="feedback__right-elem elem"><span class="feedback__right-elem__content name">Мурад Сарафанов</span><span class="feedback__right-elem__content">5 дней назад</span></div>
+          <div class="feedback__left-elem elem">
+            <div class="like-buttons">
+              <input class="like-buttons__input" type="checkbox" id="murad">
+              <label class="like-buttons__item" for="murad"></label><span class="like-buttons__text">12</span>
+            </div>
+          </div>
+          <div class="feedback__right-elem elem"><span class="feedback__right-elem__content feedback__main">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</span></div>
+        </div>
+      </div>
+    </div>
+    <script src="../../Form_Elements.js"></script>
+  </body>
+</html>

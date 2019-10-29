@@ -29,7 +29,9 @@ body {
     margin: 0;
     padding: 0;
 }
-
+.RoomDetails {
+    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+}
 .RoomDetails__img {
     width: 100%;
     display: flex;
@@ -59,6 +61,7 @@ body {
     flex-wrap: wrap;
     margin-left: 9.7%;
     margin-right: 9.7%;
+    margin-bottom: 62px;
     .Roomdetails__left-side {
         display: flex;
         flex-wrap: wrap;
@@ -73,7 +76,7 @@ body {
     flex-wrap: wrap;
     align-items: flex-start;
     width: 270px;
-    margin-right: 60px;
+    margin-right: 91px;
 }
 
 .RoomDetails__cancel {
@@ -81,11 +84,16 @@ body {
     flex-wrap: wrap;
     align-content: flex-start;
     width: 340px;
+    margin-top: 17px;
     span {
         text-align: left;
+        margin-top: 9px;
+        line-height: 24px;
+        letter-spacing: 1.155px;
     }
 }
 .block-card {
+    margin-left: -17px;
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -117,6 +125,11 @@ body {
         color: var(--dark);
         font-family: var(--quicksand);
     }
+    .num-bold {
+        font-family: var(--montserrat_bold);
+        font-size: 14px;
+        line-height: 34px;
+    }
     .two-input_wrapper h3 {
         margin: 14px 0 5px;
     }
@@ -135,31 +148,31 @@ body {
     display: inherit;
     width: 100%;
     justify-content: space-between;
-    margin-top: 10px;
 
     span {
         color: var(--dark-75);
-        max-width: 215px;
+        max-width: 13.4375rem;
         text-align: left;
         position: relative;
-        font-size: 14px;
-        line-height: 24px;
+        font-size: 0.875rem;
+        line-height: 1.5rem;
     }
     h3 {
         margin: 0;
-        font-size: 19px;
-        line-height: 24px;
+        font-size: 17px;
+        line-height: 6px;
+        font-family: OpenSans;
     }
     .info:after {
         content: '\1F6C8';
-        width: 30px;
-        height: 30px;
+        width: 1.875rem;
+        height: 1.875rem;
         position: absolute;
-        left: 215px;
+        left: 13.4375rem;
         top: 0;
         color: var(--dark-25);
         cursor: pointer;
-        font-size: 20px;
+        font-size: 1.25rem;
     }
     .info:hover:after {
         color: var(--dark-75);
@@ -167,8 +180,71 @@ body {
     }
     .border-bottom {
         flex-grow: 2;
-        border-bottom: 1px solid var(--dark-25);
+        border-bottom: 0.0625rem dotted var(--dark-25);
         box-sizing: border-box;
     }
 }
 
+.Roomdetails__left-side {
+    .RoomDetails_h3 {
+        text-transform: none;
+        font-family: OpenSans;
+        font-size: 19px;
+        line-height: 24px;
+        letter-spacing: -0.3px;
+        margin-top: -1px;
+        margin-bottom: 7px;
+    }
+    .option {
+        .content {
+            h3 {
+                margin: 0;
+                line-height: 28px;
+            }
+            span {
+                line-height: 21px;
+            }
+        }
+    }
+    .option:nth-child(3), .option:nth-child(4) {
+        margin-top: 8px;
+    }
+    .RoomDetails_feedback {
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-between;
+        width: 89%;
+        margin-bottom: 12px;
+        
+        .count-feedback {
+            color: var(--dark-50);
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }    
+    .mt-10 {
+        .feedback {
+            margin-top: -5px;
+        }
+    }
+    .rule {
+        text-transform: none;
+        font-family: OpenSans;
+        font-size: 19px;
+        line-height: 24px;
+        letter-spacing: -0.4px;
+        margin-top: -5px;
+        margin-bottom: 17px;
+        margin-left: 20px;
+    }
+    .bullet-list__items {
+        margin-bottom: 10px;
+    }
+}
+.footer {
+    .main {
+        margin-left: 0;
+        margin-top: -13px;
+    }
+}
