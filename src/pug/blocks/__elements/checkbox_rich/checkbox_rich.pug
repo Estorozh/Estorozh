@@ -3,10 +3,10 @@ mixin checkbox_rich_item(item, descript)
     input(type="checkbox" class="checkbox__input")
     span.checkbox__input--check
     span.list__item--h3= item
-    span.list__item= descript
+    span.list__item!= descript
 
 mixin checkbox_rich()
   .checkbox.checkbox_rich
-    -var list = {'Широкий коридор':'Ширина коридоров в номере не менее 91 см.','Помощник для инвалидов':'На 1 этаже вас встретит специалист  и проводит до номера.'}
+    -var list = {'Широкий коридор':'Ширина коридоров в номере <br>не менее 91 см.','Помощник для инвалидов':'На 1 этаже вас встретит специалист  и проводит до номера.'}
       each descript, item in list
         +checkbox_rich_item(item, descript)

@@ -26,9 +26,9 @@ block body
   +header({'О нас':'', 'Услуги':'arrow-down', 'Вакансии':'', 'Новости':'','Соглашения':'arrow-down'}, '', 'ВОЙТИ', 'ЗАРЕГИСТРИРОВАТЬСЯ')
   .content
     .content__left-side.mt-30
-      h3 Дата пребывания в отеле
+      h3 Даты пребывания в отеле
       +text-field('text','')(class="datepicker-single")
-      h3.mt-20 Сколько гостей
+      h3.mt-20 Гости
       +dropdown('People',true,'3 гостя')(class="arrow--down")
       h3 Диапазон цены
       .range
@@ -36,10 +36,10 @@ block body
       span Стоимость за сутки пребывания в номере
       h3.mt-30 checkbox Buttons
       +checkbox('Checkbox Buttons')
-      .wrapper_content
-        h3.mt-30 Доступность
+      .wrapper_content.mt-30
+        h3 Доступность
         +checkbox_rich()
-      h3.mt-30 Удобство номера
+      h3.mt-30 Удобства номера
       +dropdown('Сonveniences','','2 спальни, 2 кровати')(class=["size-medium",'expanded','arrow--down'])
       +checkbox-expandle('Дополнительные удобства',['Завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь','Телевизор','Шампунь'])(class="mt-30")
       
@@ -47,32 +47,32 @@ block body
       h3.mt-40 Номера, которые мы для вас подобрали
       .SearchRoom
         .SearchRoom__block
-          +slider('№888','9 900','145',true).img--0
+          +slider('888','9 900','145',true).img--0
         .SearchRoom__block
-          +slider('№888','9 900','145',true).img--1
+          +slider('840','9 900','65',false).img--1
         .SearchRoom__block
-          +slider('№888','9 900','145',true).img--2
+          +slider('980','8 500','35',true).img--2
         .SearchRoom__block
-          +slider('№888','9 900','145',true).img--3
+          +slider('856','7 300','19',false).img--3
         .SearchRoom__block
-          +slider('№888','9 900','145',true).img--4
+          +slider('740','6 000','44',false).img--4
         .SearchRoom__block
-          +slider('№888','9 900','145',true).img--5
+          +slider('982','5 800','56',false).img--5
         .SearchRoom__block
-          +slider('№888','9 900','145',true).img--6
+          +slider('678','5 500','45',false).img--6
         .SearchRoom__block
-          +slider('№888','9 900','145',true).img--7
+          +slider('450','5 300','39',false).img--7
         .SearchRoom__block
-          +slider('№888','9 900','145',true).img--8
+          +slider('350','5 000','77',false).img--8
         .SearchRoom__block
-          +slider('№888','9 900','145',true).img--9
+          +slider('666','5 000','25',false).img--9
         .SearchRoom__block
-          +slider('№888','9 900','145',true).img--10
+          +slider('444','5 000','15',false).img--10
         .SearchRoom__block
-          +slider('№888','9 900','145',true).img--11
+          +slider('352','5 000','55',false).img--11
       .pagination__wrapper
         .pagination
-        span.pagination--text 1-12 из 100+ вариантов аренды
+        span.pagination--text 1 – 12 из 100+ вариантов аренды
 
   +footer('Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
   {

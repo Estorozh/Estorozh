@@ -11,15 +11,14 @@
         margin-top: 10.5px;
         flex-wrap: wrap;
         cursor: pointer;
-
-        .list__item {
-            width: 192px;
-            align-self: center;
-            font-size: 12px;
-            text-align: left;
-            letter-spacing: 0;
-            line-height: 20px;
-        }
+    }
+    .list__item {
+        width: 192px;
+        align-self: center;
+        font-size: 12px;
+        text-align: left;
+        letter-spacing: 0;
+        line-height: 20px;
     }
     .checkbox__input {
         visibility: hidden;
