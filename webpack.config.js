@@ -136,12 +136,6 @@ let config = {
             chunks: ['<index>']
         }),
         new HtmlWebpackPlugin({
-            template: __dirname + '/src/pug/blocks/pages/test.pug',
-            filename: '/main/pages/test.html',
-            inject: true,
-            chunks: ['<index>']
-        }),
-        new HtmlWebpackPlugin({
             template: __dirname + '/src/pug/blocks/pages/RoomDetails.pug',
             filename: '/main/pages/RoomDetails.html',
             inject: true,

@@ -29,12 +29,16 @@ body {
     margin-top: 70px;
     margin-left: 140px;
 }
+@media screen and (max-width:700px) {
+    .block-card {
+        margin-left:10px;
+    }
+}
 .content {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     position: relative;
-
     .content__text {
         width: 100%;
         z-index: 1;
