@@ -23,7 +23,8 @@ let config = {
         Landing: `${PATHS.src}/Landing.js`,
         SearchRoom: `${PATHS.src}/SearchRoom.js`,
         RoomDetails: `${PATHS.src}/RoomDetails.js`,
-        test: `${PATHS.src}/test.js` 
+        LogIn: `${PATHS.src}/LogIn.js`,
+        Registration: `${PATHS.src}/Registration.js` 
     },
     output: {
         filename: '[name].js',
@@ -143,6 +144,18 @@ let config = {
         new HtmlWebpackPlugin({
             template: __dirname + '/src/pug/blocks/pages/RoomDetails.pug',
             filename: '/main/pages/RoomDetails.html',
+            inject: true,
+            chunks: ['<index>']
+        }),
+        new HtmlWebpackPlugin({
+            template: __dirname + '/src/pug/blocks/pages/Registration.pug',
+            filename: '/main/pages/Registration.html',
+            inject: true,
+            chunks: ['<index>']
+        }),
+        new HtmlWebpackPlugin({
+            template: __dirname + '/src/pug/blocks/pages/LogIn.pug',
+            filename: '/main/pages/LogIn.html',
             inject: true,
             chunks: ['<index>']
         })

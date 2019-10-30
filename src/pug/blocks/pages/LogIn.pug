@@ -1,0 +1,50 @@
+extends ../main.pug
+block head 
+  title Log in
+  link(rel="stylesheet", href="../../assets/css/LogIn.css")
+
+include ./../__elements/text-field/text-field
+include ./../__elements/air-datepicker/two-input/two-input
+include ./../__elements/checkbox/checkbox
+include ./../__elements/radio-buttons/radio-buttons
+include ./../__elements/toggle/toggle
+include ./../__elements/like-buttons/like-buttons
+include ./../__elements/rate-button/rate-button
+include ./../__elements/buttons/buttons
+include ./../__elements/dropdown/dropdown
+include ./../__elements/checkbox-expandle/checkbox-expandle
+include ./../__elements/option/option
+include ./../__elements/checkbox_rich/checkbox_rich
+include ./../__elements/bullet-list/bullet-list
+include ./../__elements/feedback/feedback
+include ./../__elements/slider/slider
+include ./../__elements/header/header
+include ./../__elements/footer/footer
+include ./../__elements/chart/chart
+include ./../__elements/cards_find/cards_find
+
+block body
+  +header({'О нас':'', 'Услуги':'arrow-down', 'Вакансии':'', 'Новости':'','Соглашения':'arrow-down'}, '', 'ВОЙТИ', 'ЗАРЕГИСТРИРОВАТЬСЯ')
+
+  .content
+    .block
+      .block-card
+        h1 Войти
+        +text-field('','Email')(class="mt-20")
+        +text-field('','Пароль')(class="mt-10")
+        +button('ВОЙТИ')(class=['btn--fill','btn--big','mt-20'])
+        .auth.mt-30
+          span Нет аккаунта на Toxin?
+          +button('Создать')(class=['btn--enable', 'btn--border'])
+
+  +footer('Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
+  {
+    ['навигация']:['О нас','Новости','Служба поддержки','Услуги'],
+    ['о нас']: ['О сервисе','Наша команда','Вакансии','Инвесторы'],
+    ['Служба поддержки']: ['Соглашения','Сообщества','Связь с нами'] 
+    },
+    'Подписка',
+    'Получайте специальные <br>предложения и новости сервиса'
+    )
+block footer
+  script(src='../../LogIn.js')
