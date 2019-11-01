@@ -45,215 +45,276 @@
             <use xlink:href="#logo"></use>
           </svg>
         </div>
-    <div class="block" style="margin: 20px 0 0 141px;">
-      <div class="elem">
-        <h3>text-field</h3><span>default</span>
-        <div class="text-field">
-          <input type="text" placeholder="EMAIL">
-        </div>
-      </div>
-      <div class="elem mt-5">
-        <h3>text-field</h3><span>hover/focus</span>
-        <div class="text-field">
-          <input class="color-75" type="text" placeholder="This is pretty awesome">
-        </div>
-      </div>
-      <div class="elem mt-5">
-        <h3>dropdown</h3><span>DEFAULT</span>
-        <div class="dropdown arrow--down" id="dropdown">Сколько Гостей
-          <div class="dropdown__content">
+    <div class="main">
+      <div class="block">
+        <div class="elem">
+          <h3>text-field</h3><span>default</span>
+          <div class="text-field">
+            <input type="text" placeholder="EMAIL">
           </div>
         </div>
-      </div>
-      <div class="elem mt-10">
-        <h3>masked text field</h3><span>default</span>
-        <div class="text-field">
-          <input class="datepicker-single" type="text" placeholder="">
-        </div>
-      </div>
-      <div class="elem mt-28">
-        <div class="two-input">
-          <div class="two-input_wrapper">
-            <h3>Прибытие</h3>
-            <input type="text" id="start" placeholder="дд.мм.ггг"><i class="fa fa-angle-down"></i>
-          </div>
-          <div class="two-input_wrapper">
-            <h3>Выезд</h3>
-            <input type="text" id="end" placeholder="дд.мм.ггг"><i class="fa fa-angle-down"></i>
+        <div class="elem mt-5">
+          <h3>text-field</h3><span>hover/focus</span>
+          <div class="text-field">
+            <input class="color-75" type="text" placeholder="This is pretty awesome">
           </div>
         </div>
-      </div>
-      <div class="elem mt-28" style="width: 266px;">
-        <h3>filter date dropdown</h3>
-        <div class="dropdown size-medium arrow--down color-75" id="dropdown">
-          <div class="dropdown__content">
-          </div>
-        </div>
-      </div>
-      <div class="elem mt-30 flex-size-medium">
-        <h3>subscription text field</h3>
-        <div class="text-field arrow--forward">
-          <input class="flex-size-medium" type="text" placeholder="Email">
-        </div>
-      </div>
-      <div class="elem flex-size-medium" style="margin-top: 85px;">
-        <h3>dropdown</h3><span>default</span>
-      </div>
-      <div class="elem flex-size-medium">
-        <div class="dropdown flex-size-medium arrow--down" id="dropdown">2 спальни, 2 кровати
-          <div class="dropdown__content">
-          </div>
-        </div>
-      </div>
-      <div class="elem flex-size-medium" style="margin-top: 9px;">
-        <h3>dropdown</h3><span>Expanded</span>
-      </div>
-      <div class="elem flex-size-medium">
-        <div class="dropdown size-medium expanded arrow--down" id="dropdown">2 спальни, 2 кровати
-          <div class="dropdown__content">
-            <div class="items"><span class="items__text">спальни</span>
-              <div class="items__count"><span class="items__count--style items__count__minus">-</span><span class="items__count--style items__count__text">0</span><span class="items__count--style items__count__plus">+</span></div>
-            </div>
-            <div class="items"><span class="items__text">кровати</span>
-              <div class="items__count"><span class="items__count--style items__count__minus">-</span><span class="items__count--style items__count__text">0</span><span class="items__count--style items__count__plus">+</span></div>
-            </div>
-            <div class="items"><span class="items__text">ванные комнаты</span>
-              <div class="items__count"><span class="items__count--style items__count__minus">-</span><span class="items__count--style items__count__text">0</span><span class="items__count--style items__count__plus">+</span></div>
+        <div class="elem mt-5">
+          <h3>dropdown</h3><span>DEFAULT</span>
+          <div class="dropdown arrow--down" id="dropdown">Сколько Гостей
+            <div class="dropdown__content">
             </div>
           </div>
         </div>
-      </div>
-      <div class="size-medium" style="margin-top: 157px;">
-        <div class="checkbox-expandle arrow--down" onclick="children[1].classList.toggle(&quot;show&quot;); classList.toggle(&quot;arrow--up&quot;); classList.toggle(&quot;arrow--down&quot;);">
-          <h3 class="text">expandable checkbox list</h3>
-          <div class="checkbox-expandle__body checkbox">
+        <div class="elem">
+          <h3>masked text field</h3><span>default</span>
+          <div class="text-field">
+            <input class="datepicker-single" type="text" placeholder="">
           </div>
         </div>
-        <div class="mt-20">
+        <div class="elem">
+          <div class="two-input">
+            <div class="two-input_wrapper">
+              <h3>Прибытие</h3>
+              <input type="text" id="start" placeholder="дд.мм.ггг"><i class="fa fa-angle-down"></i>
+            </div>
+            <div class="two-input_wrapper">
+              <h3>Выезд</h3>
+              <input type="text" id="end" placeholder="дд.мм.ггг"><i class="fa fa-angle-down"></i>
+            </div>
+          </div>
+        </div>
+        <div class="elem">
+          <h3>filter date dropdown</h3>
+          <div class="dropdown size-medium arrow--down color-75" id="dropdown">
+            <div class="dropdown__content">
+            </div>
+          </div>
+        </div>
+        <div class="elem flex-size-medium">
+          <h3>subscription text field</h3>
+          <div class="text-field arrow--forward">
+            <input class="flex-size-medium" type="text" placeholder="Email">
+          </div>
+        </div>
+        <div class="elem flex-size-medium">
+          <h3>dropdown</h3><span>default</span>
+        </div>
+        <div class="elem flex-size-medium">
+          <div class="dropdown flex-size-medium arrow--down" id="dropdown">2 спальни, 2 кровати
+            <div class="dropdown__content">
+            </div>
+          </div>
+        </div>
+        <div class="elem flex-size-medium">
+          <h3>dropdown</h3><span>Expanded</span>
+        </div>
+        <div class="elem flex-size-medium">
+          <div class="dropdown size-medium expanded arrow--down" id="dropdown">2 спальни, 2 кровати
+            <div class="dropdown__content">
+              <div class="items"><span class="items__text">спальни</span>
+                <div class="items__count"><span class="items__count--style items__count__minus">-</span><span class="items__count--style items__count__text">0</span><span class="items__count--style items__count__plus">+</span></div>
+              </div>
+              <div class="items"><span class="items__text">кровати</span>
+                <div class="items__count"><span class="items__count--style items__count__minus">-</span><span class="items__count--style items__count__text">0</span><span class="items__count--style items__count__plus">+</span></div>
+              </div>
+              <div class="items"><span class="items__text">ванные комнаты</span>
+                <div class="items__count"><span class="items__count--style items__count__minus">-</span><span class="items__count--style items__count__text">0</span><span class="items__count--style items__count__plus">+</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="size-medium">
           <div class="checkbox-expandle arrow--down" onclick="children[1].classList.toggle(&quot;show&quot;); classList.toggle(&quot;arrow--up&quot;); classList.toggle(&quot;arrow--down&quot;);">
             <h3 class="text">expandable checkbox list</h3>
             <div class="checkbox-expandle__body checkbox">
-              <label>
-                <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item">Завтрак</span>
+            </div>
+          </div>
+          <div class="mt-20">
+            <div class="checkbox-expandle arrow--down" onclick="children[1].classList.toggle(&quot;show&quot;); classList.toggle(&quot;arrow--up&quot;); classList.toggle(&quot;arrow--down&quot;);">
+              <h3 class="text">expandable checkbox list</h3>
+              <div class="checkbox-expandle__body checkbox">
+                <label>
+                  <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item">Завтрак</span>
+                </label>
+                <label>
+                  <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item">Письменный стол</span>
+                </label>
+                <label>
+                  <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item">Стул для кормления</span>
+                </label>
+                <label>
+                  <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item">Кроватка</span>
+                </label>
+                <label>
+                  <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item">Телевизор</span>
+                </label>
+                <label>
+                  <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item">Шампунь</span>
+                </label>
+                <label>
+                  <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item">Телевизор</span>
+                </label>
+                <label>
+                  <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item">Шампунь</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <div class="mt-20">
+          <h3>checkbox Buttons</h3>
+          <div class="checkbox">
+            <label>
+              <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item">Можно курить</span>
+            </label>
+            <label>
+              <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item">Можно с питомцами</span>
+            </label>
+            <label>
+              <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item">Можно пригласить гостей (до 10 человек)</span>
+            </label>
+          </div>
+        </div>
+        <h3>Radio Buttons</h3>
+        <div class="mt-15">
+          <div class="radio-button">
+            <label class="radio-button__item">
+              <input class="radio-button__input" type="radio" name="sex"><span class="radio-button__text">Мужчина</span>
+            </label>
+            <label class="radio-button__item">
+              <input class="radio-button__input" type="radio" name="sex"><span class="radio-button__text">Женщина</span>
+            </label>
+          </div>
+        </div>
+        <h3>Toggle</h3>
+        <div class="mt-10">
+          <div class="toggle">
+            <label class="toggle__item">
+              <input class="toggle__input" type="checkbox" checked><span class="toggle__text">Получать спецпредложения</span>
+            </label>
+          </div>
+        </div>
+        <div class="mt-10">
+          <div class="toggle">
+            <label class="toggle__item">
+              <input class="toggle__input" type="checkbox"><span class="toggle__text">Получать спецпредложения</span>
+            </label>
+          </div>
+        </div>
+        <h3>like button</h3>
+        <div class="mt-15 elem">
+          <div class="like-buttons">
+            <input class="like-buttons__input" type="checkbox" id="dislake">
+            <label class="like-buttons__item" for="dislake"></label><span class="like-buttons__text">2</span>
+          </div>
+          <div class="like-buttons">
+            <input class="like-buttons__input" type="checkbox" id="like">
+            <label class="like-buttons__item" for="like"></label><span class="like-buttons__text">12</span>
+          </div>
+        </div>
+        <h3>rate button</h3>
+        <div class="mt-15 elem">
+          <div class="rate-button">
+            <label class="rate-button__star">
+              <input class="rate-button__input" type="radio" name="stars-left">
+            </label>
+            <label class="rate-button__star">
+              <input class="rate-button__input" type="radio" name="stars-left">
+            </label>
+            <label class="rate-button__star">
+              <input class="rate-button__input" type="radio" name="stars-left">
+            </label>
+            <label class="rate-button__star">
+              <input class="rate-button__input" type="radio" name="stars-left">
+            </label>
+            <label class="rate-button__star">
+              <input class="rate-button__input" type="radio" name="stars-left">
+            </label>
+          </div>
+          <div class="rate-button">
+            <label class="rate-button__star">
+              <input class="rate-button__input" type="radio" name="stars-right">
+            </label>
+            <label class="rate-button__star">
+              <input class="rate-button__input" type="radio" name="stars-right">
+            </label>
+            <label class="rate-button__star">
+              <input class="rate-button__input" type="radio" name="stars-right">
+            </label>
+            <label class="rate-button__star">
+              <input class="rate-button__input" type="radio" name="stars-right">
+            </label>
+            <label class="rate-button__star">
+              <input class="rate-button__input" type="radio" name="stars-right">
+            </label>
+          </div>
+        </div>
+        <div class="elem">
+          <h3>dropdown</h3>
+          <div class="dropdown arrow--down" id="dropdown">Сколько гостей
+            <div class="dropdown__content">
+              <div class="items"><span class="items__text">взрослые</span>
+                <div class="items__count"><span class="items__count--style items__count__minus">-</span><span class="items__count--style items__count__text">0</span><span class="items__count--style items__count__plus">+</span></div>
+              </div>
+              <div class="items"><span class="items__text">дети</span>
+                <div class="items__count"><span class="items__count--style items__count__minus">-</span><span class="items__count--style items__count__text">0</span><span class="items__count--style items__count__plus">+</span></div>
+              </div>
+              <div class="items"><span class="items__text">младенцы</span>
+                <div class="items__count"><span class="items__count--style items__count__minus">-</span><span class="items__count--style items__count__text">0</span><span class="items__count--style items__count__plus">+</span></div>
+              </div>
+              <div class="button">
+                <div class="btn btn--disable btn--simple dropdown__clean"><span class="btn_text">Очистить</span></div>
+                <div class="btn btn--enable btn--simple dropdown__apply"><span class="btn_text">Применить</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="elem">
+          <h3>rich Checkbox Buttons</h3>
+          <div class="mt-5">
+            <div class="checkbox checkbox_rich">
+              <label class="checkbox_row">
+                <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item--h3">Широкий коридор</span><span class="list__item">Ширина коридоров в номере <br>не менее 91 см.</span>
               </label>
-              <label>
-                <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item">Письменный стол</span>
-              </label>
-              <label>
-                <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item">Стул для кормления</span>
-              </label>
-              <label>
-                <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item">Кроватка</span>
-              </label>
-              <label>
-                <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item">Телевизор</span>
-              </label>
-              <label>
-                <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item">Шампунь</span>
-              </label>
-              <label>
-                <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item">Телевизор</span>
-              </label>
-              <label>
-                <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item">Шампунь</span>
+              <label class="checkbox_row">
+                <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item--h3">Помощник для инвалидов</span><span class="list__item">На 1 этаже вас встретит специалист  и проводит до номера.</span>
               </label>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="block" style="margin-left: 126px">
-      <div class="mt-20">
-        <h3>checkbox Buttons</h3>
-        <div class="checkbox">
-          <label>
-            <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item">Можно курить</span>
-          </label>
-          <label>
-            <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item">Можно с питомцами</span>
-          </label>
-          <label>
-            <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item">Можно пригласить гостей (до 10 человек)</span>
-          </label>
+      <div class="block">
+        <div class="mt-20">
+          <h3>Range slider</h3>
         </div>
-      </div>
-      <h3 style="margin-top: 37px;">Radio Buttons</h3>
-      <div class="mt-15">
-        <div class="radio-button">
-          <label class="radio-button__item">
-            <input class="radio-button__input" type="radio" name="sex"><span class="radio-button__text">Мужчина</span>
-          </label>
-          <label class="radio-button__item">
-            <input class="radio-button__input" type="radio" name="sex"><span class="radio-button__text">Женщина</span>
-          </label>
+        <div class="range" style="margin-top: -18px;">
+          <input class="js-range-slider" type="text" name="my_range" value="">
         </div>
-      </div>
-      <h3 style="margin-top: 45px;">Toggle</h3>
-      <div class="mt-10">
-        <div class="toggle">
-          <label class="toggle__item">
-            <input class="toggle__input" type="checkbox" checked><span class="toggle__text">Получать спецпредложения</span>
-          </label>
-        </div>
-      </div>
-      <div class="mt-10">
-        <div class="toggle">
-          <label class="toggle__item">
-            <input class="toggle__input" type="checkbox"><span class="toggle__text">Получать спецпредложения</span>
-          </label>
-        </div>
-      </div>
-      <h3 style="margin-top: 36px">like button</h3>
-      <div class="mt-15 elem" style="justify-content: flex-start;">
-        <div class="like-buttons">
-          <input class="like-buttons__input" type="checkbox" id="dislake">
-          <label class="like-buttons__item" for="dislake"></label><span class="like-buttons__text">2</span>
-        </div>
-        <div class="like-buttons">
-          <input class="like-buttons__input" type="checkbox" id="like">
-          <label class="like-buttons__item" for="like"></label><span class="like-buttons__text">12</span>
-        </div>
-      </div>
-      <h3 style="margin-top: 41px;">rate button</h3>
-      <div class="mt-15 elem" style="justify-content: flex-start;">
-        <div class="rate-button">
-          <label class="rate-button__star">
-            <input class="rate-button__input" type="radio" name="stars-left">
-          </label>
-          <label class="rate-button__star">
-            <input class="rate-button__input" type="radio" name="stars-left">
-          </label>
-          <label class="rate-button__star">
-            <input class="rate-button__input" type="radio" name="stars-left">
-          </label>
-          <label class="rate-button__star">
-            <input class="rate-button__input" type="radio" name="stars-left">
-          </label>
-          <label class="rate-button__star">
-            <input class="rate-button__input" type="radio" name="stars-left">
-          </label>
-        </div>
-        <div class="rate-button">
-          <label class="rate-button__star">
-            <input class="rate-button__input" type="radio" name="stars-right">
-          </label>
-          <label class="rate-button__star">
-            <input class="rate-button__input" type="radio" name="stars-right">
-          </label>
-          <label class="rate-button__star">
-            <input class="rate-button__input" type="radio" name="stars-right">
-          </label>
-          <label class="rate-button__star">
-            <input class="rate-button__input" type="radio" name="stars-right">
-          </label>
-          <label class="rate-button__star">
-            <input class="rate-button__input" type="radio" name="stars-right">
-          </label>
-        </div>
-      </div>
-      <div class="elem" style="margin-top: 157px;">
+        <h3>Buttons
+          <div class="buttons-line">
+            <div class="btn btn--enable btn--fill"><span class="btn_text">CLICK ME</span></div>
+            <div class="btn btn--disable btn--fill"><span class="btn_text">CLICK ME</span></div>
+          </div>
+          <div class="buttons-line">
+            <div class="btn btn--enable btn--border"><span class="btn_text">CLICK ME</span></div>
+            <div class="btn btn--disable btn--border"><span class="btn_text">CLICK ME</span></div>
+          </div>
+          <div class="buttons-line">
+            <div class="btn btn--enable btn--simple"><span class="btn_text">CLICK ME</span></div>
+            <div class="btn btn--sdisable btn--simple"><span class="btn_text">CLICK ME</span></div>
+          </div>
+          <div class="buttons-line">
+            <div class="btn btn--fill btn--big"><span class="btn_text">ПЕРЕЙТИ К ОПЛАТЕ</span></div>
+          </div>
+        </h3>
+        <h3>pagination
+          <div class="pagination"></div><span class="pagination--text">1 – 12 из 100+ вариантов аренды</span>
+        </h3>
         <h3>dropdown</h3>
-        <div class="dropdown arrow--down" id="dropdown">Сколько гостей
+        <div class="dropdown arrow--down" id="dropdown">3 гостя
           <div class="dropdown__content">
             <div class="items"><span class="items__text">взрослые</span>
               <div class="items__count"><span class="items__count--style items__count__minus">-</span><span class="items__count--style items__count__text">0</span><span class="items__count--style items__count__plus">+</span></div>
@@ -270,75 +331,15 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="elem" style="margin-top: 245px;">
-        <h3 style="width: 100%;">rich Checkbox Buttons</h3>
-        <div class="mt-5">
-          <div class="checkbox checkbox_rich">
-            <label class="checkbox_row">
-              <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item--h3">Широкий коридор</span><span class="list__item">Ширина коридоров в номере <br>не менее 91 см.</span>
-            </label>
-            <label class="checkbox_row">
-              <input class="checkbox__input" type="checkbox"><span class="checkbox__input--check"></span><span class="list__item--h3">Помощник для инвалидов</span><span class="list__item">На 1 этаже вас встретит специалист  и проводит до номера.</span>
-            </label>
+        <div class="elem">
+          <h3>bulet list</h3>
+          <div class="bullet-list"><span class="bullet-list__items">Нельзя с питомцами</span><span class="bullet-list__items">Без вечеринок и мероприятий</span><span class="bullet-list__items">Время прибытия — после 13:00, а выезд до 12:00</span>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="block" style="margin-left: 72px;">
-      <div class="mt-20">
-        <h3>Range slider</h3>
-      </div>
-      <div class="range" style="margin-top: -18px;">
-        <input class="js-range-slider" type="text" name="my_range" value="">
-      </div>
-      <h3 style="margin-top: 33px;">Buttons
-        <div class="buttons-line">
-          <div class="btn btn--enable btn--fill"><span class="btn_text">CLICK ME</span></div>
-          <div class="btn btn--disable btn--fill"><span class="btn_text">CLICK ME</span></div>
-        </div>
-        <div class="buttons-line" style="margin-top: 29px;">
-          <div class="btn btn--enable btn--border"><span class="btn_text">CLICK ME</span></div>
-          <div class="btn btn--disable btn--border"><span class="btn_text">CLICK ME</span></div>
-        </div>
-        <div class="buttons-line" style="margin-top: 26px;">
-          <div class="btn btn--enable btn--simple"><span class="btn_text">CLICK ME</span></div>
-          <div class="btn btn--sdisable btn--simple"><span class="btn_text">CLICK ME</span></div>
-        </div>
-        <div class="buttons-line" style="margin-top: 27px;">
-          <div class="btn btn--fill btn--big"><span class="btn_text">ПЕРЕЙТИ К ОПЛАТЕ</span></div>
-        </div>
-      </h3>
-      <h3 style="margin-top: 35px; width:100%;">pagination
-        <div class="pagination"></div><span class="pagination--text">1 – 12 из 100+ вариантов аренды</span>
-      </h3>
-      <div class="mt-20" style="margin-top: 357px;"></div>
-      <h3>dropdown</h3>
-      <div class="dropdown arrow--down" id="dropdown">3 гостя
-        <div class="dropdown__content">
-          <div class="items"><span class="items__text">взрослые</span>
-            <div class="items__count"><span class="items__count--style items__count__minus">-</span><span class="items__count--style items__count__text">0</span><span class="items__count--style items__count__plus">+</span></div>
-          </div>
-          <div class="items"><span class="items__text">дети</span>
-            <div class="items__count"><span class="items__count--style items__count__minus">-</span><span class="items__count--style items__count__text">0</span><span class="items__count--style items__count__plus">+</span></div>
-          </div>
-          <div class="items"><span class="items__text">младенцы</span>
-            <div class="items__count"><span class="items__count--style items__count__minus">-</span><span class="items__count--style items__count__text">0</span><span class="items__count--style items__count__plus">+</span></div>
-          </div>
-          <div class="button">
-            <div class="btn btn--disable btn--simple dropdown__clean"><span class="btn_text">Очистить</span></div>
-            <div class="btn btn--enable btn--simple dropdown__apply"><span class="btn_text">Применить</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="elem" style="margin-top: 245px;">
-        <h3 style="margin-bottom: 8px;">bulet list</h3>
-        <div class="bullet-list"><span class="bullet-list__items">Нельзя с питомцами</span><span class="bullet-list__items">Без вечеринок и мероприятий</span><span class="bullet-list__items">Время прибытия — после 13:00, а выезд до 12:00</span>
         </div>
       </div>
     </div>
     <div class="footer">
-      <div class="wrapper_content" style="margin-left: 142px;">
+      <div class="wrapper_content">
         <div class="option">
           <div class="icon" style="background:var(--smile)"></div>
           <div class="content">

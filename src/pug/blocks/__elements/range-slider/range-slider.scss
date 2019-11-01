@@ -8,6 +8,9 @@
   display: block;
   user-select: none;
 }
+.irs-single {
+  line-height: 0;
+}
 .irs-hidden-input {
   position: absolute !important;
   display: block !important;

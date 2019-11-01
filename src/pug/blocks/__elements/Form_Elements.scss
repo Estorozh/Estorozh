@@ -24,6 +24,11 @@ html {
 body {
     margin-bottom: 130px;
 }
+.main {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
 .block {
     display: flex;
     justify-content: space-between;
@@ -92,7 +97,105 @@ body {
     margin-top: 22px;
 
 }
+//PP
+.block:first-child {
+    margin: 20px 0 0 141px;
+    .elem:nth-child(4) {
+        margin-top: 7px;
+    }
+    .elem:nth-child(5) {
+        margin-top: 24px;
+    }
+    .elem:nth-child(6) {
+        margin-top: 27px;
+        width: 266px;
+    }
+    .elem:nth-child(7) {
+        margin-top: 26px;
+        width: 266px;
+    }
+    .elem:nth-child(8) {
+        margin-top: 85px;
+    }
 
+    .elem:nth-child(10) {
+        margin-top: 4px;
+    }
+    div:nth-child(12) {
+        margin-top: 159px;
+    }
+}
+.block:nth-child(2) {
+    margin-left: 126px;
+
+    h3:nth-child(2) {
+        margin-top: 37px;
+    }
+    h3:nth-child(4) {
+        margin-top: 45px;
+    }
+    h3:nth-child(7) {
+        margin-top: 36px;
+    }
+    .elem:nth-child(8) {
+        justify-content: flex-start;
+    }
+    h3:nth-child(9) {
+        margin-top: 41px;
+    }
+    .elem:nth-child(10) {
+        justify-content: flex-start;
+    }
+    .elem:nth-child(11) {
+        margin-top: 162px;
+    }
+    .elem:nth-child(12) {
+        margin-top: 254px;
+        h3:first-child {
+            width: 100%;
+        }
+    }
+    
+}
+.block:nth-child(3) {
+    margin-left: 72px;
+    .range {
+        margin-top: -18px;
+    }
+    h3:nth-child(3) {
+        margin-top: 33px;
+    }
+    .buttons-line:nth-child(2) {
+        margin-top: 29px;
+    }
+    .buttons-line:nth-child(3) {
+        margin-top: 26px;
+        .btn--simple {
+            width: 100px;
+        }
+    }
+    .buttons-line:nth-child(4) {
+        margin-top: 27px;
+    }
+    h3:nth-child(4) {
+        margin-top: 35px; 
+        width:100%;
+    }
+    h3:nth-child(5) { //dropdown с 3 гостя
+        margin-top: 239px;
+    }
+    .elem:nth-child(7) {
+        margin-top: 245px;
+        h3:first-child {
+            margin-bottom: 8px;
+        }
+    }
+}
+.footer {
+    .wrapper_content:first-child {
+        margin-left: 142px;
+    }
+}
 @media screen and (max-width: 700px) {
     body .block {
         margin-left:0 !important;
