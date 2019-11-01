@@ -2,6 +2,7 @@ let dropdown, itemsText, itemsPlus, itemsMinus, arr;
 itemsText = document.getElementsByClassName('items__count__text');
 dropdown = document.getElementsByClassName('dropdown');
 
+
 //функция для правильной подстановки нужного окончания
 const goodNaming = (value,arr) => {
   switch(value) {
@@ -25,6 +26,7 @@ const goodNaming = (value,arr) => {
 }
 for (i=0; i<dropdown.length; i++) {
     dropdown[i].addEventListener('click', function(event,dropdown) {
+      let guest = 0, baby = 0, bedroom=0,bed = 0, bathroom = 0;
       dropdown= event.target;
       //проверка какой массив выбрать с удобствами или гостями
       // console.log(dropdown);
@@ -43,42 +45,66 @@ for (i=0; i<dropdown.length; i++) {
           dropdown.classList.toggle('arrow--down');
         //счетчик в items обрабатывает нажатия на минус и плюс
           dropdown.children[0].addEventListener('click',(e)=>{
-            arr = [' гостей',' гость',' гостя'];
+            arr_guest = [' гостей',' гость',' гостя'], arr_baby = [' младенцев',' младенец',' младенца'], arr_bedroom = ['спален','спальня','спальни'], arr_bed = ['кроватей','кровать','кровати'], arr_bathroom = ['ванных комнат','ванная комната','ванных комнаты'];
             let count;
             //функция, которая принимает количество гостей и выдает строку
-            let summGuest = (items)=> {
-              let guest = 0, baby = 0;
-              /**первый не правильно работающий метод */
-              // switch(e.target.parentElement.parentElement.children[0].innerText) {
-              //   case 'взрослые':
-              //     for (k=0; k < items.length-2; k++) {
-              //       guest = counting(+items[k].children[1].children[1].innerHTML, guest)
-              //     }
-              //     break;
-              //   case 'дети':
-              //       for (k=0; k < items.length-2; k++) {
-              //         guest = counting(+items[k].children[1].children[1].innerHTML, guest)
-              //       }
-              //       console.log(items[k].children[1].children[1].innerHTML);
-              //     break;
-              //   case 'младенцы':
-              //       for (k=0; k < items.length-1; k++) {
-              //         baby = counting(+items[k].children[1].children[1].innerHTML, baby)
-              //       }
-              //       console.log(baby);
-              //     break;
-
-              // }
-              /**втоорй не правильно работающий метод */
-              // for (k=0; k < items.length-1; k++) { 
-              //   if(e.target.parentElement.parentElement.children[0].innerText == "младенцы") {
-              //     baby++;
-              //   } else {
-              //     guest += +items[k].children[1].children[1].innerHTML;
-              //   }
-              // }
-              //вызываю функцию подставления правильного окончания
-              return guest + goodNaming(guest, arr) + baby + ' младенцев';
+            let sumGuest = (items,sign)=> {
+              let item = e.target.parentElement.parentElement.children[0].innerText;
+              if (item == 'ВЗРОСЛЫЕ' || item == 'ДЕТИ' || item == 'МЛАДЕНЦЫ') {
+                switch(item) {
+                  case 'ВЗРОСЛЫЕ':
+                    if(sign=="+") {
+                      ++guest;
+                    } else {
+                      --guest;
+                    }
+                    break;
+                  case 'ДЕТИ':
+                    if(sign=="+") {
+                      ++guest;
+                    } else {
+                      --guest;
+                    }
+                    break;
+                  case 'МЛАДЕНЦЫ':
+                    if(sign=="+") {
+                      ++baby;
+                    } else {
+                      --baby;
+                    }
+                    break;
+                }
+                //вызываю функцию для подставления правильного окончания и возвращаю строку для input
+                if(baby == 0) return guest + goodNaming(guest, arr_guest);
+                return guest + goodNaming(guest, arr_guest) +', '+ baby + goodNaming(baby, arr_baby);
+              } else {
+                switch(item) {
+                  case 'СПАЛЬНИ':
+                    if(sign=="+") {
+                      ++bedroom;
+                    } else {
+                      --bedroom;
+                    }
+                    break;
+                  case 'КРОВАТИ':
+                    if(sign=="+") {
+                      ++bed;
+                    } else {
+                      --bed;
+                    }
+                    break;
+                  case 'ВАННЫЕ КОМНАТЫ':
+                    if(sign=="+") {
+                      ++bathroom;
+                    } else {
+                      --bathroom;
+                    }
+                    break;
+                }
+                //вызываю функцию для подставления правильного окончания и возвращаю строку для input
+                if(bathroom == 0) return bedroom +' '+ goodNaming(bedroom, arr_bedroom) + ', '+ bed +' '+ goodNaming(bed, arr_bed);
+                return (bedroom + ' ' +goodNaming(bedroom, arr_bedroom)+', ' + bed +' '+ goodNaming(bed, arr_bed) + ', ' + bathroom + ' ' + goodNaming(bathroom, arr_bathroom)).slice(0,27)+'...';
+              }
             };
 
             //проверка нажатий на - и +
@@ -92,6 +118,7 @@ for (i=0; i<dropdown.length; i++) {
                 if (count>=1) //проверяем возможно ли еще отнимать
                   count--;
                   e.target.nextSibling.innerHTML = count;
+                  dropdown.firstChild.data = sumGuest(dropdown.children[0].children,"-");
               break;
 
               //проверка нажатия на плюс
@@ -101,19 +128,26 @@ for (i=0; i<dropdown.length; i++) {
                     e.target.previousSibling.previousSibling.classList.toggle('disable');
                   count++;
                   e.target.previousSibling.innerHTML=count;
-                  dropdown.firstChild.data = summGuest(dropdown.children[0].children);
+                  dropdown.firstChild.data = sumGuest(dropdown.children[0].children,"+");
               break;
             }
           });
         }
 
       //Использую кнопку "применить" скрывая содержимое при нажатии
-      let dropdown__aply = document.querySelector('.dropdown__apply');
-      dropdown__aply.addEventListener('click', function(e) {
-        e.target.parentElement.parentElement.classList.toggle('show');
-        e.target.parentElement.parentElement.parentElement.classList.toggle('arrow--up');
-        e.target.parentElement.parentElement.parentElement.classList.toggle('arrow--down');
-      })
+      let dropdown__apply = document.getElementsByClassName('dropdown__apply');
+      for(let i=0; i<dropdown__apply.length; i++) {
+        dropdown__apply[i].addEventListener('click', function(e) {
+          e.target.parentElement.parentElement.parentElement.classList.toggle('show');
+          e.target.parentElement.parentElement.parentElement.parentElement.classList.toggle('arrow--up');
+          e.target.parentElement.parentElement.parentElement.parentElement.classList.toggle('arrow--down');
+        });
+      }
+      let dropdown__clean = document.querySelector('.dropdown__clean');
+      for(let i=0; i<dropdown__apply.length; i++) {
+        dropdown__clean[i].addEventListener('click', function(e) {
+          console.log(guest,baby);
+        });
+      }
     });
 }
-
