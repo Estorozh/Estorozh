@@ -251,3 +251,36 @@ body {
         margin-top: -13px;
     }
 }
+
+@media screen and (max-width: 1300px) {
+    .RoomDetails__content {
+        margin-left: 4%;
+        margin-right: 4%;
+
+    }
+}
+@media screen and (max-width: 1150px) {
+    .RoomDetails__content .Roomdetails__left-side {
+        width: 50%;
+        .RoomDetails__block:nth-child(2) {
+            margin-top: 40px;
+            h3 {
+                margin-bottom: 100px;
+            }
+        }
+    }
+    .RoomDetails__content .Roomdetails__right-side {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 740px) {
+    .RoomDetails__content .RoomDetails__right-side {
+        order:1;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .RoomDetails__content .RoomDetails__left-side {
+        order:2;
+    }
+}

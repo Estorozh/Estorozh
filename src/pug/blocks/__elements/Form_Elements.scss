@@ -197,8 +197,37 @@ body {
     margin-top: 22px;
 
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1400px) {
+    .main {
+        justify-content: center;
+    }
+    .block:first-child {
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 1150px) {
+    .main .block {
+         margin-right: 35%;
+         margin-left: 35%;
+    }
+    .block:nth-child(2) {
+        margin-top: 270px;
+    }
+    .wrapper_content {
+        margin-right: 35%;
+        margin-left: 142px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .main {
+        justify-content: flex-start;
+    }
     body .block {
         margin-left:0 !important;
+        margin-right: 0 !important;
+    }
+    .wrapper_content {
+        margin-left: 0 !important;
+        margin-right: 0;
     }
 }

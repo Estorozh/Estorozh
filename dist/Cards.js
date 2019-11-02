@@ -553,7 +553,7 @@ eval("//эти переменные следят, чтобы не было бе�
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! C:\\git\\work\\node_modules\\webpack-dev-server\\client\\index.js?http://localhost:3000 */\"./node_modules/webpack-dev-server/client/index.js?http://localhost:3000\");\nmodule.exports = __webpack_require__(/*! C:\\git\\work\\src/Cards.js */\"./src/Cards.js\");\n\n\n//# sourceURL=webpack:///multi_(webpack)-dev-server/client?");
+eval("__webpack_require__(/*! H:\\work\\FSD\\node_modules\\webpack-dev-server\\client\\index.js?http://localhost:3000 */\"./node_modules/webpack-dev-server/client/index.js?http://localhost:3000\");\nmodule.exports = __webpack_require__(/*! H:\\work\\FSD\\src/Cards.js */\"./src/Cards.js\");\n\n\n//# sourceURL=webpack:///multi_(webpack)-dev-server/client?");
 
 /***/ })
 

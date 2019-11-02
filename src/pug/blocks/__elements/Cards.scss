@@ -197,3 +197,9 @@ body {
         margin-right: -3px;
     }
 }
+
+@media screen and (max-width: 500px) {
+    .block {
+        margin-left: -40px;
+    }
+}
