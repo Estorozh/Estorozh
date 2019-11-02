@@ -8,6 +8,7 @@
     background: #FFFFFF;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     z-index: 2;
+    transition: margin-top .5s ease-in-out;
 
     &__logo {
         width: 105px;
@@ -96,8 +97,11 @@
     background-position: right center;
     right: -23px;
 }
-.header .nav.show {
+.header.show .nav{
     display: flex;
+}
+.header.show {
+    margin-top: 55px;
 }
 
 @media (max-width:1055px) {
@@ -120,14 +124,21 @@
             top: 70px;
             background-color: #fff;
             z-index: 2;
+            justify-content: center;
+            margin-top: -125px;
         }
         .nav__ul {
             width: 100%;
             margin: 0;
             padding:0;
+            margin-bottom: 10px;
+            justify-content: center;
         }
     }
     @media (max-width:590px) {
+        .header {
+            justify-content: flex-end;
+        }
         .header .nav__ul {
             width: 110px;
             flex-wrap: wrap;
