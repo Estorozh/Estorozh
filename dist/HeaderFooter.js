@@ -487,7 +487,7 @@ eval("var burger = document.querySelectorAll('.burger');\n\nfor (i = 0; i < burg
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! H:\\work\\FSD\\node_modules\\webpack-dev-server\\client\\index.js?http://localhost:3000 */\"./node_modules/webpack-dev-server/client/index.js?http://localhost:3000\");\nmodule.exports = __webpack_require__(/*! H:\\work\\FSD\\src/Header&Footer.js */\"./src/Header&Footer.js\");\n\n\n//# sourceURL=webpack:///multi_(webpack)-dev-server/client?");
+eval("__webpack_require__(/*! C:\\git\\work\\node_modules\\webpack-dev-server\\client\\index.js?http://localhost:3000 */\"./node_modules/webpack-dev-server/client/index.js?http://localhost:3000\");\nmodule.exports = __webpack_require__(/*! C:\\git\\work\\src/Header&Footer.js */\"./src/Header&Footer.js\");\n\n\n//# sourceURL=webpack:///multi_(webpack)-dev-server/client?");
 
 /***/ })
 

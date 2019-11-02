@@ -53,6 +53,9 @@ body {
             img {
                 width: 100%;
             }
+            img:nth-child(2) {
+                margin-top: -1px;
+            }
         }
     }
 }

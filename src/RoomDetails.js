@@ -5,6 +5,7 @@ import './pug/blocks/__elements/dropdown/dropdown.js';
 import './pug/blocks/__elements/slider/slider.js';
 import './pug/blocks/__elements/air-datepicker/datepicker.min.js';
 import './pug/blocks/__elements/header/header.js'
+import './pug/blocks/__elements/chart/chart.js'
 
 //datepicker на два инпута
 $('#start').datepicker({ 

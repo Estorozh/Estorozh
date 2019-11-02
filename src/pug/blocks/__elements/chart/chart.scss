@@ -118,3 +118,6 @@ figure {
     border-radius: 50%;
     background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
 }
+.donut-segment:hover {
+    stroke-width: 3;
+}

@@ -80,23 +80,6 @@ body {
     width: 60%;
     align-content: space-between;
 }
-.footer {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;
-    width: 100%;
-    margin-top: 190px;
-}
-.wrapper_content {
-    min-width: 23vw;
-    width: 266px;
-}
-.flex-grow {
-    flex-grow: 1;
-    margin-left: 117px;
-    margin-top: 22px;
-
-}
 //PP
 .block:first-child {
     margin: 20px 0 0 141px;
@@ -150,9 +133,12 @@ body {
         margin-top: 162px;
     }
     .elem:nth-child(12) {
-        margin-top: 254px;
+        margin-top: 240px;
         h3:first-child {
             width: 100%;
+        }
+        .checkbox_rich .checkbox_row:nth-child(2) .list__item {
+            width: 230px;
         }
     }
     
@@ -163,7 +149,7 @@ body {
         margin-top: -18px;
     }
     h3:nth-child(3) {
-        margin-top: 33px;
+        margin-top: 47px;
     }
     .buttons-line:nth-child(2) {
         margin-top: 29px;
@@ -182,19 +168,34 @@ body {
         width:100%;
     }
     h3:nth-child(5) { //dropdown с 3 гостя
-        margin-top: 239px;
+        margin-top: 229px;
     }
     .elem:nth-child(7) {
-        margin-top: 245px;
+        margin-top: 242px;
         h3:first-child {
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
     }
 }
 .footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    width: 100%;
+    margin-top: 204px;
     .wrapper_content:first-child {
         margin-left: 142px;
     }
+}
+.wrapper_content {
+    min-width: 23vw;
+    width: 266px;
+}
+.flex-grow {
+    flex-grow: 1;
+    margin-left: 115px;
+    margin-top: 22px;
+
 }
 @media screen and (max-width: 700px) {
     body .block {

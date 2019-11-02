@@ -17,8 +17,9 @@
         align-self: center;
         font-size: 12px;
         text-align: left;
-        letter-spacing: 0;
+        letter-spacing: 1px;
         line-height: 20px;
+        text-transform: none;
     }
     .checkbox__input {
         visibility: hidden;

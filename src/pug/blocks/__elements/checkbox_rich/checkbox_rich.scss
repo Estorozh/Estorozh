@@ -1,6 +1,9 @@
 .checkbox_rich {
     .checkbox_row {
         margin:0;
+        .list__item {
+            letter-spacing: 0;
+        }
     }
     label .list__item {
         margin: 5px 0;
