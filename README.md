@@ -1,7 +1,7 @@
 ## UI kit
   - [Headers & Footers](https://estorozh.github.io/FSD-Toxin/dist/main/UI/Header&Footer.html)
   - [Cards](https://estorozh.github.io/FSD-Toxin/dist/main/UI/Cards.html)
-  - [Form Elements](https://estorozh.github.io/Estorozh/dist/main/UI/Form_Elements.html)
+  - [Form Elements](https://estorozh.github.io/FSD-Toxin/dist/main/UI/Form_Elements.html)
   - [Colors & Type](https://estorozh.github.io/FSD-Toxin/dist/main/UI/ColorType.html)
 
 ## Website pages
