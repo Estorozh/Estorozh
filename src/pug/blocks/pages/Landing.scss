@@ -58,13 +58,12 @@ body {
     }
 }
 .content:before {
-    background: url('../../../assets/img/background_landing.png') no-repeat;
     content: '';
     width: 100%;
     position: absolute;
     height: 830px;
     animation-name: background_landing;
-    animation-duration: 45s;
+    animation-duration: 90s;
     animation-delay: 0;
     animation-iteration-count: infinite;
     background-size: cover;
